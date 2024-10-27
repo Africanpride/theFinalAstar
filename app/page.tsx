@@ -23,20 +23,7 @@ export default function Home() {
   const secondText = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
-  const directionRef = useRef(-1);
-
-  const animate = useCallback(() => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    }
-    else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent })
-    gsap.set(secondText.current, { xPercent: xPercent })
-    requestAnimationFrame(animate);
-    xPercent += 0.1 * directionRef.current;
-  }, []);
+  let direction = -1;
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -46,16 +33,30 @@ export default function Home() {
         scrub: 0.25,
         start: 0,
         end: window.innerHeight,
-        onUpdate: e => directionRef.current = e.direction * -1
+        onUpdate: e => direction = e.direction * -1
       },
       x: "-500px",
     })
     requestAnimationFrame(animate);
-  }, [animate])
+  }, [])
+
+  const animate = () => {
+    if (xPercent < -100) {
+      xPercent = 0;
+    }
+    else if (xPercent > 0) {
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, { xPercent: xPercent })
+    gsap.set(secondText.current, { xPercent: xPercent })
+    requestAnimationFrame(animate);
+    xPercent += 0.1 * direction;
+  }
+
 
   return (
-    <main className="min-h-[calc(350vh-100px)] h-full  ">
-      <section className="min-h-screen h-full grid grid-cols-1 md:grid-cols-3 ">
+    <main className="  h-full ">
+      <section className="min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3 ">
         <div className="bg-gray-700 col-span-1 md:col-span-2 min-h-dvh h-full flex flex-col justify-between items-start p-4 md:p-6 relative">
 
           <div className={`${bebas.className} flex items-center justify-between w-full font-bebas`}>
@@ -67,8 +68,8 @@ export default function Home() {
             <Image src={'/images/globe.png'} alt="alt" width={400} height={400} className=" animation-duration-100 animate-pulse absolute  "
 
             />
-            <div className="text-[3vw] leading-[0.9em] text-white text-center">
-              <span>A profound exploration of the strategic thinking</span><br />
+            <div className="text-[3vw] leading-[0.9em] text-white text-center" data-scroll data-scroll-speed={0.2}>
+              <span >A profound exploration of the strategic thinking</span><br />
               <span>behind informed voting decisions.</span>
             </div>
           </div>
@@ -94,14 +95,17 @@ export default function Home() {
             }}>
           </div>
 
-          <div className=" relative h-full flex flex-col justify-end items-start z-10">
+          <div className=" relative h-full flex flex-col justify-between items-start z-10">
 
+            <p className='text-md text-yellow-500 '>THE KINGDOM PATTERNS SERIES &#x2014; VOLUME ONE</p>
             <div data-scroll data-scroll-speed={0.1} className="space-y-4">
               <LucideMove3d className="text-yellow-500 text-[2.9em]" />
               <div className="text-[3em] text-white">
                 <p className="leading-[0.9em] ">The <br />Strategic <br />  Voter </p>
               </div>
-              <p className='text-sm text-yellow-500 '>&mdash; Authored By: Dr. Abu Bako</p>
+              <div>
+                <p className='text-md text-yellow-500 '>&mdash; Authored By: Dr. Abu Bako</p>
+              </div>
             </div>
           </div>
         </div>

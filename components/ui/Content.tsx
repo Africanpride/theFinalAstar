@@ -1,6 +1,11 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useCallback, useLayoutEffect, useRef } from 'react'
 import { siteConfig } from '../../config/site';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
+
 
 export default function Content() {
     return (
@@ -12,29 +17,77 @@ export default function Content() {
 }
 
 const Section2 = () => {
+    const firstText = useRef(null);
+    const secondText = useRef(null);
+    const slider = useRef(null);
+    let xPercent = 0;
+    const directionRef = useRef(-1);
+
+    const animate = useCallback(() => {
+        if (xPercent < -100) {
+            xPercent = 0;
+        }
+        else if (xPercent > 0) {
+            xPercent = -100;
+        }
+        gsap.set(firstText.current, { xPercent: xPercent })
+        gsap.set(secondText.current, { xPercent: xPercent })
+        requestAnimationFrame(animate);
+        xPercent += 0.1 * directionRef.current;
+    }, []);
+
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(slider.current, {
+            scrollTrigger: {
+                trigger: document.documentElement,
+                scrub: 0.25,
+                start: 0,
+                end: window.innerHeight,
+                onUpdate: e => directionRef.current = e.direction * -1
+            },
+            x: "-500px",
+        })
+        requestAnimationFrame(animate);
+    }, [animate])
+
     return (
-        <div className='flex justify-between items-end'>
-            <h1 className='text-[14vw] leading-[0.8] mt-10'>Strategic Voter</h1>
-            <Link href={'/'}>{siteConfig.year} &copy; copyright</Link>
+        <div className='flex justify-between items-end relative'>
+            <div className='text-[14vw] leading-[0.8] mt-10 absolute -left-5 bottom-5'>
+                <div className="">
+                    <div ref={slider} className="whitespace-nowrap flex justify-center items-center">
+                        <p ref={firstText}>Strategic Voter - </p>
+                        <p ref={secondText}>Strategic Voter - </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <Link href={'/'}>{siteConfig.year} &copy; copyright &#x2014; All Rights Reserved.</Link>
+            </div>
+            <div className='flex items-center gap-10'>
+                <Link href={'/'}>LinkedIn</Link>
+                <Link href={'/'}>Facebook</Link>
+                <Link href={'/'}>Twitter</Link>
+            </div>
         </div>
     )
 }
 
 const Nav = () => {
     return (
-        <div className='flex shrink-0 gap-20'>
-            <div className='flex flex-col gap-2'>
+        <div className='flex shrink-0 gap-20 z-50'>
+            <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-[#ffffff80]'>About</h3>
                 <Link href={'/about'}>About Author</Link>
                 <Link href={'/'}>Projects</Link>
                 <Link href={'/'}>Our Mission</Link>
                 <Link href={'/'}>Contact Us</Link>
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-[#ffffff80]'>Affiliations</h3>
-                <Link href={'/'}>COSTrAD</Link>
-                <Link href={'/'}>Gapnet</Link>
-                <Link href={'/'}>Logos-Rhema Foundation</Link>
+                <Link href={'http://www.costrad.org'} target="_blank" >COSTrAD</Link>
+                <Link href={'https://gapnetwork.org'} target="_blank" >Gapnet</Link>
+                <Link href={'https://www.logosrhema.org'} target="_blank" >Logos-Rhema Foundation</Link>
             </div>
         </div>
     )
