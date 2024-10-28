@@ -1,10 +1,10 @@
 import { LucideAlignLeft } from 'lucide-react'
 import React from 'react'
-import { ThemeSwitch } from '../theme-switch'
+import { ThemeSwitch } from './theme-switch'
 
 type Props = {}
 
-const Menu = (props: Props) => {
+export default function MainMenu(props: Props) {
     return (
         <div className="flex items-center gap-2">
             <div className=" py-1 bg-black flex items-center gap-x-4 rounded-full p-1 pl-4">
@@ -19,5 +19,3 @@ const Menu = (props: Props) => {
         </div>
     )
 }
-
-export default Menu

@@ -4,6 +4,7 @@ import React, { useCallback, useLayoutEffect, useRef } from 'react'
 import { siteConfig } from '../../config/site';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import Marquee from './marquee';
 
 
 
@@ -28,7 +29,7 @@ const Section2 = () => {
             xPercent = 0;
         }
         else if (xPercent > 0) {
-            xPercent = -100;
+            xPercent = -97;
         }
         gsap.set(firstText.current, { xPercent: xPercent })
         gsap.set(secondText.current, { xPercent: xPercent })
@@ -52,22 +53,34 @@ const Section2 = () => {
     }, [animate])
 
     return (
-        <div className='flex justify-between items-end relative'>
-            <div className='text-[14vw] leading-[0.8] mt-10 absolute -left-5 bottom-5'>
-                <div className="">
-                    <div ref={slider} className="whitespace-nowrap flex justify-center items-center">
-                        <p ref={firstText}>Strategic Voter - </p>
-                        <p ref={secondText}>Strategic Voter - </p>
+
+        <div className='flex justify-between items-end relative '>
+            {/* <div className='landing'>
+                <div className="slidercontainer ">
+                    <div ref={slider} className="slider">
+                        <p ref={firstText}>The Strategic Voter -</p>
+                        <p ref={secondText}>The Strategic Voter -</p>
                     </div>
                 </div>
+            </div> */}
+            <div className='text-[15vw] leading-[0.8] mt-10 absolute -left-14 bottom-5 '>
+
+                <div className="w-full opacity-20">
+                    <Marquee className=' ' speed={70} >
+                        <p ref={firstText}> The Strategic Voter &#x2014;  </p>
+                        <p ref={secondText}> The Strategic Voter &#x2014;  </p>
+                    </Marquee>
+                </div>
             </div>
-            <div>
-                <Link href={'/'}>{siteConfig.year} &copy; copyright &#x2014; All Rights Reserved.</Link>
-            </div>
-            <div className='flex items-center gap-10'>
-                <Link href={'/'}>LinkedIn</Link>
-                <Link href={'/'}>Facebook</Link>
-                <Link href={'/'}>Twitter</Link>
+            <div className='w-full md:flex items-center justify-between'>
+                <div>
+                    <Link href={'/'}>{siteConfig.year} &copy; copyright &#x2014; All Rights Reserved.</Link>
+                </div>
+                <div className='flex items-center gap-10'>
+                    <Link href={'/'}>LinkedIn</Link>
+                    <Link href={'/'}>Facebook</Link>
+                    <Link href={'/'}>Twitter</Link>
+                </div>
             </div>
         </div>
     )
@@ -75,7 +88,7 @@ const Section2 = () => {
 
 const Nav = () => {
     return (
-        <div className='flex shrink-0 gap-20 z-50'>
+        <div className='flex items-start shrink-0 gap-20 z-50'>
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-[#ffffff80]'>About</h3>
                 <Link href={'/about'}>About Author</Link>

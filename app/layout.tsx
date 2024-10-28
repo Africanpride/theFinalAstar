@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { bebas } from "@/config/fonts";
 
@@ -8,7 +7,6 @@ import { bebas } from "@/config/fonts";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { Navbar } from "@/components/navbar";
 import Footer from "@/components/ui/Footer";
 
 export const metadata: Metadata = {
