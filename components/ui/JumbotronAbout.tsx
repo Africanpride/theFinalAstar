@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@nextui-org/button';
@@ -18,6 +19,37 @@ import MainMenu from './Menu';
 type Props = {};
 
 const JumbotronAbout = (props: Props) => {
+  const [isLoading, setIsLoading] = React.useState(true);
+  React.useEffect(() => {
+    function onScroll({ scroll, limit, velocity, direction, progress }: any) {
+      //   console.log(scroll, limit, velocity, direction, progress);
+    }
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      const locomotiveScroll = new LocomotiveScroll({
+        autoResize: true,
+        scrollCallback: onScroll,
+        lenisOptions: {
+          //   wrapper: document.querySelector('#scroll-wrapper') as HTMLElement,
+          //   content: document.querySelector('#scroll-content') as HTMLElement,
+          lerp: 0.1,
+          duration: 1.2,
+          orientation: 'vertical',
+          gestureOrientation: 'vertical',
+          smoothWheel: true,
+          wheelMultiplier: 1,
+          touchMultiplier: 2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou,
+        },
+      });
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
   return (
     <section className='min-h-screen h-auto grid   p-5 gap-4'>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 '>
@@ -62,16 +94,18 @@ const JumbotronAbout = (props: Props) => {
             quality={100}
           />
           <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
-           <div>
-           <div className='max-w-5xl text-3xl text-white  p-4 md:p-8'  data-scroll data-scroll-speed={0.2}>
-            Founded on the belief that Africa’s future lies in its ability to
-            collaborate, trade, and invest within itself, ASTAR LLC was created
-            to promote sustainable regional growth. Our team brings decades of
-            experience in commodities trading and investment management, with a
-            special focus on the African continent.
+            <div>
+              <div
+                className='max-w-5xl text-3xl text-white  p-4 md:p-8'
+                data-scroll
+                data-scroll-speed={0.1}>
+                Founded on the belief that Africa’s future lies in its ability
+                to collaborate, trade, and invest within itself, ASTAR LLC was
+                created to promote sustainable regional growth. Our team brings
+                decades of experience in commodities trading and investment
+                management, with a special focus on the African continent.
+              </div>
             </div>
-           </div>
-
           </div>
         </div>
       </div>
