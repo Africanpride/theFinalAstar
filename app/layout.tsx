@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import Footer from "@/components/ui/Footer";
+import { Navbar } from "@/components/ui/Navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -37,14 +38,14 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background  antialiased",
+          "min-h-screen bg-background  antialiased md:m-4 ",
           bebas.className
 
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <main>
-            {/* <Navbar /> */}
+            <Navbar />
             {children}
             <Footer />
           </main>

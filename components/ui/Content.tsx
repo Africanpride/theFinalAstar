@@ -63,12 +63,12 @@ const Section2 = () => {
                     </div>
                 </div>
             </div> */}
-            <div className='text-[15vw] leading-[0.8] mt-10 absolute -left-14 bottom-5 '>
+            <div className='text-[2rem] leading-[0.8] mt-10 absolute -left-14 bottom-5 '>
 
-                <div className="w-full opacity-20">
+                <div className="w-full opacity-80">
                     <Marquee className=' ' speed={70} >
-                        <p ref={firstText}> The Strategic Voter &#x2014;  </p>
-                        <p ref={secondText}> The Strategic Voter &#x2014;  </p>
+                        <p ref={firstText}> AStar Trading & Agro Processing Co. Ltd. &#x2014;  </p>
+                        <p ref={secondText}> AStar Trading & Agro Processing Co. Ltd. &#x2014;  </p>
                     </Marquee>
                 </div>
             </div>
