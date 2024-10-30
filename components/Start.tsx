@@ -8,9 +8,10 @@ import BackgroundImageWrapper from "./BackgroundImageWrapper";
 type Props = {
   title?: string;
   order?: number;
+  children?: React.ReactNode;
 };
 
-const Start = ({ title = "Agricultural Services", order = 1 }: Props) => {
+const Start = ({ title, order = 1, children }: Props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {
     function onScroll({ scroll, limit, velocity, direction, progress }: any) {
@@ -44,7 +45,7 @@ const Start = ({ title = "Agricultural Services", order = 1 }: Props) => {
   }, []);
   return (
     <section className="min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3 ">
-              <div className={`bg-lime-700 min-h-dvh relative p-4 md:p-6 order-${order}`}>
+              <div className={` min-h-dvh relative p-4 md:p-6 order-${order}`}>
         <BackgroundImageWrapper backgroundImage="/images/farmer3.jpg" />
 
         <div className=" relative h-full flex flex-col justify-between items-start z-10">
@@ -67,19 +68,19 @@ const Start = ({ title = "Agricultural Services", order = 1 }: Props) => {
           </div>
         </div>
       </div>
-      <div className={`bg-gray-700 col-span-1 md:col-span-2 min-h-dvh h-full flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
+      <div className={`bg-slate-800 col-span-1 md:col-span-2 min-h-dvh h-full flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
         <div
           className={`${bebas.className} flex items-center justify-between w-full font-bebas`}
         >
           <MainMenu />
-          <div className={`text-[1.7em] ${playfair_display.className}`}>
+          <div className={`text-[1.7em] text-white ${playfair_display.className}`}>
             {title}
           </div>
         </div>
 
         <div className="flex items-center justify-center max-w-4xl container relative">
           <Image
-            src={"/images/globe.png"}
+            src={"/images/world.png"}
             alt="alt"
             width={400}
             height={400}
@@ -91,14 +92,12 @@ const Start = ({ title = "Agricultural Services", order = 1 }: Props) => {
             data-scroll
             data-scroll-speed={0.3}
           >
-            <span>A profound exploration of the strategic thinking</span>
-            <br />
-            <span>behind informed voting decisions.</span>
+            {children}
           </div>
         </div>
 
         <div className="hidden md:block">
-          <LucideMoveDown className="animate-bounce w-6 h-6" />
+          <LucideMoveDown className="animate-bounce w-6 h-6 text-white" />
         </div>
       </div>
 

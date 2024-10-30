@@ -25,9 +25,9 @@ const ContactStart = (props: Props) => {
 
   return (
     <section className="min-h-dvh h-auto z-20 pb-5 text-xl">
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 p-4">
         <div className="md:rounded-2xl  bg-neutral-200 col-span-1 h-dvh min-h-full flex flex-col justify-center items-center md:p-4">
-          <div className="text-4xl pb-5">Let's Talk</div>
+          <div className="text-4xl pb-5 m-5">Let's Talk</div>
           <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
             <Input {...register("name")} placeholder="Name" required />
             <Input {...register("email")} placeholder="Email" type="email" required />

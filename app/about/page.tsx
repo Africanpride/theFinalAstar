@@ -1,9 +1,10 @@
-import { title } from "@/components/primitives";
+import { title } from '@/components/primitives';
+import JumbotronAbout from '@/components/ui/JumbotronAbout';
 
 export default function AboutPage() {
   return (
-    <div>
-      <h1 className={title()}>About</h1>
-    </div>
+    <main className='space-y-3'>
+      <JumbotronAbout />
+    </main>
   );
 }

@@ -72,7 +72,7 @@ export const Navbar = () => {
 
 
 	return (
-		<NextUINavbar
+		<NextUINavbar 
 			className={`navbar ${isMenuOpen ? 'menu-open' : ''} md:py-2`}
 			style={{ maxWidth: 'full' }}
 		>
@@ -128,7 +128,7 @@ export const Navbar = () => {
 				))}
 
 				<NavbarItem>
-					<div className="border-s px-5 hidden md:flex items-center gap-x-2 ">
+					<div className="border-s  px-5 hidden md:flex items-center gap-x-2 ">
 						<div className="pt-1">
         					<ThemeSwitch />
 						</div>
@@ -144,12 +144,12 @@ export const Navbar = () => {
 					>
 						<Link href={"/contact"}>
 							<Button
-								className='uppercase rounded-full pl-4 pr-1'
+								className='uppercase bg-lime-600 text-white rounded-full pl-5 pr-1'
 								size={"sm"}
-								color={'success'}
+								// color={'success'}
 								variant='solid'
 								endContent={
-									<LucideArrowUpRight className='bg-white  text-current rounded-full' />
+									<LucideArrowUpRight className='bg-white  text-black rounded-full' />
 								}
 							>
 								<span className=' text-[0.9rem] '>Get In Touch</span>
