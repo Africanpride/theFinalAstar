@@ -74,7 +74,7 @@ export const Navbar = () => {
 
 	return (
 		<NextUINavbar
-			className={`navbar ${isMenuOpen ? 'menu-open' : ''} md:py-8`}
+			className={`navbar ${isMenuOpen ? 'menu-open' : ''} md:py-2`}
 			style={{ maxWidth: 'full' }}
 		>
 
@@ -134,14 +134,14 @@ export const Navbar = () => {
 					<div
 						className={`${bebas.className} flex items-center gap-x-2 font-medium text-gray-500 hover:text-lime-600 py-2 md:py-0 md:my-6 md:ps-6`}
 					>
-						<Link href={"/join"}>
+						<Link href={"/contact"}>
 							<Button
 								className='uppercase rounded-full pl-4 pr-1'
 								size={"sm"}
-								color={isDarkMode ? 'warning' : 'success'}
+								color={'success'}
 								variant='solid'
 								endContent={
-									<LucideArrowUpRight className='bg-primary  text-current rounded-full' />
+									<LucideArrowUpRight className='bg-white  text-current rounded-full' />
 								}
 							>
 								<span className=' text-[0.9rem] '>Talk to Us</span>

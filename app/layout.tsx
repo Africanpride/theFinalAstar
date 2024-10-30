@@ -3,7 +3,6 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import { bebas } from "@/config/fonts";
 
-
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
@@ -38,12 +37,12 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background  antialiased md:m-4 ",
+          "min-h-screen bg-background  antialiased md:m-2 ",
           bebas.className
-
         )}
+        
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <main>
             <Navbar />
             {children}

@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
+  name: "Next.js + NextUI + Wordpress",
   description: "Make beautiful websites regardless of your design experience.",
   author: "Pius Opoku-Fofie",
   year: new Date().getFullYear(),
@@ -11,20 +11,20 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
       label: "About",
       href: "/about",
+    },
+    {
+      label: "Services",
+      href: "/services",
+    },
+    {
+      label: "Partner",
+      href: "/partner",
+    },
+    {
+      label: "News",
+      href: "/news",
     },
   ],
   navMenuItems: [

@@ -1,0 +1,28 @@
+import React from 'react';
+
+type BackgroundImageWrapperProps = {
+    backgroundImage: string;
+    children?: React.ReactNode; // To allow for nested content
+};
+
+const BackgroundImageWrapper: React.FC<BackgroundImageWrapperProps> = ({ backgroundImage, children }) => {
+    return (
+        <div className="absolute inset-0 z-0"
+            style={{
+                backgroundImage: `url("${backgroundImage}")`,
+                filter: 'contrast(118%) brightness(124%) saturate(2)',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                height: '100%',
+                minHeight: '100%',
+                width: '100%',
+                minWidth: '100%',
+                position: 'absolute',
+            }}>
+            {children}
+        </div>
+    );
+};
+
+export default BackgroundImageWrapper;
