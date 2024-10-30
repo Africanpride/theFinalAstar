@@ -10,7 +10,7 @@ const BackgroundImageWrapper: React.FC<BackgroundImageWrapperProps> = ({ backgro
         <div className="absolute inset-0 z-0"
             style={{
                 backgroundImage: `url("${backgroundImage}")`,
-                filter: 'contrast(118%) brightness(124%) saturate(2)',
+                // filter: 'contrast(101%) brightness(101%) saturate(2)',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',

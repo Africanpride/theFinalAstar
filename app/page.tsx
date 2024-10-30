@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <main className="  h-full ">
       <Start />
+      <Start />
     </main>
   );
 }

@@ -17,7 +17,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
   React.useEffect(() => {
     function onScroll({ scroll, limit, velocity, direction, progress }: any) {
-      console.log(scroll, limit, velocity, direction, progress);
+      // console.log(scroll, limit, velocity, direction, progress);
     }
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -25,8 +25,8 @@ export function Providers({ children, themeProps }: ProvidersProps) {
         autoResize: true,
         scrollCallback: onScroll,
         lenisOptions: {
-          wrapper: window,
-          content: document.documentElement,
+          // wrapper: document.querySelector('#scroll-wrapper') as HTMLElement,
+          // content: document.querySelector('#scroll-content') as HTMLElement,
           lerp: 0.1,
           duration: 1.2,
           orientation: "vertical",

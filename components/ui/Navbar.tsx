@@ -38,7 +38,6 @@ export const Navbar = () => {
     // media query for mobile etc
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-    // console.log(isMobile);
   
     const pathname = usePathname();
   

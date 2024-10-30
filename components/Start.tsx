@@ -11,7 +11,7 @@ const Start = (props: Props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {
     function onScroll({ scroll, limit, velocity, direction, progress }: any) {
-      console.log(scroll, limit, velocity, direction, progress);
+    //   console.log(scroll, limit, velocity, direction, progress);
     }
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -19,8 +19,8 @@ const Start = (props: Props) => {
         autoResize: true,
         scrollCallback: onScroll,
         lenisOptions: {
-          wrapper: window,
-          content: document.documentElement,
+        //   wrapper: document.querySelector('#scroll-wrapper') as HTMLElement,
+        //   content: document.querySelector('#scroll-content') as HTMLElement,
           lerp: 0.1,
           duration: 1.2,
           orientation: "vertical",
@@ -42,7 +42,7 @@ const Start = (props: Props) => {
   return (
     <section className="min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3 ">
               <div className="bg-lime-700 min-h-dvh relative p-4 md:p-6">
-        <BackgroundImageWrapper backgroundImage="/images/abubako.jpg" />
+        <BackgroundImageWrapper backgroundImage="/images/farmer3.jpg" />
 
         <div className=" relative h-full flex flex-col justify-between items-start z-10">
           <p className="text-md text-lime-500 pt-2">
@@ -80,7 +80,8 @@ const Start = (props: Props) => {
             alt="alt"
             width={400}
             height={400}
-            className=" animation-duration-100 animate-pulse absolute  "
+            className="animation-duration-100 animate-pulse absolute"
+            style={{ width: "auto", height: "auto" }}
           />
           <div
             className="text-[3vw] leading-[0.9em] text-white text-center"
