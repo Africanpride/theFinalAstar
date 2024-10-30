@@ -28,7 +28,7 @@ import {
 } from "@/components/ui/icons";
 import { motion } from "framer-motion";
 import { bebas, playfair_display } from "@/config/fonts";
-import { LucideArrowUpRight } from "lucide-react";
+import { LucideArrowUpRight, LucideScanFace } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { useMediaQuery } from "react-responsive";
@@ -126,6 +126,15 @@ export const Navbar = () => {
 						</NextLink>
 					</NavbarItem>
 				))}
+
+				<NavbarItem>
+					<div className="border-s px-5 hidden md:flex items-center gap-x-2 ">
+						<div className="pt-1">
+        					<ThemeSwitch />
+						</div>
+						
+					</div>
+				</NavbarItem>
 			</NavbarContent>
 
 			<NavbarContent justify='end'>
@@ -143,7 +152,7 @@ export const Navbar = () => {
 									<LucideArrowUpRight className='bg-white  text-current rounded-full' />
 								}
 							>
-								<span className=' text-[0.9rem] '>Talk to Us</span>
+								<span className=' text-[0.9rem] '>Get In Touch</span>
 							</Button>
 						</Link>
 

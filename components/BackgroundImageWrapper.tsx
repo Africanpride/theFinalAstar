@@ -5,7 +5,7 @@ type BackgroundImageWrapperProps = {
     children?: React.ReactNode; // To allow for nested content
 };
 
-const BackgroundImageWrapper: React.FC<BackgroundImageWrapperProps> = ({ backgroundImage, children }) => {
+const BackgroundImageWrapper: React.FC<BackgroundImageWrapperProps> = ({ backgroundImage = "/images/farmer3.jpg", children }) => {
     return (
         <div className="absolute inset-0 z-0"
             style={{

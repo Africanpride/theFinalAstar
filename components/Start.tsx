@@ -5,9 +5,12 @@ import React from "react";
 import MainMenu from "./ui/Menu";
 import BackgroundImageWrapper from "./BackgroundImageWrapper";
 
-type Props = {};
+type Props = {
+  title?: string;
+  order?: number;
+};
 
-const Start = (props: Props) => {
+const Start = ({ title = "Agricultural Services", order = 1 }: Props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {
     function onScroll({ scroll, limit, velocity, direction, progress }: any) {
@@ -41,7 +44,7 @@ const Start = (props: Props) => {
   }, []);
   return (
     <section className="min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3 ">
-              <div className="bg-lime-700 min-h-dvh relative p-4 md:p-6">
+              <div className={`bg-lime-700 min-h-dvh relative p-4 md:p-6 order-${order}`}>
         <BackgroundImageWrapper backgroundImage="/images/farmer3.jpg" />
 
         <div className=" relative h-full flex flex-col justify-between items-start z-10">
@@ -64,13 +67,13 @@ const Start = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-700 col-span-1 md:col-span-2 min-h-dvh h-full flex flex-col justify-between items-start p-4 md:p-6 relative">
+      <div className={`bg-gray-700 col-span-1 md:col-span-2 min-h-dvh h-full flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
         <div
           className={`${bebas.className} flex items-center justify-between w-full font-bebas`}
         >
           <MainMenu />
           <div className={`text-[1.7em] ${playfair_display.className}`}>
-            The Strategic Voter
+            {title}
           </div>
         </div>
 
