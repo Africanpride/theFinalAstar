@@ -1,5 +1,5 @@
 "use client";
-import { poppins } from "@/config/fonts";
+import { bebas, poppins } from "@/config/fonts";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@nextui-org/input";
@@ -27,7 +27,7 @@ const ContactStart = (props: Props) => {
     <section className="min-h-dvh h-auto z-20 pb-5 text-xl">
       <div className="grid grid-cols-1 md:grid-cols-3 p-4">
         <div className="md:rounded-2xl  bg-neutral-200 col-span-1 h-dvh min-h-full flex flex-col justify-center items-center md:p-4">
-          <div className="text-4xl pb-5 m-5">Let us Connect and Build Africa’s Future Together.</div>
+          <div className={`${bebas.className} text-4xl pb-5 m-5 `}>Let us Connect and Build Africa’s Future Together.</div>
           <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
             <Input {...register("name")} placeholder="Name" required />
             <Input {...register("email")} placeholder="Email" type="email" required />
@@ -49,13 +49,13 @@ const ContactStart = (props: Props) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
 
           <div> 
-            <div className="text-4xl block">Our Office Location</div>
-            <div className="text-lg block">178 Otswe Street, Osu, Accra - Ghana</div>
+            <div className={`${bebas.className} text-4xl block`}>Our Office Location</div>
+            <div className="text-sm block">178 Otswe Street, Osu, Accra - Ghana</div>
           </div>
 
           <div>
-            <div className="text-4xl block">Contact Details</div>
-            <div className="text-lg block">Email: info@astar-trade.com | Phone: (+233) 00000000</div>
+            <div className={`${bebas.className} text-4xl block`}>Contact Details</div>
+            <div className="text-sm block">Email: info@astar-trade.com | Phone: (+233) 00000000</div>
           </div>
 
         </div>

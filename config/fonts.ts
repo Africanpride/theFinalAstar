@@ -3,6 +3,8 @@ import {
   Source_Sans_3,
   Playfair_Display,
   Poppins,
+  Lato,
+  Inter
 } from "next/font/google";
 
 type Props = {
@@ -11,6 +13,16 @@ type Props = {
   style: string | string[];
   display: string | string[];
 };
+
+
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 const bebas = Bebas_Neue({
   weight: ["400"],
@@ -38,4 +50,12 @@ const poppins = Poppins({
 
 const sourceCodePro700 = Source_Sans_3({ subsets: ["latin"], weight: "700" });
 
-export { poppins, playfair_display, bebas, sourceCodePro700 };
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal"],
+  display: "swap",
+  adjustFontFallback: false,
+});
+
+export { poppins, playfair_display, bebas, sourceCodePro700, lato, inter };

@@ -61,7 +61,7 @@ const Nav = () => {
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-white'>Quick Links</h3>
                 <Link href={'/privacy'}>Privacy Policy</Link>
-                <Link href={'/cookie'}>Cookie Policy</Link>
+                <Link href={'/cookies'}>Cookie Policy</Link>
                 <Link href={'/terms'}>Terms & Conditions</Link>
             </div>
             <div className='flex flex-col'>

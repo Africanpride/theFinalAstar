@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-import { bebas } from "@/config/fonts";
+import { bebas, inter } from "@/config/fonts";
 
 import { Providers } from "./providers";
 
@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background  antialiased  bg-slate-100",
-          bebas.className
+          // inter.className
         )}
         
       >

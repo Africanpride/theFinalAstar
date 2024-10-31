@@ -48,7 +48,9 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
   return (
     <NextUIProvider navigate={router.push}>
-      <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+      <NextThemesProvider {...{ ...themeProps, defaultTheme: 'light', disableTransitionOnChange: true }}>
+        {children}
+      </NextThemesProvider>
     </NextUIProvider>
   );
 }

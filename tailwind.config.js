@@ -10,7 +10,8 @@ module.exports = {
   theme: {
   	extend: {
   		fontFamily: {
-  			sans: ["var(--font-sans)"],
+  			sans: ["Inter", "var(--font-sans)"],
+  			bebas: ["Bebas", "sans-serif"],
   			mono: ["var(--font-mono)"]
   		},
   		borderRadius: {

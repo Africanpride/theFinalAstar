@@ -44,7 +44,7 @@ const Start = ({ title, order = 1, children }: Props) => {
     })();
   }, []);
   return (
-    <section className="min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3 ">
+    <section className={`${bebas.className} min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3`}>
               <div className={` min-h-dvh relative p-4 md:p-6 order-${order}`}>
         <BackgroundImageWrapper backgroundImage="/images/farmer3.jpg" />
 
