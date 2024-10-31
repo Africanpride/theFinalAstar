@@ -25,7 +25,7 @@ const Section2 = () => {
 
         <div className='flex justify-between items-end relative text-neutral-100 '>
 
-            <div className='text-[2rem] leading-[0.8] mt-10 absolute -left-14 bottom-5 '>
+            <div className='text-[3rem] leading-[0.8] mt-10 absolute -left-14 bottom-5 '>
 
                 <div className="w-full opacity-80 text-lime-200">
                     <Marquee className=' ' speed={70} >
