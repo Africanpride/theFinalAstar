@@ -1,4 +1,4 @@
-import { LucideFactory } from 'lucide-react';
+import { LucideBuilding, LucideDam, LucideFactory, LucideTheater } from 'lucide-react';
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import { Button } from '@nextui-org/button';
@@ -47,9 +47,9 @@ const Jumbotron = (props: Props) => {
           data-scroll-speed={0.1}>
           <ServiceCard text='Intra-African Trade Facilitation' />
           <ServiceCardWithBackgroundImage backgroundImage='farmer.jpg' />
-          <ServiceCard text='Investment Opportunities' />
+          <ServiceCard text='Investment Opportunities' icon={<LucideTheater />} />
           <ServiceCardWithBackgroundImage />
-          <ServiceCard text='Commodity Trading' />
+          <ServiceCard text='Commodity Trading' icon={<LucideBuilding />} />
           <ServiceCardWithBackgroundImage backgroundImage='farmer3.jpg' />
         </div>
       </div>

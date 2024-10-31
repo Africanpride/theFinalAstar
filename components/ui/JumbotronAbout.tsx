@@ -53,7 +53,7 @@ const JumbotronAbout = (props: Props) => {
   }, []);
   return (
     <section className='min-h-screen h-auto grid   p-5 gap-4'>
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 '>
+      <div className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='flex items-end justify-between h-full '>
             <div className='capitalize text-5xl text-gray-500 leading-[3rem] '>
@@ -84,7 +84,7 @@ const JumbotronAbout = (props: Props) => {
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1 bg-white rounded-2xl aspect-square md:aspect-video  md:p-2 '>
+      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video  md:p-2 '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/mission.jpg'
@@ -110,7 +110,7 @@ const JumbotronAbout = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 '>
+      <div className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
         <div
           className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
         flex flex-col justify-end text-white p-4'>
@@ -169,7 +169,7 @@ const JumbotronAbout = (props: Props) => {
           <div className='max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto'>
             {/* Title */}
             <div className='max-w-3xl mb-10 lg:mb-14'>
-              <h2 className=' font-semibold text-2xl md:text-4xl md:leading-tight'>
+              <h2 className={`${bebas.className}  font-semibold text-2xl md:text-4xl md:leading-tight`}>
                 Partnerships
               </h2>
               <p className='mt-1 text-neutral-400'>
@@ -194,7 +194,7 @@ const JumbotronAbout = (props: Props) => {
 
               <div>
                 <div className='mb-4'>
-                  <h2 className=' font-semibold text-2xl md:text-4xl md:leading-tight'>
+                  <h2 className={`${bebas.className} font-semibold text-2xl md:text-4xl md:leading-tight`}>
                     Our Core Values
                   </h2>
                 </div>
