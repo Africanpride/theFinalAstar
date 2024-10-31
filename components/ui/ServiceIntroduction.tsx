@@ -1,8 +1,10 @@
-import { bebas, playfair_display } from '@/config/fonts';
-import { LucideMoveDown, LucideMove3d } from 'lucide-react';
+import { bebas, inter, playfair_display } from '@/config/fonts';
+import { LucideMoveDown, LucideMove3d, LucideArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 import BackgroundImageWrapper from '../BackgroundImageWrapper';
+import Link from 'next/link';
+import ServiceIntroComponent from './ServiceIntroComponent';
 // Removed imports for MainMenu and BackgroundImageWrapper due to errors
 
 type Props = {
@@ -45,60 +47,56 @@ const Start = ({ title, order = 1, children }: Props) => {
   }, []);
   return (
     <section
-      className={`${bebas.className} min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3`}>
-      <div className={` min-h-dvh relative p-4 md:p-6 order-${order}`}>
+      className={`${bebas.className} min-h-screen h-auto grid grid-cols-1 md:grid-cols-3`}>
+      <div className={` md:aspect-square relative p-4 md:p-6 `}>
         {/* <BackgroundImageWrapper backgroundImage='/images/farmer3.jpg' /> */}
 
-        <div className=' relative h-full flex flex-col justify-between items-start z-10'>
-          <p className='text-xl text-lime-900 pt-2 leading-[1.25rem]'>
+        <div className=' relative h-full flex flex-col justify-start space-y-3 items-start z-10'>
+          <p className='text-lime-500 text-[3em] leading-[0.9em] '>
+            Our Services &#x2014;
+          </p>
+
+          <p className='text-xl text-lime-900 leading-[1.25rem] '>
             ASTAR LLC connects buyers, sellers, and investors across Africa in
             agriculture, minerals, and energy. We simplify trade, foster
             sustainable growth, and offer end-to-end support for reliable,
             impactful partnerships in emerging markets.
           </p>
-          <div data-scroll data-scroll-speed={0.1} className='space-y-4'>
+          <div className='space-y-4 py-14'>
             {/* <LucideMove3d className='text-lime-500 text-[2.9em]' /> */}
-            {/* <div className='text-[3em] text-white'>
-              <p className='leading-[0.9em] '>
-               Our Services
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
+
       <div
-        className={`bg-slate-800 col-span-1 md:col-span-2 min-h-dvh h-full flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
-        <div
-          className={`${bebas.className} flex items-center justify-between w-full font-bebas`}>
-          {/* <MainMenu /> */}
-          <div
-            className={`text-[1.7em] text-white ${playfair_display.className}`}>
-            {title}
-          </div>
-        </div>
-
-        <div className='flex items-center justify-center max-w-4xl container relative bg-yellow-700 h-full'>
-          {/* <Image
-            src={"/images/world.png"}
-            alt="alt"
-            width={400}
-            height={400}
-            className="animation-duration-100 animate-pulse absolute"
-            style={{ width: "auto", height: "auto" }}
-          /> */}
-          <div
-            className='text-[3vw] leading-[0.9em] text-white text-center'
-            data-scroll
-            data-scroll-speed={0.3}>
-            {' '}
-            123456789
-            {children}
-          </div>
-        </div>
-
-        <div className='hidden md:block'>
-          <LucideMoveDown className='animate-bounce w-6 h-6 text-white' />
-        </div>
+        className={` col-span-1 md:col-span-2  h-auto grid grid-cols-1 md:grid-cols-2 gap-2 p-4 md:p-6 relative `}>
+        <ServiceIntroComponent
+          title='Agriculture'
+          description='We trade high-quality agricultural products, fostering sustainable farming practices and supporting local economies. Products such as Soya Beans, Shea Butter, Cashew, Palm Oil, Maize, Rice etc'
+        />
+        <ServiceIntroComponent
+          title='Minerals & Natural Resources'
+          url='/services'
+          description={`Facilitating the trade of Africa's abundant natural resources and minerals such as, Mining (Gold, Diamond, Tanzanite) Crude Oil etc`}
+        />
+        <ServiceIntroComponent
+          title='Energy'
+          url='/services'
+          description={`Involved in the regional trade of key energy products, contributing to Africa's energy security. Green Energy or Solar Wind, Hydro Power etc.`}
+        />
+        <ServiceIntroComponent
+          title='Real Estate'
+          url='/services'
+          description={`We specialize in real estate services that cater to diasporas looking to invest in their 
+                homeland. Our offerings cover everything from land acquisition to home purchasing. `}
+        />
+        <ServiceIntroComponent
+          title='Africa Diaspora 126+'
+          url='/services'
+          description={`AAHA is dedicated to helping individuals pursue opportunities abroad, whether for 
+                work, education, or specialized training. Our primary focus is on providing assistance 
+                to those aiming to travel to the UK, US, or Canada `}
+        />
       </div>
     </section>
   );

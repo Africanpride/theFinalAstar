@@ -90,7 +90,7 @@ export const Navbar = () => {
               <MainLogo />
               <span
                 className={`hidden md:block md:text-md text-sm md:leading-4 px-2 border-s`}>
-                AStar Trading & Agro
+                Astar Trading & Agro
                 <br />
                 Processing Company Limited
               </span>

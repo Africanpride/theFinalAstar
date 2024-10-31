@@ -24,7 +24,7 @@ const Jumbotron = (props: Props) => {
                 {/* Title */}
                 <div className='mt-5 max-w-5xl text-center mx-auto'>
                   <h1
-                    className='block font-bold text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-neutral-100'
+                    className='block  text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-neutral-100'
                     data-scroll
                     data-scroll-speed={0.0}>
                     At ASTAR LLC, we believe in Africa’s vast potential and are
@@ -50,7 +50,7 @@ const Jumbotron = (props: Props) => {
           <ServiceCard text='Investment Opportunities' icon={<LucideTheater />} />
           <ServiceCardWithBackgroundImage />
           <ServiceCard text='Commodity Trading' icon={<LucideBuilding />} />
-          <ServiceCardWithBackgroundImage backgroundImage='farmer3.jpg' />
+          <ServiceCardWithBackgroundImage backgroundImage='vision3.jpg' />
         </div>
       </div>
     </section>
