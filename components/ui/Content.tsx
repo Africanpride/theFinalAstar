@@ -23,7 +23,7 @@ const Section2 = () => {
 
     return (
 
-        <div className='flex justify-between items-end relative '>
+        <div className='flex justify-between items-end relative text-neutral-100 '>
 
             <div className='text-[2rem] leading-[0.8] mt-10 absolute -left-14 bottom-5 '>
 
@@ -50,7 +50,7 @@ const Section2 = () => {
 
 const Nav = () => {
     return (
-        <div className='flex items-start shrink-0 gap-12 z-50 md:pt-[20dvh]'>
+        <div className='flex items-start shrink-0 gap-12 z-50 md:pt-[20dvh] text-neutral-300'>
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-white'>About</h3>
                 <Link href={'/about'}>About Us</Link>

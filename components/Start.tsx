@@ -49,22 +49,19 @@ const Start = ({ title, order = 1, children }: Props) => {
         <BackgroundImageWrapper backgroundImage="/images/farmer3.jpg" />
 
         <div className=" relative h-full flex flex-col justify-between items-start z-10">
-          <p className="text-md text-lime-500 pt-2">
-            THE KINGDOM PATTERNS SERIES &#x2014; VOLUME ONE
+          <p className="text-xl text-lime-900 pt-2 leading-[1.25rem]">
+          Our vast network, market expertise, and commitment to reliable supply make us a trusted 
+          partner in commodity trading
           </p>
           <div data-scroll data-scroll-speed={0.1} className="space-y-4">
             <LucideMove3d className="text-lime-500 text-[2.9em]" />
             <div className="text-[3em] text-white">
               <p className="leading-[0.9em] ">
-                The <br />
-                Strategic <br /> Voter{" "}
+                Access Our Strategic <br />
+                Investment <br /> Opportunities{" "}
               </p>
             </div>
-            <div>
-              <p className="text-md text-lime-500 ">
-                &mdash; Authored By: Dr. Abu Bako
-              </p>
-            </div>
+
           </div>
         </div>
       </div>
@@ -72,7 +69,7 @@ const Start = ({ title, order = 1, children }: Props) => {
         <div
           className={`${bebas.className} flex items-center justify-between w-full font-bebas`}
         >
-          <MainMenu />
+          {/* <MainMenu /> */}
           <div className={`text-[1.7em] text-white ${playfair_display.className}`}>
             {title}
           </div>

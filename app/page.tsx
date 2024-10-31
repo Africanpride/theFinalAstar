@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main className="  h-full space-y-3 ">
-      <Start title="Mining Services">
+      <Start>
 
     <span>Unlocking Africa's Potential through</span>
             <br />
