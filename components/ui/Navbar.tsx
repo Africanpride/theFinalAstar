@@ -122,6 +122,7 @@ export const Navbar = () => {
             {/* <div className="pt-1">
         					<ThemeSwitch />
 						</div> */}
+
             <Link href='/'>
               <FaLinkedinIn className='text-2xl' />
             </Link>

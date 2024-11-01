@@ -19,10 +19,6 @@ export const siteConfig = {
       href: "/services",
     },
     {
-      label: "Partner",
-      href: "/partner",
-    },
-    {
       label: "News",
       href: "/news",
     },
