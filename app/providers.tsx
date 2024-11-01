@@ -21,22 +21,26 @@ export function Providers({ children, themeProps }: ProvidersProps) {
     }
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
-        autoResize: true,
-        scrollCallback: onScroll,
-        lenisOptions: {
-          // wrapper: document.querySelector('#scroll-wrapper') as HTMLElement,
-          // content: document.querySelector('#scroll-content') as HTMLElement,
-          lerp: 0.1,
-          duration: 1.2,
-          orientation: "vertical",
-          gestureOrientation: "vertical",
-          smoothWheel: true,
-          wheelMultiplier: 1,
-          touchMultiplier: 2,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou,
-        },
-      });
+
+      // Check if the window width is greater than 768 pixels
+      if (window.innerWidth > 768) {
+        const locomotiveScroll = new LocomotiveScroll({
+          autoResize: true,
+          scrollCallback: onScroll,
+          lenisOptions: {
+            // wrapper: document.querySelector('#scroll-wrapper') as HTMLElement,
+            // content: document.querySelector('#scroll-content') as HTMLElement,
+            lerp: 0.1,
+            duration: 1.2,
+            orientation: "vertical",
+            gestureOrientation: "vertical",
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            touchMultiplier: 2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou,
+          },
+        });
+      }
 
       setTimeout(() => {
         setIsLoading(false);

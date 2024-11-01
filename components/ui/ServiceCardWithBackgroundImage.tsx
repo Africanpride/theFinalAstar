@@ -2,12 +2,12 @@ import React from 'react';
 
 type BackgroundImageProps = {
     backgroundImage?: string;
-    children?: React.ReactNode; // To allow for nested content
+
 };
 
-const ServiceCardWithBackgroundImage: React.FC<BackgroundImageProps> = ({ backgroundImage = "farmer4.jpg", children }) => {
+const ServiceCardWithBackgroundImage: React.FC<BackgroundImageProps> = ({ backgroundImage = "farmer4.jpg" }) => {
     return (
-       <div className='relative rounded-3xl'>
+       <div className='relative rounded-3xl aspect-square'>
          <div className="absolute inset-0 z-0 rounded-3xl"
             style={{
                 backgroundImage: `url("/images/${backgroundImage}")`,
@@ -21,7 +21,6 @@ const ServiceCardWithBackgroundImage: React.FC<BackgroundImageProps> = ({ backgr
                 minWidth: '100%',
                 position: 'absolute',
             }}>
-            {children}
         </div>
        </div>
     );

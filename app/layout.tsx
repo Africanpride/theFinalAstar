@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background  antialiased  bg-slate-100",
-          // inter.className
+          inter.className
         )}
         
       >

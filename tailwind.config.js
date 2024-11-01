@@ -11,7 +11,6 @@ module.exports = {
   	extend: {
   		fontFamily: {
   			sans: ["Inter", "var(--font-sans)"],
-  			bebas: ["Bebas", "sans-serif"],
   			mono: ["var(--font-mono)"]
   		},
   		borderRadius: {

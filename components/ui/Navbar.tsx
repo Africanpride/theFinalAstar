@@ -123,9 +123,6 @@ export const Navbar = () => {
         					<ThemeSwitch />
 						</div> */}
             <Link href='/'>
-              <FaXTwitter className='text-2xl' />
-            </Link>
-            <Link href='/'>
               <FaLinkedinIn className='text-2xl' />
             </Link>
             <Link href='/'>

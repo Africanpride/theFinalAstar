@@ -9,8 +9,7 @@ type Props = {};
 
 const Jumbotron = (props: Props) => {
   return (
-    <section
-      className={`${bebas.className} container mx-auto min-h-dvh h-auto  rounded-2xl `}>
+    <section className={`${bebas.className} container mx-auto min-h-dvh h-auto py-16  rounded-2xl `}>
       <div className='flex flex-col justify-between h-auto '>
         <div>
           <>
@@ -24,7 +23,7 @@ const Jumbotron = (props: Props) => {
                 {/* Title */}
                 <div className='mt-5 max-w-5xl text-center mx-auto'>
                   <h1
-                    className='block  text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-neutral-100'
+                    className={`${bebas.className} block  text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-neutral-100`}
                     data-scroll
                     data-scroll-speed={0.0}>
                     At ASTAR LLC, we believe in Africa’s vast potential and are
@@ -42,14 +41,12 @@ const Jumbotron = (props: Props) => {
         </div>
 
         <div
-          className='grid grid-cols-1 md:grid-cols-6 align-baseline gap-4 p-4 h-auto py-12'
-          data-scroll
-          data-scroll-speed={0.1}>
+          className='grid grid-cols-1 md:grid-cols-6 align-baseline gap-4 p-4 h-auto py-12'>
           <ServiceCard text='Intra-African Trade Facilitation' />
           <ServiceCardWithBackgroundImage backgroundImage='farmer.jpg' />
           <ServiceCard text='Investment Opportunities' icon={<LucideTheater />} />
           <ServiceCardWithBackgroundImage />
-          <ServiceCard text='Commodity Trading' icon={<LucideBuilding />} />
+          <ServiceCard text='Commodity Trading ' icon={<LucideBuilding />} />
           <ServiceCardWithBackgroundImage backgroundImage='vision3.jpg' />
         </div>
       </div>

@@ -11,9 +11,11 @@ export default function Home() {
   return (
     <main className='  h-full'>
       <Start>
-        <span>Unlocking Africa's Potential through</span>
-        <br />
-        <span>Strategic Commodity Trade and Investment.</span>
+        <span>
+          Unlocking Africa's Potential through
+          <br />
+          Strategic Commodity Trade and Investment.
+        </span>
       </Start>
       <Jumbotron />
       <Quote />

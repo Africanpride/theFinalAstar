@@ -26,8 +26,13 @@ const ContactStart = (props: Props) => {
   return (
     <section className="min-h-dvh h-auto z-20 pb-5 text-xl">
       <div className="grid grid-cols-1 md:grid-cols-3 p-4">
-        <div className="md:rounded-2xl  bg-neutral-200 col-span-1 h-dvh min-h-full flex flex-col justify-center items-center md:p-4">
-          <div className={`${bebas.className} text-4xl pb-5 m-5 `}>Let us Connect and Build Africa’s Future Together.</div>
+
+        <div className="md:rounded-2xl  bg-neutral-200 col-span-1 h-auto min-h-dvh p-4
+        flex flex-col justify-start md:justify-center items-center py-8 md:p-6">
+          <div className={`${bebas.className} text-4xl pb-5 m-5 `}>
+            Let us Connect and Build Africa’s Future Together.
+            </div>
+
           <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
             <Input {...register("name")} placeholder="Name" required />
             <Input {...register("email")} placeholder="Email" type="email" required />
@@ -35,7 +40,7 @@ const ContactStart = (props: Props) => {
             <textarea
               {...register("message")}
               placeholder="Send us a Message"
-              className="border p-2 w-full rounded-3xl"
+              className="border p-2 w-full rounded-xl min-h-16"
               required
             />
             <Button color="success" radius="full" type="submit" className="w-full mt-4  text-white p-2">
@@ -46,16 +51,16 @@ const ContactStart = (props: Props) => {
 
         <div className="md:col-span-2 h-auto min-h-full p-4 md:p-16 ">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4">
 
           <div> 
             <div className={`${bebas.className} text-4xl block`}>Our Office Location</div>
-            <div className="text-sm block">178 Otswe Street, Osu, Accra - Ghana</div>
+            <div className=" block">178 Otswe Street, Osu, Accra - Ghana</div>
           </div>
 
           <div>
             <div className={`${bebas.className} text-4xl block`}>Contact Details</div>
-            <div className="text-sm block">Email: info@astar-trade.com | Phone: (+233) 00000000</div>
+            <div className=" block">Email: info@astar-trade.com <br /> Phone: (+233) 26 917 3378</div>
           </div>
 
         </div>

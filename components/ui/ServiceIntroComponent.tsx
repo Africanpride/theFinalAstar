@@ -15,7 +15,7 @@ const ServiceIntroComponent: React.FC<ServiceIntroComponentProps> = ({
 }) => {
   return (
     <div
-      className='rounded-3xl bg-neutral-100 hover:bg-lime-300/30 p-4 md:p-8 md:aspect-video flex flex-col justify-center items-start border border-neutral-300 space-y-2 relative'
+      className='rounded-3xl bg-neutral-100 hover:bg-lime-300/30 p-4 md:p-8 aspect-square md:aspect-video flex flex-col justify-center items-start border border-neutral-300 space-y-2 relative'
       data-scroll
       data-scroll-speed={0.1}>
       <div className='w-full text-lg flex justify-between items-center'>

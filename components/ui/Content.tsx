@@ -5,6 +5,7 @@ import { siteConfig } from '../../config/site';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import Marquee from './marquee';
+import { bebas } from '@/config/fonts';
 
 
 
@@ -50,7 +51,7 @@ const Section2 = () => {
 
 const Nav = () => {
     return (
-        <div className='flex items-start shrink-0 gap-12 z-50 md:pt-[20dvh] text-neutral-300'>
+        <div className={`${bebas.className} flex items-start shrink-0 gap-12 z-50 md:pt-[20dvh] text-neutral-300`}>
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-2xl text-white'>About</h3>
                 <Link href={'/about'}>About Us</Link>
@@ -59,7 +60,7 @@ const Nav = () => {
                 <Link href={'/'}>Contact Us</Link>
             </div>
             <div className='flex flex-col'>
-                <h3 className='mb-2 uppercase text-2xl text-white'>Quick Links</h3>
+                <h3 className='mb-2 uppercase text-2xl text-white'>Disclaimers</h3>
                 <Link href={'/privacy'}>Privacy Policy</Link>
                 <Link href={'/cookies'}>Cookie Policy</Link>
                 <Link href={'/terms'}>Terms & Conditions</Link>

@@ -54,7 +54,7 @@ const Start = ({ title, order = 1, children }: Props) => {
           partner in commodity trading
           </p>
           <div data-scroll data-scroll-speed={0.1} className="space-y-4">
-            <LucideMove3d className="text-lime-500 text-[2.9em]" />
+            {/* <LucideMove3d className="text-lime-500 text-[2.9em]" /> */}
             <div className="text-[3em] text-white">
               <p className="leading-[0.9em] ">
                 Access Our Strategic <br />
@@ -65,7 +65,7 @@ const Start = ({ title, order = 1, children }: Props) => {
           </div>
         </div>
       </div>
-      <div className={`bg-slate-800 col-span-1 md:col-span-2 min-h-dvh h-full flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
+      <div className={`bg-slate-800 col-span-1 md:col-span-2 min-h-dvh h-full hidden md:flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
         <div
           className={`${bebas.className} flex items-center justify-between w-full font-bebas`}
         >

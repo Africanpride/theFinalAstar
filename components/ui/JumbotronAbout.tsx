@@ -53,18 +53,17 @@ const JumbotronAbout = (props: Props) => {
   }, []);
   return (
     <section className='min-h-screen h-auto grid   p-5 gap-4'>
-      <div className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+      <div
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='flex items-end justify-between h-full '>
-            <div className='capitalize text-5xl text-gray-500 leading-[3rem] '>
-              A Quest For sustainable <br />
-              regional growth
+          <div className='md:flex items-end justify-between h-full space-y-2 '>
+            <div className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+              A Quest For sustainable regional growth
             </div>
 
             <div className='capitalize  text-gray-500 text-left text-xl leading-[1.2rem]'>
-              Our team brings decades of <br />
-              experience in commodities trading and <br />
-              investment management, with a <br /> special focus on the African
+              Our team brings decades of experience in commodities trading and
+              investment management, with a special focus on the African
               continent.
             </div>
           </div>
@@ -97,7 +96,7 @@ const JumbotronAbout = (props: Props) => {
           <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
             <div>
               <div
-                className='max-w-5xl text-3xl text-white  p-4 md:p-8'
+                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
                 data-scroll
                 data-scroll-speed={0.1}>
                 Founded on the belief that Africa’s future lies in its ability
@@ -110,7 +109,8 @@ const JumbotronAbout = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+      <div
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
         <div
           className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
         flex flex-col justify-end text-white p-4'>
@@ -123,18 +123,17 @@ const JumbotronAbout = (props: Props) => {
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           African trade <br /> expertise
         </div>
-        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='flex items-center justify-between h-full gap-x-8 '>
-            <div className='capitalize text-5xl text-gray-500 leading-[3rem] '>
-              Our <br />
-              Mission
-            </div>
+        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl  flex flex-col justify-center'>
+          <div className='space-y-2 '>
+            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+              Our Mission
+            </h1>
 
-            <div className='capitalize  text-gray-500 text-left text-xl leading-[1.2rem] md:p-8'>
+            <p className='capitalize  text-gray-500 text-left text-xl leading-[1.2rem]'>
               To drive Africa’s economic growth by enabling seamless commodity
               trading and fostering impactful investment opportunities across
               regional markets
-            </div>
+            </p>
           </div>
         </div>
       </div>
@@ -149,15 +148,14 @@ const JumbotronAbout = (props: Props) => {
             quality={100}
           />
           <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
-            <div>
-              <div
-                className='max-w-5xl text-3xl text-white  p-4 md:p-8'
+            <div
+                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
                 data-scroll
                 data-scroll-speed={0.1}>
                 Our Vision is a united Africa where regional trade flows
                 seamlessly, fostering mutual growth and long-term prosperity
               </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -169,10 +167,11 @@ const JumbotronAbout = (props: Props) => {
           <div className='max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto'>
             {/* Title */}
             <div className='max-w-3xl mb-10 lg:mb-14'>
-              <h2 className={`${bebas.className}  font-semibold text-2xl md:text-4xl md:leading-tight`}>
+              <h2
+                className={`${bebas.className}  font-semibold text-2xl md:text-4xl md:leading-tight`}>
                 Partnerships
               </h2>
-              <p className='mt-1 text-neutral-400'>
+              <p className='mt-1 text-neutral-600'>
                 ASTAR LLC works closely with businesses, governments, and
                 private investors to create mutually beneficial partnerships
                 that foster regional trade and growth. If you’re interested in
@@ -192,9 +191,10 @@ const JumbotronAbout = (props: Props) => {
                 />
               </div>
 
-              <div>
+              <div className='text-neutral-600'>
                 <div className='mb-4'>
-                  <h2 className={`${bebas.className} font-semibold text-2xl md:text-4xl md:leading-tight`}>
+                  <h2
+                    className={`${bebas.className} font-semibold text-2xl md:text-4xl md:leading-tight`}>
                     Our Core Values
                   </h2>
                 </div>
@@ -208,8 +208,8 @@ const JumbotronAbout = (props: Props) => {
                     </div>
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
-                    <p className='text-sm lg:text-base text-neutral-400'>
-                      <span className=''>Integrity:</span>
+                    <p className='text-sm lg:text-base text-neutral-600'>
+                      <span className='font-bold text-black pr-3'>Integrity:</span> <br />
                       We believe in transparency and ethical practices in every
                       transaction.
                     </p>
@@ -225,8 +225,8 @@ const JumbotronAbout = (props: Props) => {
                     </div>
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
-                    <p className='text-sm lg:text-base text-neutral-400'>
-                      <span className=''>Sustainability:</span>
+                    <p className='text-sm lg:text-base text-neutral-600'>
+                      <span className='font-bold text-black pr-3'>Sustainability:</span> <br />
                       We prioritize sustainable investments that benefit
                       communities and the environment.
                     </p>
@@ -242,8 +242,8 @@ const JumbotronAbout = (props: Props) => {
                     </div>
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
-                    <p className='text-sm md:text-base text-neutral-400'>
-                      <span className=''>Collaboration:</span>
+                    <p className='text-sm md:text-base text-neutral-600'>
+                      <span className='font-bold text-black pr-3'>Collaboration:</span> <br />
                       We are stronger together and believe in the power of
                       partnerships to drive progress.
                     </p>
@@ -259,8 +259,8 @@ const JumbotronAbout = (props: Props) => {
                     </div>
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
-                    <p className='text-sm md:text-base text-neutral-400'>
-                      <span className=''>Innovation</span>
+                    <p className='text-sm md:text-base text-neutral-600'>
+                      <span className='font-bold text-black pr-3'>Innovation</span> <br />
                       We embrace forward-thinking solutions to stay ahead in the
                       ever-evolving market.
                     </p>

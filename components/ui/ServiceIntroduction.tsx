@@ -62,9 +62,7 @@ const Start = ({ title, order = 1, children }: Props) => {
             sustainable growth, and offer end-to-end support for reliable,
             impactful partnerships in emerging markets.
           </p>
-          <div className='space-y-4 py-14'>
-            {/* <LucideMove3d className='text-lime-500 text-[2.9em]' /> */}
-          </div>
+
         </div>
       </div>
 
