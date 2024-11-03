@@ -56,7 +56,6 @@ const Nav = () => {
                 <h3 className='mb-2 uppercase text-2xl text-white'>About</h3>
                 <Link href={'/about'}>About Us</Link>
                 <Link href={'/'}>Projects</Link>
-                <Link href={'/'}>Our Mission</Link>
                 <Link href={'/'}>Contact Us</Link>
             </div>
             <div className='flex flex-col'>
