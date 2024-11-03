@@ -14,7 +14,7 @@ interface BlogCardProps {
 const BlogCard: React.FC<BlogCardProps> = ({ imageSrc, imageAlt, title, description, avatarSrc = '/images/logo.png', author = 'By Astar Team' }) => {
   return (
     <Link
-      className='group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-3 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40 dark:focus:border-transparent dark:focus:shadow-black/40'
+      className=' bg-white group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-3 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40 dark:focus:border-transparent dark:focus:shadow-black/40'
       href='#'>
       <div className='aspect-w-16 aspect-h-11'>
         <Image

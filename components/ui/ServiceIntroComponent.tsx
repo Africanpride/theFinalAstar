@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { LucideArrowUpRight } from 'lucide-react';
+import { lato, montserrat, poppins } from '@/config/fonts';
 
 type ServiceIntroComponentProps = {
   title: string;
@@ -26,7 +27,7 @@ const ServiceIntroComponent: React.FC<ServiceIntroComponentProps> = ({
           </Link>
         </div>
       </div>
-      <div className={`text-[1.1rem] leading-[1rem] font-light uppercase`}>
+      <div className={`${poppins.className} font-light line-clamp-3  `}>
         {description}
       </div>
       <div>

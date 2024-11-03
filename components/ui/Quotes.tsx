@@ -14,10 +14,10 @@ const Quote: React.FC<Props> = ({
 }) => {
   return (
     <div className='bg-neutral-200 mb-8  ' data-scroll data-scroll-speed={0.1}>
-      <div className='max-w-7xl px-4 lg:px-8 py-12 lg:py-24 mx-auto '>
-        <blockquote className='max-w-5xl mx-auto min-h-dvh h-auto flex flex-col justify-center items-start'>
+      <div className='max-w-7xl px-4 lg:px-8 py-16 lg:py-32 mx-auto '>
+        <blockquote className='max-w-5xl mx-auto  h-auto flex flex-col justify-center items-start'>
           <p className='mb-6 md:text-lg'>
-            <span className='font-semibold text-lime-600'>{name},</span>{' '}
+            <span className=' text-lime-600'>{name},</span>{' '}
             <span className='text-neutral-500'>{title}</span>
           </p>
 

@@ -12,7 +12,7 @@ import {
   Minus,
   Plus,
 } from 'lucide-react';
-import { bebas, playfair_display } from '@/config/fonts';
+import { bebas, montserrat, playfair_display, poppins } from '@/config/fonts';
 import { title } from 'process';
 import BackgroundImageWrapper from '../BackgroundImageWrapper';
 import MainMenu from './Menu';
@@ -57,39 +57,40 @@ const ServiceJumbotron = (props: Props) => {
         className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-            <div className=' text-left capitalize text-3xl md:text-4xl leading-[1.8rem] max-w-md  md:leading-[2rem] '>
+            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
               Commodity Trading
-            </div>
+            </h1>
 
-            <div className='capitalize  text-gray-500 text-left text-xl leading-[1.2rem]'>
+            <p
+              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
               ASTAR LLC specializes in the trade of essential commodities within
               Africa’s booming markets. From agriculture to minerals, we connect
               sellers and buyers, ensuring smooth transactions and reliable
               supply chains.
-            </div>
+            </p>
           </div>
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-black rounded-2xl text-lg leading-[1.12rem]
+          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-end text-white p-4 space-y-2'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <div className='text-lime-500'>
-            Sectors of <br /> Operation
-          </div>
-          <p>
+          <h1 className='text-lime-500'>
+            Sectors of Operation
+          </h1>
+          <p className={`${poppins.className} text-sm`}>
             We focus on high-growth sectors, including energy, agriculture,
             infrastructure, and technology, offering investors unique
             opportunities for meaningful returns.
           </p>
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-lg leading-[1.12rem]
+          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-end text-black p-4 space-y-2'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <div className='text-white'>
-            Our <br /> Approach
-          </div>
-          <p>
+          <h1>
+            Our Approach
+          </h1>
+          <p className={`${poppins.className} text-sm text-white`}>
             We combine data-driven insights with on-the-ground knowledge to help
             investors navigate Africa’s emerging markets and make informed
             investment decisions.
@@ -97,7 +98,7 @@ const ServiceJumbotron = (props: Props) => {
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video  md:p-2 '>
+      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/services4.jpg'
@@ -128,27 +129,22 @@ const ServiceJumbotron = (props: Props) => {
         className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
         <div
           className='col-span-2   aspect-auto relative bg-black rounded-2xl text-xl leading-tight
-        flex flex-col justify-end text-white p-4 space-y-2'>
+        flex flex-col justify-end text-white p-4 md:p-8 space-y-2'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <div className='text-lime-500'>End-To-End Facilitation</div>
-          <p>
+          <h1 className='text-lime-600 text-5xl leadig-[2.9rem] '>
+            End-To-End Facilitation
+          </h1>
+          <p className={`${poppins.className} text-base  `}>
             We offer end-to-end trade facilitation services, including market
-            access support, regulatory guidance, and logistics management.
+            access support, regulatory guidance, and logistics management. With
+            our support, businesses can overcome international trade barriers,
+            stay compliant with complex regulations, and leverage the best
+            logistics solutions to maximize operational efficiency. Trust us to
+            be your partner in achieving seamless, successful trade operations
+            from start to finish.
           </p>
         </div>
-        {/* <div
-          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-lg leading-[1.12rem]
-        flex flex-col justify-end text-black p-4 space-y-2'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <div className='text-white'>
-            Our <br /> Approach
-          </div>
-          <p>
-            We combine data-driven insights with on-the-ground knowledge to help
-            investors navigate Africa’s emerging markets and make informed
-            investment decisions.
-          </p>
-        </div> */}
+       
 
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
@@ -156,17 +152,18 @@ const ServiceJumbotron = (props: Props) => {
               Intra-African Trade <br /> Facilitation
             </div>
 
-            <div className='capitalize  text-gray-500 text-left text-xl leading-[1.2rem]'>
+            <p
+              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
               African markets are full of untapped potential, but navigating
               regional trade regulations, logistics, and supply chains can be
               complex. ASTAR LLC simplifies this process, helping businesses and
               investors unlock the power of Africa's intra-regional trade.
-            </div>
+            </p>
           </div>
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video  md:p-2 '>
+      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/services3.jpg'
@@ -193,15 +190,16 @@ const ServiceJumbotron = (props: Props) => {
         </div>
       </div>
 
-      <div className='container grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
         <div
-          className={`${bebas.className} col-span-1 md:col-span-1   aspect-auto relative bg-black text-white  rounded-2xl text-lg leading-[1.12rem]
-        flex flex-col justify-end  p-4 space-y-3`}>
+          className={`${bebas.className} col-span-1    aspect-video relative bg-black text-white  rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-end  p-4 md:p-8 space-y-3`}>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <div className='text-lime-600 text-5xl leadig-[2.9rem] '>
+          <h1 className='text-lime-600 text-5xl leadig-[2.9rem] '>
             Real Estate <br /> Services
-          </div>
-          <p>
+          </h1>
+          <p
+            className={`${poppins.className} capitalize  text-white text-left text-base`}>
             We specialize in real estate services that cater to diasporas
             looking to invest in their homeland. Our offerings cover everything
             from land acquisition to home purchasing. We provide land searches,
@@ -244,8 +242,6 @@ const ServiceJumbotron = (props: Props) => {
           </div>
         </div>
       </div>
-
-      
     </section>
   );
 };

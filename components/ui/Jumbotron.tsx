@@ -9,13 +9,13 @@ type Props = {};
 
 const Jumbotron = (props: Props) => {
   return (
-    <section className={`${bebas.className} container mx-auto min-h-dvh h-auto py-16  rounded-2xl `}>
+    <section className={`${bebas.className} container mx-auto  h-auto py-8  rounded-2xl `}>
       <div className='flex flex-col justify-between h-auto '>
         <div>
           <>
             {/* Hero */}
             <div className="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
-              <div className='max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10'>
+              <div className='max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10'>
                 {/* Announcement Banner */}
                 <div className='flex justify-center'></div>
                 {/* End Announcement Banner */}
@@ -23,7 +23,7 @@ const Jumbotron = (props: Props) => {
                 {/* Title */}
                 <div className='mt-5 max-w-5xl text-center mx-auto'>
                   <h1
-                    className={`${bebas.className} block  text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-neutral-100`}
+                    className={`${bebas.className} block  text-gray-800 text-3xl md:text-5xl lg:text-5xl dark:text-neutral-100`}
                     data-scroll
                     data-scroll-speed={0.0}>
                     At ASTAR LLC, we believe in Africa’s vast potential and are

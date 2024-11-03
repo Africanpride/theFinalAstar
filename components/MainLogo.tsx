@@ -28,6 +28,7 @@ const MainLogo = (props: Props) => {
         style={{
           width: '100%',
           height: 'auto',
+          mixBlendMode: 'color-burn'
         }}
         className='pr-2 rounded-full'
       />

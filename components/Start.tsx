@@ -65,7 +65,7 @@ const Start = ({ title, order = 1, children }: Props) => {
           </div>
         </div>
       </div>
-      <div className={`bg-slate-800 col-span-1 md:col-span-2 min-h-dvh h-full hidden md:flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
+      <div className={`bg-neutral-100 col-span-1 md:col-span-2 min-h-dvh h-full hidden md:flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
         <div
           className={`${bebas.className} flex items-center justify-between w-full font-bebas`}
         >
@@ -85,7 +85,7 @@ const Start = ({ title, order = 1, children }: Props) => {
             style={{ width: "auto", height: "auto" }}
           />
           <div
-            className="text-[3vw] leading-[0.9em] text-white text-center"
+            className="text-[3vw] leading-[0.9em] text-lime-800 text-center"
             data-scroll
             data-scroll-speed={0.3}
           >

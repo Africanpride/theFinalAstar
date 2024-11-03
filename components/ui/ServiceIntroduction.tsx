@@ -1,4 +1,4 @@
-import { bebas, inter, playfair_display } from '@/config/fonts';
+import { bebas, inter, montserrat, playfair_display, poppins } from '@/config/fonts';
 import { LucideMoveDown, LucideMove3d, LucideArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
@@ -47,16 +47,14 @@ const Start = ({ title, order = 1, children }: Props) => {
   }, []);
   return (
     <section
-      className={`${bebas.className} min-h-screen h-auto grid grid-cols-1 md:grid-cols-3`}>
-      <div className={` md:aspect-square relative p-4 md:p-6 `}>
-        {/* <BackgroundImageWrapper backgroundImage='/images/farmer3.jpg' /> */}
-
-        <div className=' relative h-full flex flex-col justify-start space-y-3 items-start z-10'>
-          <p className='text-lime-500 text-[3em] leading-[0.9em] '>
+      className={`${bebas.className} min-h-screen h-auto grid grid-cols-1 `}>
+      <div className={`  relative p-4 md:p-6 space-y-6 `}>
+        <div className=' relative h-auto flex flex-col justify-start space-y-3 md:px-2 items-start z-10'>
+          <h1 className='text-lime-500 text-[3em] leading-[0.9em] '>
             Our Services &#x2014;
-          </p>
+          </h1>
 
-          <p className='text-xl text-lime-900 leading-[1.25rem] '>
+          <p className={`${poppins.className} text-lg  max-w-4xl `}>
             ASTAR LLC connects buyers, sellers, and investors across Africa in
             agriculture, minerals, and energy. We simplify trade, foster
             sustainable growth, and offer end-to-end support for reliable,
@@ -64,10 +62,8 @@ const Start = ({ title, order = 1, children }: Props) => {
           </p>
 
         </div>
-      </div>
 
-      <div
-        className={` col-span-1 md:col-span-2  h-auto grid grid-cols-1 md:grid-cols-2 gap-2 p-4 md:p-6 relative `}>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         <ServiceIntroComponent
           title='Agriculture'
           description='We trade high-quality agricultural products, fostering sustainable farming practices and supporting local economies. Products such as Soya Beans, Shea Butter, Cashew, Palm Oil, Maize, Rice etc'
@@ -82,20 +78,9 @@ const Start = ({ title, order = 1, children }: Props) => {
           url='/services'
           description={`Involved in the regional trade of key energy products, contributing to Africa's energy security. Green Energy or Solar Wind, Hydro Power etc.`}
         />
-        <ServiceIntroComponent
-          title='Real Estate'
-          url='/services'
-          description={`We specialize in real estate services that cater to diasporas looking to invest in their 
-                homeland. Our offerings cover everything from land acquisition to home purchasing. `}
-        />
-        <ServiceIntroComponent
-          title='Africa Diaspora 126+'
-          url='/services'
-          description={`AAHA is dedicated to helping individuals pursue opportunities abroad, whether for 
-                work, education, or specialized training. Our primary focus is on providing assistance 
-                to those aiming to travel to the UK, US, or Canada `}
-        />
+        </div>
       </div>
+
     </section>
   );
 };

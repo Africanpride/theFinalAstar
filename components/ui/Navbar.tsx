@@ -6,7 +6,6 @@ import {
   NavbarMenuToggle,
   NavbarBrand,
   NavbarItem,
-  NavbarMenuItem,
 } from '@nextui-org/navbar';
 import { Button } from '@nextui-org/button';
 import { Kbd } from '@nextui-org/kbd';
@@ -17,29 +16,31 @@ import NextLink from 'next/link';
 import clsx from 'clsx';
 
 import { siteConfig } from '@/config/site';
-import { ThemeSwitch } from '@/components/ui/theme-switch';
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
 } from 'react-icons/fa6';
 
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from '@/components/ui/icons';
 import { motion } from 'framer-motion';
-import { bebas, playfair_display } from '@/config/fonts';
-import { LucideArrowUpRight, LucideScanFace } from 'lucide-react';
+import { bebas } from '@/config/fonts';
+import {
+  LucideActivity,
+  LucideArrowUpRight,
+  LucideChevronDown,
+  LucideGlobe,
+  SearchIcon,
+} from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import MainLogo from '../MainLogo';
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from '@nextui-org/react';
 
 export const Navbar = () => {
   // media query for mobile etc
@@ -78,7 +79,8 @@ export const Navbar = () => {
   const isDarkMode = useMediaQuery({ query: '(prefers-color-scheme: dark)' });
 
   return (
-    <NextUINavbar maxWidth="full"
+    <NextUINavbar
+      maxWidth='full'
       className={`navbar ${isMenuOpen ? 'menu-open' : ''} md:py-2`}
       style={{ maxWidth: 'full' }}>
       <NavbarContent justify='start' className='md:!px-0'>
@@ -100,22 +102,65 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className={`${bebas.className} hidden sm:flex gap-x-4  px-16 rounded-full`}
+        className={`${bebas.className} hidden sm:flex gap-x-4 text-2xl  px-16 rounded-full`}
         justify='center'>
-        {siteConfig.navItems.map((item) => (
-          <NavbarItem key={item.href}>
-            <NextLink
-              className={clsx(linkStyles({ color: 'foreground' }), {
-                'data-[active=true]:text-primary data-[active=true]:font-medium hover:text-lime-600':
-                  true,
-                'text-lime-600': pathname === item.href, // Highlight active link
-              })}
-              color='foreground'
-              href={item.href}>
-              {item.label}
-            </NextLink>
-          </NavbarItem>
-        ))}
+        {siteConfig.navItems.map((item) =>
+          item.label === 'Partners' ? (
+            <Dropdown key={item.href}>
+              <NavbarItem>
+                <DropdownTrigger>
+                  <Button
+                    disableRipple
+                    className='p-0 bg-transparent data-[hover=true]:bg-transparent'
+                    radius='none'
+                    variant='light'>
+                    <span className='flex items-center gap-x-1'>
+                      {' '}
+                      {item.label} <LucideChevronDown className='text-xs' />
+                    </span>
+                  </Button>
+                </DropdownTrigger>
+              </NavbarItem>
+              <DropdownMenu
+                aria-label='Astar Partners'
+                className='w-[340px]'
+                itemClasses={{
+                  base: 'gap-4',
+                }}>
+                <DropdownItem
+                  key='african_diaspora_126+'
+                  description='This is a non-profit organization focused on supporting the African diaspora. '
+                  startContent={<LucideGlobe />}>
+                  <span className={`${bebas.className} text-lg`}>
+                    {' '}
+                    Africa Diaspora 126+
+                  </span>
+                </DropdownItem>
+                <DropdownItem
+                  key='access_africa_home&abroad_(AAHA)'
+                  description='Real-time metrics to debug issues. Slow query added? We’ll show you exactly where.'
+                  startContent={<LucideActivity />}>
+                  <span className={`${bebas.className} text-lg`}>
+                    Access Africa Home & Abroad (AAHA)
+                  </span>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          ) : (
+            <NavbarItem key={item.href}>
+              <NextLink
+                className={clsx(linkStyles({ color: 'foreground' }), {
+                  'data-[active=true]:text-primary data-[active=true]:font-medium hover:text-lime-600':
+                    true,
+                  'text-lime-600': pathname === item.href, // Highlight active link
+                })}
+                color='foreground'
+                href={item.href}>
+                {item.label}
+              </NextLink>
+            </NavbarItem>
+          )
+        )}
 
         <NavbarItem>
           <div className='border-s  px-5 hidden md:flex items-center gap-x-4 '>
@@ -176,26 +221,76 @@ export const Navbar = () => {
                 },
               },
             }}
-            className='space-y-2 font-poppins font-extrabold uppercase italic '>
-            {siteConfig.navItems.map((item, index) => (
-              <motion.li
-                key={`${item}-${index}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}>
-                <Link
-                  onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
-                  className={clsx(linkStyles({ color: 'foreground' }), {
-                    'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-600 text-lg':
-                      true,
-                    'text-lime-600': pathname === item.href,
-                  })}
-                  color='foreground'
-                  href={item.href}>
-                  {item.label}
-                </Link>
-              </motion.li>
-            ))}
+            className='space-y-2 font-poppins font-extrabold uppercase italic'>
+            {siteConfig.navItems.map((item, index) =>
+              item.label === 'Partners' ? (
+                <Dropdown key={`${item}-${index}`}>
+                  <DropdownTrigger>
+                    <Button
+                      disableRipple
+                      className='p-0 bg-transparent data-[hover=true]:bg-transparent'
+                      radius='none'
+                      variant='light'>
+                      <Link
+                        onClick={() => setIsMenuOpen(false)}
+                        className={clsx(linkStyles({ color: 'foreground' }), {
+                          'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-600 text-lg':
+                            true,
+                          'text-lime-600': pathname === item.href,
+                        })}
+                        color='foreground'
+                        href={item.href}>
+                        <span className='space-y-2 font-poppins font-extrabold uppercase italic'>
+                          {item.label}
+                        </span>
+                      </Link>
+                    </Button>
+                  </DropdownTrigger>
+                  <DropdownMenu
+                    aria-label='ACME features'
+                    className='w-[340px]'
+                    itemClasses={{
+                      base: 'gap-4',
+                    }}>
+                    <DropdownItem
+                      key='african_diaspora_126+'
+                      description='This is a non-profit organization focused on supporting the African diaspora. '
+                      startContent={<LucideGlobe />}>
+                      <span className={`${bebas.className} text-lg`}>
+                        {' '}
+                        Africa Diaspora 126+
+                      </span>
+                    </DropdownItem>
+                    <DropdownItem
+                      key='access_africa_home&abroad_(AAHA)'
+                      description='Real-time metrics to debug issues. Slow query added? We’ll show you exactly where.'
+                      startContent={<LucideActivity />}>
+                      <span className={`${bebas.className} text-lg`}>
+                        Access Africa Home & Abroad (AAHA)
+                      </span>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+              ) : (
+                <motion.li
+                  key={`${item}-${index}`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}>
+                  <Link
+                    onClick={() => setIsMenuOpen(false)}
+                    className={clsx(linkStyles({ color: 'foreground' }), {
+                      'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-600 text-lg':
+                        true,
+                      'text-lime-600': pathname === item.href,
+                    })}
+                    color='foreground'
+                    href={item.href}>
+                    {item.label}
+                  </Link>
+                </motion.li>
+              )
+            )}
           </motion.ul>
         </div>
       </NavbarMenu>

@@ -1,7 +1,11 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-import { bebas, inter } from "@/config/fonts";
+import { poppins } from "@/config/fonts";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+
 
 import { Providers } from "./providers";
 
@@ -37,8 +41,8 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background  antialiased  bg-slate-100",
-          inter.className
+          "min-h-screen  antialiased  bg-neutral-200/65",
+          poppins.className
         )}
         
       >
@@ -47,6 +51,9 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <Analytics />
+            <SpeedInsights />
+
           </main>
         </Providers>
       </body>

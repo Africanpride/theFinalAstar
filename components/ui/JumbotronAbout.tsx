@@ -12,7 +12,7 @@ import {
   Minus,
   Plus,
 } from 'lucide-react';
-import { bebas, playfair_display } from '@/config/fonts';
+import { bebas, playfair_display, poppins } from '@/config/fonts';
 import { title } from 'process';
 import BackgroundImageWrapper from '../BackgroundImageWrapper';
 import MainMenu from './Menu';
@@ -56,16 +56,16 @@ const JumbotronAbout = (props: Props) => {
       <div
         className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='md:flex items-end justify-between h-full space-y-2 '>
-            <div className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
-              A Quest For sustainable regional growth
-            </div>
+          <div className='md:flex flex-col justify-center h-full space-y-2 '>
+            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+              A Quest For sustainable <br /> regional growth
+            </h1>
 
-            <div className='capitalize  text-gray-500 text-left text-xl leading-[1.2rem]'>
+            <p className={`${poppins.className} capitalize  text-gray-500 text-left text-lg`}>
               Our team brings decades of experience in commodities trading and
               investment management, with a special focus on the African
               continent.
-            </div>
+            </p>
           </div>
         </div>
         <div
@@ -83,7 +83,7 @@ const JumbotronAbout = (props: Props) => {
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video  md:p-2 '>
+      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/mission.jpg'
@@ -129,7 +129,7 @@ const JumbotronAbout = (props: Props) => {
               Our Mission
             </h1>
 
-            <p className='capitalize  text-gray-500 text-left text-xl leading-[1.2rem]'>
+            <p className={`${poppins.className} capitalize  text-gray-500 text-left text-lg`}>
               To drive Africa’s economic growth by enabling seamless commodity
               trading and fostering impactful investment opportunities across
               regional markets
@@ -137,7 +137,7 @@ const JumbotronAbout = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className='container mx-auto grid grid-cols-1 bg-white rounded-2xl aspect-square md:aspect-video  md:p-2 '>
+      <div className='container mx-auto grid grid-cols-1 bg-white rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/vision.jpg'
@@ -191,7 +191,7 @@ const JumbotronAbout = (props: Props) => {
                 />
               </div>
 
-              <div className='text-neutral-600'>
+              <div className='text-black'>
                 <div className='mb-4'>
                   <h2
                     className={`${bebas.className} font-semibold text-2xl md:text-4xl md:leading-tight`}>
@@ -209,7 +209,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
                     <p className='text-sm lg:text-base text-neutral-600'>
-                      <span className='font-bold text-black pr-3'>Integrity:</span> <br />
+                      <span className={`${bebas.className} font-bold text-black pr-3 text-xl`}>Integrity:</span> <br />
                       We believe in transparency and ethical practices in every
                       transaction.
                     </p>
@@ -226,7 +226,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
                     <p className='text-sm lg:text-base text-neutral-600'>
-                      <span className='font-bold text-black pr-3'>Sustainability:</span> <br />
+                      <span className={`${bebas.className} font-bold text-black pr-3 text-xl`}>Sustainability:</span> <br />
                       We prioritize sustainable investments that benefit
                       communities and the environment.
                     </p>
@@ -243,7 +243,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
                     <p className='text-sm md:text-base text-neutral-600'>
-                      <span className='font-bold text-black pr-3'>Collaboration:</span> <br />
+                      <span className={`${bebas.className} font-bold text-black pr-3 text-xl`}>Collaboration:</span> <br />
                       We are stronger together and believe in the power of
                       partnerships to drive progress.
                     </p>
@@ -260,7 +260,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pt-0.5 pb-8 sm:pb-12'>
                     <p className='text-sm md:text-base text-neutral-600'>
-                      <span className='font-bold text-black pr-3'>Innovation</span> <br />
+                      <span className={`${bebas.className} font-bold text-black pr-3 text-xl`}>Innovation</span> <br />
                       We embrace forward-thinking solutions to stay ahead in the
                       ever-evolving market.
                     </p>
