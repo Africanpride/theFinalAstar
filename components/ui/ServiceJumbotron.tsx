@@ -190,58 +190,7 @@ const ServiceJumbotron = (props: Props) => {
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
-        <div
-          className={`${bebas.className} col-span-1    aspect-video relative bg-black text-white  rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end  p-4 md:p-8 space-y-3`}>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1 className='text-lime-600 text-5xl leadig-[2.9rem] '>
-            Real Estate <br /> Services
-          </h1>
-          <p
-            className={`${poppins.className} capitalize  text-white text-left text-base`}>
-            We specialize in real estate services that cater to diasporas
-            looking to invest in their homeland. Our offerings cover everything
-            from land acquisition to home purchasing. We provide land searches,
-            arrange professional surveyors, facilitate land purchases, and
-            connect clients with reputable architects and contractors to build
-            their dream homes.
-            <br />
-            <br />
-            Whether you’re interested in constructing a new property from the
-            ground up or buying a pre-built home, our commitment is to guide you
-            through each stage, making the process seamless and stress-free. Our
-            ultimate goal is to create long-term opportunities for individuals
-            and families within the diaspora to secure their future by
-            establishing real estate investments and reconnecting with their
-            roots
-          </p>
-        </div>
-        <div className='col-span-1 md:col-span-2 rounded-3xl flex flex-col justify-center relative'>
-          <Image
-            src='/images/real-estate2.jpg'
-            alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
-            className='absolute inset-0 z-10 rounded-2xl'
-            quality={100}
-          />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
-            <div>
-              {/* <div
-                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
-                data-scroll
-                data-scroll-speed={0.1}>
-                Founded on the belief that Africa’s future lies in its ability
-                to collaborate, trade, and invest within itself, ASTAR LLC was
-                created to promote sustainable regional growth. Our team brings
-                decades of experience in commodities trading and investment
-                management, with a special focus on the African continent.
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
+
     </section>
   );
 };

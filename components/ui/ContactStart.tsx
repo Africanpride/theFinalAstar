@@ -13,6 +13,7 @@ const ContactStart = (props: Props) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data: any) => {
+    console.log(data);
     try {
       const response = await fetch('/api/submit', {
         method: 'POST',
@@ -48,7 +49,7 @@ const ContactStart = (props: Props) => {
               {...register('message')}
               placeholder='Send us a Message'
               className='border p-2 w-full rounded-xl min-h-16'
-              required
+              
             />
             <Button
               color='success'

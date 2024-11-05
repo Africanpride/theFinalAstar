@@ -16,11 +16,7 @@ import NextLink from 'next/link';
 import clsx from 'clsx';
 
 import { siteConfig } from '@/config/site';
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedinIn,
-} from 'react-icons/fa6';
+import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 
 import { motion } from 'framer-motion';
 import { bebas } from '@/config/fonts';
@@ -29,6 +25,7 @@ import {
   LucideArrowUpRight,
   LucideChevronDown,
   LucideGlobe,
+  LucideHousePlus,
   SearchIcon,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
@@ -128,21 +125,34 @@ export const Navbar = () => {
                   base: 'gap-4',
                 }}>
                 <DropdownItem
+                  key='real_estate_services'
+                  description='We specialize in real estate services that cater to diasporas looking to invest in their homeland'
+                  startContent={<LucideHousePlus />}>
+                  <Link href='/real-estate'>
+                    <span className={`${bebas.className} text-lg`}>
+                      Real Estate Services
+                    </span>
+                  </Link>
+                </DropdownItem>
+                <DropdownItem
                   key='african_diaspora_126+'
                   description='This is a non-profit organization focused on supporting the African diaspora. '
                   startContent={<LucideGlobe />}>
-                  <span className={`${bebas.className} text-lg`}>
-                    {' '}
-                    Africa Diaspora 126+
-                  </span>
+                  <Link href='/african-diaspora-126-plus'>
+                    <span className={`${bebas.className} text-lg`}>
+                      Africa Diaspora 126+
+                    </span>
+                  </Link>
                 </DropdownItem>
                 <DropdownItem
                   key='access_africa_home&abroad_(AAHA)'
-                  description='Real-time metrics to debug issues. Slow query added? We’ll show you exactly where.'
+                  description='Helping individuals pursue opportunities abroad, whether for work, education, or specialized training.'
                   startContent={<LucideActivity />}>
-                  <span className={`${bebas.className} text-lg`}>
-                    Access Africa Home & Abroad (AAHA)
-                  </span>
+                  <Link href='/aaha'>
+                    <span className={`${bebas.className} text-lg`}>
+                      Access Africa Home & Abroad (AAHA)
+                    </span>
+                  </Link>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
@@ -253,21 +263,34 @@ export const Navbar = () => {
                       base: 'gap-4',
                     }}>
                     <DropdownItem
+                      key='real_estate_services'
+                      description='We specialize in real estate services that cater to diasporas looking to invest in their homeland'
+                      startContent={<LucideHousePlus />}>
+                      <Link href='/real-estate'>
+                        <span className={`${bebas.className} text-lg`}>
+                          Real Estate Services
+                        </span>
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem
                       key='african_diaspora_126+'
                       description='This is a non-profit organization focused on supporting the African diaspora. '
                       startContent={<LucideGlobe />}>
-                      <span className={`${bebas.className} text-lg`}>
-                        {' '}
-                        Africa Diaspora 126+
-                      </span>
+                      <Link href='/african-diaspora-126-plus'>
+                        <span className={`${bebas.className} text-lg`}>
+                          Africa Diaspora 126+
+                        </span>
+                      </Link>
                     </DropdownItem>
                     <DropdownItem
                       key='access_africa_home&abroad_(AAHA)'
-                      description='Real-time metrics to debug issues. Slow query added? We’ll show you exactly where.'
+                      description='Helping individuals pursue opportunities abroad, whether for work, education, or specialized training.'
                       startContent={<LucideActivity />}>
-                      <span className={`${bebas.className} text-lg`}>
-                        Access Africa Home & Abroad (AAHA)
-                      </span>
+                      <Link href='/aaha'>
+                        <span className={`${bebas.className} text-lg`}>
+                          Access Africa Home & Abroad (AAHA)
+                        </span>
+                      </Link>
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
