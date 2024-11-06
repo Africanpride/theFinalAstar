@@ -26,9 +26,9 @@ export default function CallToAction() {
         <div className='bg-blue-600 p-8 md:p-12 lg:p-16 flex flex-col justify-center'>
           <div className='max-w-md'>
             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight ${bebas.className}`}>
-              An ecosystem to be part of.
+              Join a thriving network.
               <br />
-              Stay in the loop.
+              Stay connected to Growth and Oppportunity.
             </h2>
 
             <form className='space-y-8'>

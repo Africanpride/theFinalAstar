@@ -42,13 +42,23 @@ const PartnerJumbotron = (props: Props) => {
   return (
     <section className='min-h-screen h-auto grid   p-5 gap-4'>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
+        <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
+          <Image
+            src='/images/real-estate2.jpg'
+            alt='Vision Background'
+            layout='fill'
+            objectFit='cover'
+            className='absolute inset-0 z-10 rounded-2xl'
+            quality={100}
+          />
+        </div>
         <div
           id='real_estate_services'
-          className={`${bebas.className} col-span-1    aspect-video relative bg-black text-white  rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end  p-4 md:p-8 space-y-3`}>
+          className={`${bebas.className} col-span-2    aspect-video relative bg-black text-white  rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-center  p-4 md:p-8 space-y-3`}>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           <h1 className='text-lime-600 text-5xl leadig-[2.9rem] '>
-            Real Estate <br /> Services
+            Real Estate Services
           </h1>
           <p
             className={`${poppins.className} capitalize  text-white text-left text-base`}>
@@ -64,33 +74,9 @@ const PartnerJumbotron = (props: Props) => {
             variant='flat'
             as={Link}
             href='/real-estate'
-            className='text-white'>
+            className='text-white w-1/4 '>
             Read More ...
           </Button>
-        </div>
-        <div className='col-span-1 md:col-span-2 rounded-3xl flex flex-col justify-center relative'>
-          <Image
-            src='/images/real-estate2.jpg'
-            alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
-            className='absolute inset-0 z-10 rounded-2xl'
-            quality={100}
-          />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
-            <div>
-              {/* <div
-                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
-                data-scroll
-                data-scroll-speed={0.1}>
-                Founded on the belief that Africa’s future lies in its ability
-                to collaborate, trade, and invest within itself, ASTAR LLC was
-                created to promote sustainable regional growth. Our team brings
-                decades of experience in commodities trading and investment
-                management, with a special focus on the African continent.
-              </div> */}
-            </div>
-          </div>
         </div>
       </div>
 
@@ -147,10 +133,21 @@ const PartnerJumbotron = (props: Props) => {
       </div>
 
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
+      <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
+          <Image
+            src='/images/airport2.jpg'
+            alt='Vision Background'
+            layout='fill'
+            objectFit='cover'
+            className='absolute inset-0 z-10 rounded-2xl'
+            quality={100}
+          />
+
+        </div>
         <div
           id='real_estate_services'
-          className={`${bebas.className} col-span-1    aspect-video relative bg-blue-700 text-white  rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end  p-4 md:p-8 space-y-3`}>
+          className={`${bebas.className} col-span-2    aspect-video relative bg-blue-700 text-white  rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-center  p-4 md:p-8 space-y-3`}>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           <h1 className='text-blue-400 text-5xl leadig-[2.9rem] '>
             Access Africa Home & Abroad (AAHA):
@@ -164,34 +161,11 @@ const PartnerJumbotron = (props: Props) => {
             each destination.
             <br />
           </p>
-          <Button variant='flat' as={Link} href='/aaha' className='text-white'>
+          <Button variant='flat' as={Link} href='/aaha' className='text-white md:w-1/4'>
             Read More ...
           </Button>
         </div>
-        <div className='col-span-1 md:col-span-2 rounded-3xl flex flex-col justify-center relative'>
-          <Image
-            src='/images/airport2.jpg'
-            alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
-            className='absolute inset-0 z-10 rounded-2xl'
-            quality={100}
-          />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
-            <div>
-              {/* <div
-                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
-                data-scroll
-                data-scroll-speed={0.1}>
-                Founded on the belief that Africa’s future lies in its ability
-                to collaborate, trade, and invest within itself, ASTAR LLC was
-                created to promote sustainable regional growth. Our team brings
-                decades of experience in commodities trading and investment
-                management, with a special focus on the African continent.
-              </div> */}
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
