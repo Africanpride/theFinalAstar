@@ -240,7 +240,7 @@ const ContactStart = () => {
           </div>
 
           <div className='block pt-12'>
-            {/* <GoogleMap /> */}
+            <GoogleMap />
             {/* <OpenStreetMap /> */}
           </div>
         </div>
