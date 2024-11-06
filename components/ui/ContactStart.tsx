@@ -1,28 +1,186 @@
 'use client';
 import { bebas, poppins } from '@/config/fonts';
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useCallback, useEffect, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { Input } from '@nextui-org/input';
 import { Button } from '@nextui-org/button';
 import { GoogleMap } from './GoogleMap';
-import OpenStreetMap from './OpenStreetMap';
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
-type Props = {};
+import {
+  GoogleReCaptchaProvider,
+  GoogleReCaptcha,
+  useGoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
+import { LucideBadgeCheck } from 'lucide-react';
 
-const ContactStart = (props: Props) => {
-  const { register, handleSubmit } = useForm();
+interface InputsData {
+  name: string;
+  email: string;
+  company: string;
+  message: string;
+}
 
-  const onSubmit = async (data: any) => {
-    console.log(data);
+const ContactStart = () => {
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    reset,
+    formState: { errors },
+  } = useForm<InputsData>({
+    defaultValues: {
+      name: '',
+      email: '',
+      company: '',
+      message: '',
+    },
+  });
+  const [isVerified, setIsVerified] = useState<boolean>(false);
+  const [token, setToken] = useState<string>('');
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  const checkForToken = useCallback(async () => {
+    if (!token && executeRecaptcha) {
+      try {
+        const recaptchaToken = await executeRecaptcha('inquirySubmit');
+        if (recaptchaToken) {
+          // console.log("Token received from Google::::::::", recaptchaToken);
+          setToken(recaptchaToken); // Set the token in state
+          // verify token with handleCaptchaSubmission
+          handleCaptchaSubmission(recaptchaToken);
+        }
+      } catch (error) {
+        console.error('Error executing reCAPTCHA:', error);
+      }
+    } else {
+      // console.log("Token already present or executeRecaptcha not available");
+    }
+  }, [token, executeRecaptcha]);
+
+  // checkForToken();
+
+  // // Call the checkForToken function when the component mounts or when executeRecaptcha changes
+  useEffect(() => {
+    // console.log("EXECUTING USEEFECT...")
+    checkForToken();
+  }, [checkForToken]);
+
+  //   // verify token and then submit form
+  //   // const response = await handleCaptchaSubmission(recaptchaToken)
+  // }, [checkForToken]);
+
+  async function notifyAllParties(
+    firstName: string,
+    email: string,
+    gdueMemberId: string
+  ) {
     try {
-      const response = await fetch('/api/submit', {
+      const response = await fetch('/api/notification/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ firstName, email, gdueMemberId }),
       });
-      if (!response.ok) throw new Error('Network response was not ok');
+
+      if (response.ok) {
+        return;
+      } else {
+        console.error('Notification not sent successfully');
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('An error occurred while sending the notification:', error);
+    }
+  }
+
+  async function handleCaptchaSubmission(token: string | null) {
+    const response = axios
+      .post('/api/recaptchaVerification/', { token })
+      .then(function (response) {
+        if (response.status !== 200) {
+          toast.error('Verification failed ...');
+          return;
+        }
+
+        setIsVerified(true);
+      })
+      .catch(function (error) {
+        setIsVerified(false);
+        console.error('Verification failed:', error);
+      });
+  }
+
+  const onSubmit: SubmitHandler<InputsData> = async (
+    data: InputsData | undefined
+  ) => {
+    // Create a promise for the axios request
+    const myPromise = axios.post('/api/register/registrationForm/', data, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    // Use toast.promise to handle the toast notifications
+    toast.promise(
+      myPromise,
+      {
+        loading: 'Submitting your request...',
+        success: (response) => {
+          // Handle success response
+          const firstName = response.data.firstName;
+          const email = response.data.email;
+          const gdueMemberId = response.data.membershipNumber;
+
+          console.log('NOTIFYING ....', firstName, email, gdueMemberId);
+
+          const notify = notifyAllParties(firstName, email, gdueMemberId);
+
+          // Log the membershipNumber
+          // console.log('Membership Number:', membershipNumber);
+          // reset();
+          // window.location.reload();
+          return 'Membership Request Submitted!';
+        },
+        error: (err) => {
+          if (axios.isAxiosError(err)) {
+            if (err.response) {
+              // Handle specific status codes
+              if (err.response.status === 409) {
+                return 'User is already registered';
+              }
+              return 'Submission Error. Contact GDUE Office.';
+            } else {
+              return 'Submission Error. Contact GDUE Office.';
+            }
+          } else {
+            return 'An unexpected error occurred. Please try again later.';
+          }
+        },
+      },
+      {
+        style: {
+          minWidth: '250px',
+        },
+        success: {
+          duration: 18000,
+          icon: <LucideBadgeCheck color='limegreen' />,
+        },
+      }
+    );
+
+    try {
+      // Await the promise to ensure that errors are caught
+      await myPromise;
+      // wait a while and reload the page
+      setTimeout(() => {
+        window.location.reload();
+      }, 5000);
+      // window.location.reload();
+    } catch (error) {
+      // Additional error handling (if needed)
+      console.error('Submission failed:', error);
     }
   };
 
@@ -49,7 +207,6 @@ const ContactStart = (props: Props) => {
               {...register('message')}
               placeholder='Send us a Message'
               className='border p-2 w-full rounded-xl min-h-16'
-              
             />
             <Button
               color='success'
@@ -67,7 +224,9 @@ const ContactStart = (props: Props) => {
               <div className={`${bebas.className} text-3xl block`}>
                 Our Office Location
               </div>
-              <p className=' block'>178 Otswe Street, <br /> Osu, Accra - Ghana</p>
+              <p className=' block'>
+                178 Otswe Street, <br /> Osu, Accra - Ghana
+              </p>
             </div>
 
             <div>
@@ -81,7 +240,7 @@ const ContactStart = (props: Props) => {
           </div>
 
           <div className='block pt-12'>
-            <GoogleMap />
+            {/* <GoogleMap /> */}
             {/* <OpenStreetMap /> */}
           </div>
         </div>

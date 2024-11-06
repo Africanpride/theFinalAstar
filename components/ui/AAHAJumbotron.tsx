@@ -57,7 +57,7 @@ const AAHAJumbotron = (props: Props) => {
       <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
-            src='/images/airplane.jpg'
+            src='/images/airport2.jpg'
             alt='Vision Background'
             layout='fill'
             objectFit='cover'

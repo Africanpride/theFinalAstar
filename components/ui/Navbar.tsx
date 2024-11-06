@@ -101,76 +101,20 @@ export const Navbar = () => {
       <NavbarContent
         className={`${bebas.className} hidden sm:flex gap-x-4 text-2xl  px-16 rounded-full`}
         justify='center'>
-        {siteConfig.navItems.map((item) =>
-          item.label === 'Partners' ? (
-            <Dropdown key={item.href}>
-              <NavbarItem>
-                <DropdownTrigger>
-                  <Button
-                    disableRipple
-                    className='p-0 bg-transparent data-[hover=true]:bg-transparent'
-                    radius='none'
-                    variant='light'>
-                    <span className='flex items-center gap-x-1'>
-                      {' '}
-                      {item.label} <LucideChevronDown className='text-xs' />
-                    </span>
-                  </Button>
-                </DropdownTrigger>
-              </NavbarItem>
-              <DropdownMenu
-                aria-label='Astar Partners'
-                className='w-[340px]'
-                itemClasses={{
-                  base: 'gap-4',
-                }}>
-                <DropdownItem
-                  key='real_estate_services'
-                  description='We specialize in real estate services that cater to diasporas looking to invest in their homeland'
-                  startContent={<LucideHousePlus />}>
-                  <Link href='/real-estate'>
-                    <span className={`${bebas.className} text-lg`}>
-                      Real Estate Services
-                    </span>
-                  </Link>
-                </DropdownItem>
-                <DropdownItem
-                  key='african_diaspora_126+'
-                  description='This is a non-profit organization focused on supporting the African diaspora. '
-                  startContent={<LucideGlobe />}>
-                  <Link href='/african-diaspora-126-plus'>
-                    <span className={`${bebas.className} text-lg`}>
-                      Africa Diaspora 126+
-                    </span>
-                  </Link>
-                </DropdownItem>
-                <DropdownItem
-                  key='access_africa_home&abroad_(AAHA)'
-                  description='Helping individuals pursue opportunities abroad, whether for work, education, or specialized training.'
-                  startContent={<LucideActivity />}>
-                  <Link href='/aaha'>
-                    <span className={`${bebas.className} text-lg`}>
-                      Access Africa Home & Abroad (AAHA)
-                    </span>
-                  </Link>
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          ) : (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(linkStyles({ color: 'foreground' }), {
-                  'data-[active=true]:text-primary data-[active=true]:font-medium hover:text-lime-600':
-                    true,
-                  'text-lime-600': pathname === item.href, // Highlight active link
-                })}
-                color='foreground'
-                href={item.href}>
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          )
-        )}
+        {siteConfig.navItems.map((item) => (
+          <NavbarItem key={item.href}>
+            <NextLink
+              className={clsx(linkStyles({ color: 'foreground' }), {
+                'data-[active=true]:text-primary data-[active=true]:font-medium hover:text-lime-600':
+                  true,
+                'text-lime-600': pathname === item.href, // Highlight active link
+              })}
+              color='foreground'
+              href={item.href}>
+              {item.label}
+            </NextLink>
+          </NavbarItem>
+        ))}
 
         <NavbarItem>
           <div className='border-s  px-5 hidden md:flex items-center gap-x-4 '>
@@ -263,34 +207,34 @@ export const Navbar = () => {
                       base: 'gap-4',
                     }}>
                     <DropdownItem
-                      key='real_estate_services'
+                      // key='real_estate_services'
                       description='We specialize in real estate services that cater to diasporas looking to invest in their homeland'
                       startContent={<LucideHousePlus />}>
-                      <Link href='/real-estate'>
+                      <a href='/real-estate'>
                         <span className={`${bebas.className} text-lg`}>
                           Real Estate Services
                         </span>
-                      </Link>
+                      </a>
                     </DropdownItem>
                     <DropdownItem
                       key='african_diaspora_126+'
                       description='This is a non-profit organization focused on supporting the African diaspora. '
                       startContent={<LucideGlobe />}>
-                      <Link href='/african-diaspora-126-plus'>
+                      <a href='/african-diaspora-126-plus'>
                         <span className={`${bebas.className} text-lg`}>
                           Africa Diaspora 126+
                         </span>
-                      </Link>
+                      </a>
                     </DropdownItem>
                     <DropdownItem
                       key='access_africa_home&abroad_(AAHA)'
                       description='Helping individuals pursue opportunities abroad, whether for work, education, or specialized training.'
                       startContent={<LucideActivity />}>
-                      <Link href='/aaha'>
+                      <a href='/aaha'>
                         <span className={`${bebas.className} text-lg`}>
                           Access Africa Home & Abroad (AAHA)
                         </span>
-                      </Link>
+                      </a>
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>

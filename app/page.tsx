@@ -6,10 +6,12 @@ import Jumbotron from '@/components/ui/Jumbotron';
 import CallToAction from '@/components/ui/CallToAction';
 import ServiceIntroduction from '@/components/ui/ServiceIntroduction';
 import Quote from '@/components/ui/Quotes';
+import MainSlider from '@/components/ui/MainSlider';
 
 export default function Home() {
   return (
     <main className='  h-full'>
+      <MainSlider />
       <Start>
         <span>
           Unlocking Africa's Potential through
