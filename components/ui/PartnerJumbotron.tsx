@@ -42,6 +42,57 @@ const PartnerJumbotron = (props: Props) => {
   return (
     <section className='min-h-screen h-auto grid   p-5 gap-4'>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
+        <div
+          id='real_estate_services'
+          className={`${bebas.className} col-span-2    aspect-auto relative bg-lime-700 text-white  rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-end  p-4 md:p-8 space-y-3`}>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          <h1 className='text-lime-300 text-5xl leadig-[2.9rem] '>
+            Africa Diaspora 126+
+          </h1>
+          <p
+            className={`${poppins.className} capitalize  text-white text-left text-base`}>
+            A non-profit organization focused on supporting the African
+            diaspora. We advocate for the Right of Return, ensuring that people
+            of African descent have the opportunity to reconnect with their
+            heritage. Our work includes lobbying for policies that recognize and
+            facilitate the return of diasporas to their ancestral homes. 
+            <br />
+          </p>
+          <Button
+            variant='flat'
+            as={Link}
+            href='/african-diaspora-126-plus'
+            className='text-white md:w-1/4 '>
+            Read More ...
+          </Button>
+        </div>
+        <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
+          <Image
+            src='/images/aaha.jpg'
+            alt='Vision Background'
+            layout='fill'
+            objectFit='cover'
+            className='absolute inset-0 z-10 rounded-2xl'
+            quality={100}
+          />
+          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
+            <div>
+              {/* <div
+                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
+                data-scroll
+                data-scroll-speed={0.1}>
+                Founded on the belief that Africa’s future lies in its ability
+                to collaborate, trade, and invest within itself, ASTAR LLC was
+                created to promote sustainable regional growth. Our team brings
+                decades of experience in commodities trading and investment
+                management, with a special focus on the African continent.
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
         <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/real-estate2.jpg'
@@ -54,7 +105,7 @@ const PartnerJumbotron = (props: Props) => {
         </div>
         <div
           id='real_estate_services'
-          className={`${bebas.className} col-span-2    aspect-video relative bg-black text-white  rounded-2xl text-base leading-[1.12rem]
+          className={`${bebas.className} col-span-2    aspect-auto relative bg-black text-white  rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-center  p-4 md:p-8 space-y-3`}>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           <h1 className='text-lime-600 text-5xl leadig-[2.9rem] '>
@@ -81,59 +132,7 @@ const PartnerJumbotron = (props: Props) => {
       </div>
 
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
-        <div
-          id='real_estate_services'
-          className={`${bebas.className} col-span-1    aspect-video relative bg-lime-700 text-white  rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end  p-4 md:p-8 space-y-3`}>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1 className='text-lime-300 text-5xl leadig-[2.9rem] '>
-            Africa Diaspora 126+
-          </h1>
-          <p
-            className={`${poppins.className} capitalize  text-white text-left text-base`}>
-            This non-profit organization is dedicated to empowering and
-            uplifting the African diaspora. We champion the Right of Return,
-            aiming to ensure that individuals of African heritage have
-            meaningful opportunities to rediscover and reconnect with their
-            cultural roots.
-            <br />
-          </p>
-          <Button
-            variant='flat'
-            as={Link}
-            href='/african-diaspora-126-plus'
-            className='text-white'>
-            Read More ...
-          </Button>
-        </div>
-        <div className='col-span-1 md:col-span-2 rounded-3xl flex flex-col justify-center relative'>
-          <Image
-            src='/images/aaha.jpg'
-            alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
-            className='absolute inset-0 z-10 rounded-2xl'
-            quality={100}
-          />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
-            <div>
-              {/* <div
-                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
-                data-scroll
-                data-scroll-speed={0.1}>
-                Founded on the belief that Africa’s future lies in its ability
-                to collaborate, trade, and invest within itself, ASTAR LLC was
-                created to promote sustainable regional growth. Our team brings
-                decades of experience in commodities trading and investment
-                management, with a special focus on the African continent.
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
-      <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
+        <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/airport2.jpg'
             alt='Vision Background'
@@ -142,11 +141,10 @@ const PartnerJumbotron = (props: Props) => {
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
           />
-
         </div>
         <div
           id='real_estate_services'
-          className={`${bebas.className} col-span-2    aspect-video relative bg-blue-700 text-white  rounded-2xl text-base leading-[1.12rem]
+          className={`${bebas.className} col-span-2    aspect-auto relative bg-blue-700 text-white  rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-center  p-4 md:p-8 space-y-3`}>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           <h1 className='text-blue-400 text-5xl leadig-[2.9rem] '>
@@ -161,11 +159,14 @@ const PartnerJumbotron = (props: Props) => {
             each destination.
             <br />
           </p>
-          <Button variant='flat' as={Link} href='/aaha' className='text-white md:w-1/4'>
+          <Button
+            variant='flat'
+            as={Link}
+            href='/aaha'
+            className='text-white md:w-1/4'>
             Read More ...
           </Button>
         </div>
-
       </div>
     </section>
   );

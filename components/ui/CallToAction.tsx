@@ -15,7 +15,7 @@ export default function CallToAction() {
         {/* Image Column */}
         <div className='relative h-[400px] md:h-full'>
           <Image
-            src='/images/board.jpg'
+            src='/images/calltoaction2.jpg'
             alt='Laboratory professional at work'
             layout='fill'
             className='absolute inset-0 w-full h-full object-cover'
@@ -23,7 +23,7 @@ export default function CallToAction() {
         </div>
 
         {/* Content Column */}
-        <div className='bg-blue-600 p-8 md:p-12 lg:p-16 flex flex-col justify-center'>
+        <div className='bg-blue-950 p-8 md:p-12 lg:p-16 flex flex-col justify-center'>
           <div className='max-w-md'>
             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight ${bebas.className}`}>
               Join a thriving network.

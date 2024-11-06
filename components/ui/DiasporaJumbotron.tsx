@@ -7,8 +7,11 @@ import {
   Link,
   LucideAArrowUp,
   LucideArrowUpRight,
+  LucideGlobe,
   LucideMove3d,
   LucideMoveDown,
+  LucidePhoneIncoming,
+  LucideVoicemail,
   Minus,
   Plus,
 } from 'lucide-react';
@@ -17,6 +20,7 @@ import { title } from 'process';
 import BackgroundImageWrapper from '../BackgroundImageWrapper';
 import MainMenu from './Menu';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
+import AfricanDiasporaServices from './AfricanDiasporaServices';
 
 type Props = {};
 
@@ -54,6 +58,71 @@ const DiasporaJumbotron = (props: Props) => {
   }, []);
   return (
     <section className='min-h-screen h-auto grid   p-5 gap-4'>
+      <div
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
+          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
+            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+              Supporting the African diaspora.
+            </h1>
+
+            <p
+              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+              Africa Diaspora 126+ is a non-profit organization working to help
+              people of African descent to reconnect with their heritage. We
+              advocate for the Right to Return, focusing on policies that
+              facilitate the African Diaspora integration to the Motherland.
+            </p>
+          </div>
+        </div>
+        <div
+          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-end text-white p-4 space-y-2'>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          <h1 className='text-yellow-500'>Our Mission</h1>
+          <p className={`${poppins.className} text-sm`}>
+            To champion the Right to Return by building collaborative networks
+            with local partners, enabling descendants of the African Diaspora to
+            reintegrate and thrive in their ancestral homeland.
+          </p>
+        </div>
+        <ServiceCardWithBackgroundImage backgroundImage='mission4.jpg' />
+      </div>
+
+      <div
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
+          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
+            <h1 className='capitalize text-3xl md:text-4xl leading-[2.5rem] max-w-xl text-yellow-600 
+             md:leading-[3rem] '>
+              Message to the Diaspora Community
+            </h1>
+
+            <p
+              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+              Congratulations to all African Diaspora Descendants (HUG) who have
+              successfully embraced their heritage through the citizenship
+              process. Each journey home is a milestone, not just for the
+              individual, but for all of us. It’s a testament to the resilience
+              of African culture and the power of connection. Akwaaba! Welcome
+              home.
+            </p>
+          </div>
+        </div>
+        <ServiceCardWithBackgroundImage backgroundImage='vision4.jpg' />
+        <div
+          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-end text-white p-4 space-y-2'>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          <h1 className='text-yellow-500'>Our Vision</h1>
+          <p className={`${poppins.className} text-sm`}>
+            We envision a vibrant Africa enriched by the presence, talents, and
+            contributions of its Diaspora descendants. Through shared heritage
+            and collective support, we strive for an Africa where everyone with
+            roots in this land can once again call it home.
+          </p>
+        </div>
+      </div>
       <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
@@ -80,38 +149,25 @@ const DiasporaJumbotron = (props: Props) => {
           </div>
         </div>
       </div>
-
-      <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
-        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
-              Supporting the African diaspora.
-            </h1>
-
-            <p
-              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
-              This is a non-profit organization focused on supporting the
-              African diaspora. We advocate for the Right of Return, ensuring
-              that people of African descent have the opportunity to reconnect
-              with their heritage.
-            </p>
+      <AfricanDiasporaServices />
+      <div className='container mx-auto grid md:grid-cols-3 gap-4 space-y-2 '>
+        <ServiceCardWithBackgroundImage backgroundImage='contactus.jpg' />
+        <div
+          className='col-span-2   aspect-auto relative bg-black rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-center text-white p-4 md:p-8 space-y-2'>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          <h1 className='text-yellow-500 font-bold  '>Contact Us</h1>
+          <p className={`${poppins.className} text-sm`}>
+            Ready to learn more or start your journey home? Reach out to us and
+            let us build a future of connection, community, and cultural pride.
+          </p>
+          <div className='space-y-3'>
+           <div className='flex items-center gap-x-4'><LucideVoicemail /> Email: info@africadiaspora126+.com</div>
+           <div className='flex items-center gap-x-4'><LucidePhoneIncoming />Phone: +233 269 173 378 Address</div>
+           <div className='flex items-center gap-x-4'><LucideGlobe />173/4 Otswe Street, Osu, Accra, Ghana</div>
+            
           </div>
         </div>
-        <div
-          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end text-white p-4 space-y-2'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1 className='text-lime-500'>Our ultimate goal</h1>
-          <p className={`${poppins.className} text-sm`}>
-            Our work includes lobbying for policies that recognize and
-            facilitate the return of diasporas to their ancestral homes, while
-            also offering resources and support to make the transition smooth
-            and successful
-          </p>
-        </div>
-        <ServiceCardWithBackgroundImage backgroundImage='aaha3.jpg' />
-
       </div>
     </section>
   );

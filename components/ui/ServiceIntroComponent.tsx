@@ -7,21 +7,23 @@ type ServiceIntroComponentProps = {
   title: string;
   description: string;
   url?: string;
+  color?: string;
 };
 
 const ServiceIntroComponent: React.FC<ServiceIntroComponentProps> = ({
   title,
   description,
   url = '/services',
+  color='yellow'
 }) => {
   return (
     <div
-      className='rounded-3xl bg-neutral-100 hover:bg-lime-300/30 p-4 md:p-8 aspect-square md:aspect-video flex flex-col justify-center items-start border border-neutral-300 space-y-2 relative'
+      className={`rounded-3xl bg-neutral-100 hover:bg-yellow-300/30 p-4 md:p-8 aspect-square md:aspect-video flex flex-col justify-center items-start border border-neutral-300 space-y-2 relative`}
       data-scroll
       data-scroll-speed={0.1}>
       <div className='w-full text-lg flex justify-between items-center'>
         <div className='text-3xl'>{title}</div>
-        <div className='bg-lime-600 rounded-full w-8 aspect-square flex justify-center items-center absolute top-2 right-2'>
+        <div className='bg-yellow-600 rounded-full w-8 aspect-square flex justify-center items-center absolute top-2 right-2'>
           <Link href={url}>
             <LucideArrowUpRight className='text-white' />
           </Link>
@@ -31,7 +33,7 @@ const ServiceIntroComponent: React.FC<ServiceIntroComponentProps> = ({
         {description}
       </div>
       <div>
-        <Link href={url} className='hover:text-lime-600'>
+        <Link href={url} className='hover:text-yellow-600'>
           {' '}
           Read More ...
         </Link>
