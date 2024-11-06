@@ -132,17 +132,7 @@ const PartnerJumbotron = (props: Props) => {
       </div>
 
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
-        <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
-          <Image
-            src='/images/airport2.jpg'
-            alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
-            className='absolute inset-0 z-10 rounded-2xl'
-            quality={100}
-          />
-        </div>
-        <div
+      <div
           id='real_estate_services'
           className={`${bebas.className} col-span-2    aspect-auto relative bg-blue-700 text-white  rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-center  p-4 md:p-8 space-y-3`}>
@@ -167,6 +157,17 @@ const PartnerJumbotron = (props: Props) => {
             Read More ...
           </Button>
         </div>
+       <div className='col-span-1 md:col-span-1 rounded-3xl flex flex-col justify-center relative'>
+          <Image
+            src='/images/airport2.jpg'
+            alt='Vision Background'
+            layout='fill'
+            objectFit='cover'
+            className='absolute inset-0 z-10 rounded-2xl'
+            quality={100}
+          />
+        </div>
+
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ const Start = ({ title, order = 1, children }: Props) => {
   }, []);
   return (
     <section
-      className={`${bebas.className} min-h-screen h-auto grid grid-cols-1 `}>
+      className={`${bebas.className} h-auto grid grid-cols-1 `}>
       <div className={`  relative p-4 md:p-6 space-y-6 `}>
         <div className=' relative h-auto flex flex-col justify-start space-y-3 md:px-2 items-start z-10'>
           <h1 className='text-lime-500 text-[3em] leading-[0.9em] '>
