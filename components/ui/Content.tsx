@@ -54,8 +54,8 @@ const Nav = () => {
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-2xl text-white'>About</h3>
                 <Link href={'/about'}>About Us</Link>
-                <Link href={'/'}>Projects</Link>
-                <Link href={'/'}>Contact Us</Link>
+                <Link href={'/news'}>News</Link>
+                <Link href={'/contact'}>Contact Us</Link>
             </div>
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-2xl text-white'>Disclaimers</h3>
@@ -67,7 +67,6 @@ const Nav = () => {
                 <h3 className='mb-2 uppercase text-2xl text-white'>Services</h3>
                 <Link href={'/services'}>Agriculture</Link>
                 <Link href={'/services'}>Minerals & Natural Resources</Link>
-                <Link href={'/real-estate'}>Real Estate</Link>
                 <Link href={'/services'}>Technology</Link>
             </div>
             <div className='flex flex-col'>
