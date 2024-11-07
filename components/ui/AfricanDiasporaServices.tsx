@@ -4,7 +4,6 @@ import {
 } from '@/config/fonts';
 import React from 'react';
 import ServiceIntroComponent from './ServiceIntroComponent';
-// Removed imports for MainMenu and BackgroundImageWrapper due to errors
 
 type Props = {
   title?: string;
@@ -49,7 +48,7 @@ const AfricanDiasporaServices = ({ title, order = 1, children }: Props) => {
       className={`${bebas.className} min-h-screen h-auto flex flex-col justify-center `}>
 
       <div className={`  relative md:p-6 gap-4 `}>
-        <div className=' relative h-auto flex flex-col justify-center items-center space-y-3 md:px-2 
+        <div className=' relative h-auto flex flex-col justify-center items-start space-y-3 pb-7 md:px-2 
          z-10'>
           <h1 className='text-yellow-500 text-[2em] '>
           Africa Diaspora 126+: Reconnecting the Diaspora to the Motherland

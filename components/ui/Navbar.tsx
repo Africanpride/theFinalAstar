@@ -23,7 +23,6 @@ import { bebas } from '@/config/fonts';
 import {
   LucideActivity,
   LucideArrowUpRight,
-  LucideChevronDown,
   LucideGlobe,
   LucideHousePlus,
   SearchIcon,
@@ -77,6 +76,7 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
+      isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth='full'

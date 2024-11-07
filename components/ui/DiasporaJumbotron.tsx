@@ -82,7 +82,8 @@ const DiasporaJumbotron = (props: Props) => {
         className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-            <h1 className='capitalize text-3xl md:text-4xl leading-[2.5rem] max-w-xl text-yellow-600 
+            <h1
+              className='capitalize text-3xl md:text-4xl leading-[2.5rem] max-w-xl text-yellow-600 
              md:leading-[3rem] '>
               Message to the Diaspora Community
             </h1>
@@ -143,19 +144,39 @@ const DiasporaJumbotron = (props: Props) => {
         <ServiceCardWithBackgroundImage backgroundImage='contactus.jpg' />
 
         <div
-          className='col-span-2   md:aspect-auto relative bg-black rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-center text-white p-4 md:p-8 space-y-2'>
+          className='col-span-2   md:aspect-auto relative bg-black rounded-2xl leading-[1.12rem]
+        flex flex-col justify-center text-white p-4 md:p-8 space-y-3'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1 className='text-yellow-500 font-bold  '>Contact Us</h1>
-          <p className={`${poppins.className} text-sm`}>
+          <h1 className={`${bebas.className} text-yellow-500 uppercase `}>
+            Contact us
+          </h1>
+          <p className={`${poppins.className} text-sm md:text-lg md:w-3/4`}>
             Ready to learn more or start your journey home? Reach out to us and
             let us build a future of connection, community, and cultural pride.
           </p>
+          <div className='border-0 border-t border-solid border-yellow-500 h-[2px] w-[120px] ' />{' '}
           <div className='space-y-3'>
-           <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '><span className='hidden md:inline-block'> <LucideVoicemail />  </span> Email: info@africadiaspora126+.com</div>
-           <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '><span className='hidden md:inline-block'>  <LucidePhoneIncoming /> </span>Phone: +233 269 173 378 </div>
-           <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '><span className='hidden md:inline-block'> <LucideGlobe />  </span>Address: 173/4 Otswe Street, Osu, Accra, Ghana</div>
-            
+            <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '>
+              <span className='hidden md:inline-block'>
+                {' '}
+                <LucideVoicemail />{' '}
+              </span>{' '}
+              Email: info@africadiaspora126+.com
+            </div>
+            <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '>
+              <span className='hidden md:inline-block'>
+                {' '}
+                <LucidePhoneIncoming />{' '}
+              </span>
+              Phone: +233 269 173 378{' '}
+            </div>
+            <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '>
+              <span className='hidden md:inline-block'>
+                {' '}
+                <LucideGlobe />{' '}
+              </span>
+              Address: 173/4 Otswe Street, Osu, Accra, Ghana
+            </div>
           </div>
         </div>
       </div>
