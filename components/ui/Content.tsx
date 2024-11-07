@@ -26,23 +26,23 @@ const Section2 = () => {
 
         <div className='flex justify-between items-end relative text-neutral-100 '>
 
-            <div className='text-[3rem] leading-[0.8] mt-10 absolute -left-14 bottom-5  '>
+            <div className='text-[3rem] leading-[0.8] mt-10 absolute -left-14  bottom-5  '>
 
-                <div className="w-full opacity-80 text-lime-200 hidden md:block  ">
+                <div className="w-full opacity-35 text-lime-200 hidden md:block  ">
                     <Marquee className=' ' speed={70} >
                         <p ref={firstText}> AStar Trading & Agro Processing Co. Ltd. &#x2014;  </p>
                         <p ref={secondText}> AStar Trading & Agro Processing Co. Ltd. &#x2014;  </p>
                     </Marquee>
                 </div>
             </div>
-            <div className='w-full md:flex items-center justify-between'>
+            <div className='w-full md:flex items-center justify-between pt-10'>
                 <div>
                     <Link href={'/'}>{siteConfig.year} &copy; copyright &#x2014; All Rights Reserved.</Link>
                 </div>
                 <div className='flex items-center gap-10'>
                     <Link href={'/'}>LinkedIn</Link>
                     <Link href={'/'}>Facebook</Link>
-                    <Link href={'/'}>Twitter</Link>
+                    <Link href={'/'}>Instagram</Link>
                 </div>
             </div>
         </div>
@@ -51,7 +51,8 @@ const Section2 = () => {
 
 const Nav = () => {
     return (
-        <div className={`${bebas.className} flex items-start shrink-0 gap-12 z-50 md:pt-[20dvh] text-neutral-300`}>
+        <div className={`${bebas.className} flex md:flex-row flex-col items-start shrink-0 gap-8 md:gap-12 z-50
+         md:pt-[20dvh] text-neutral-300`}>
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-2xl text-white'>About</h3>
                 <Link href={'/about'}>About Us</Link>
@@ -66,10 +67,16 @@ const Nav = () => {
             </div>
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-2xl text-white'>Services</h3>
-                <Link href={'/agriculture'}>Agriculture</Link>
-                <Link href={'/natural-resources'}>Minerals & Natural Resources</Link>
+                <Link href={'/services'}>Agriculture</Link>
+                <Link href={'/services'}>Minerals & Natural Resources</Link>
                 <Link href={'/real-estate'}>Real Estate</Link>
-                <Link href={'/technology'}>Technology</Link>
+                <Link href={'/services'}>Technology</Link>
+            </div>
+            <div className='flex flex-col'>
+                <h3 className='mb-2 uppercase text-2xl text-white'>Partners</h3>
+                <Link href={'/privacy'}>Real Estate</Link>
+                <Link href={'/cookies'}>Africa Diaspora 126+</Link>
+                <Link href={'/terms'}>Access Africa Home & Abroad (AAHA)</Link>
             </div>
         </div>
     )
