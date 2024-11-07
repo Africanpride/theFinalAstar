@@ -52,9 +52,10 @@ const ServiceJumbotron = (props: Props) => {
     })();
   }, []);
   return (
-    <section className='min-h-screen h-auto grid   p-5 gap-4'>
+    <section className='min-h-screen h-auto grid p-4 gap-4'>
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
+          
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
             <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
@@ -74,9 +75,7 @@ const ServiceJumbotron = (props: Props) => {
           className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-end text-white p-4 space-y-2'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1 className='text-lime-500'>
-            Sectors of Operation
-          </h1>
+          <h1 className='text-lime-500'>Sectors of Operation</h1>
           <p className={`${poppins.className} text-sm`}>
             We focus on high-growth sectors, including energy, agriculture,
             infrastructure, and technology, offering investors unique
@@ -87,9 +86,7 @@ const ServiceJumbotron = (props: Props) => {
           className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-end text-black p-4 space-y-2'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1>
-            Our Approach
-          </h1>
+          <h1>Our Approach</h1>
           <p className={`${poppins.className} text-sm text-white`}>
             We combine data-driven insights with on-the-ground knowledge to help
             investors navigate Africa’s emerging markets and make informed
@@ -126,7 +123,7 @@ const ServiceJumbotron = (props: Props) => {
       </div>
 
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div
           className='col-span-2   aspect-auto relative bg-black rounded-2xl text-xl leading-tight
         flex flex-col justify-end text-white p-4 md:p-8 space-y-2'>
@@ -144,7 +141,6 @@ const ServiceJumbotron = (props: Props) => {
             from start to finish.
           </p>
         </div>
-       
 
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
@@ -189,8 +185,6 @@ const ServiceJumbotron = (props: Props) => {
           </div>
         </div>
       </div>
-
-
     </section>
   );
 };

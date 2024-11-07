@@ -52,9 +52,9 @@ const JumbotronAbout = (props: Props) => {
     })();
   }, []);
   return (
-    <section className='min-h-screen h-auto grid   p-5 gap-4'>
+    <section className='min-h-screen h-auto grid   p-4 gap-4'>
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col justify-center h-full space-y-2 '>
             <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
@@ -110,7 +110,7 @@ const JumbotronAbout = (props: Props) => {
         </div>
       </div>
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div
           className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
         flex flex-col justify-end text-white p-4'>

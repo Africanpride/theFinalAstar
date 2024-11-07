@@ -77,6 +77,8 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
       maxWidth='full'
       className={`navbar ${isMenuOpen ? 'menu-open' : ''} md:py-2`}
       style={{ maxWidth: 'full' }}>
@@ -186,7 +188,7 @@ export const Navbar = () => {
                       radius='none'
                       variant='light'>
                       <Link
-                        onClick={() => setIsMenuOpen(false)}
+                        onClick={() => handleMenuItemClick()}
                         className={clsx(linkStyles({ color: 'foreground' }), {
                           'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-600 text-lg':
                             true,

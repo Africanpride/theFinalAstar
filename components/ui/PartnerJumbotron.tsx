@@ -40,7 +40,7 @@ const PartnerJumbotron = (props: Props) => {
     })();
   }, []);
   return (
-    <section className='min-h-screen h-auto grid   p-5 gap-4'>
+    <section className='min-h-screen h-auto grid grid-cols-1  p-4 gap-4'>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl h-auto  '>
         <div
           id='real_estate_services'
@@ -125,7 +125,7 @@ const PartnerJumbotron = (props: Props) => {
             variant='flat'
             as={Link}
             href='/real-estate'
-            className='text-white w-1/4 '>
+            className='text-white md:w-1/4 '>
             Read More ...
           </Button>
         </div>

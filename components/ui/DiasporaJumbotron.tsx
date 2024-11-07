@@ -57,9 +57,9 @@ const DiasporaJumbotron = (props: Props) => {
     })();
   }, []);
   return (
-    <section className='min-h-screen h-auto grid   p-5 gap-4'>
+    <section className='min-h-screen h-auto grid   p-4 gap-4'>
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
             <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
@@ -90,7 +90,7 @@ const DiasporaJumbotron = (props: Props) => {
       </div>
 
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
             <h1 className='capitalize text-3xl md:text-4xl leading-[2.5rem] max-w-xl text-yellow-600 
@@ -150,10 +150,11 @@ const DiasporaJumbotron = (props: Props) => {
         </div>
       </div>
       <AfricanDiasporaServices />
-      <div className='container mx-auto grid md:grid-cols-3 gap-4 space-y-2 '>
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 space-y-2 '>
         <ServiceCardWithBackgroundImage backgroundImage='contactus.jpg' />
+
         <div
-          className='col-span-2   aspect-auto relative bg-black rounded-2xl text-base leading-[1.12rem]
+          className='col-span-2   md:aspect-auto relative bg-black rounded-2xl text-base leading-[1.12rem]
         flex flex-col justify-center text-white p-4 md:p-8 space-y-2'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           <h1 className='text-yellow-500 font-bold  '>Contact Us</h1>
@@ -162,9 +163,9 @@ const DiasporaJumbotron = (props: Props) => {
             let us build a future of connection, community, and cultural pride.
           </p>
           <div className='space-y-3'>
-           <div className='flex items-center gap-x-4'><LucideVoicemail /> Email: info@africadiaspora126+.com</div>
-           <div className='flex items-center gap-x-4'><LucidePhoneIncoming />Phone: +233 269 173 378 Address</div>
-           <div className='flex items-center gap-x-4'><LucideGlobe />173/4 Otswe Street, Osu, Accra, Ghana</div>
+           <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '><span className='hidden md:inline-block'> <LucideVoicemail />  </span> Email: info@africadiaspora126+.com</div>
+           <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '><span className='hidden md:inline-block'>  <LucidePhoneIncoming /> </span>Phone: +233 269 173 378 </div>
+           <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '><span className='hidden md:inline-block'> <LucideGlobe />  </span>Address: 173/4 Otswe Street, Osu, Accra, Ghana</div>
             
           </div>
         </div>

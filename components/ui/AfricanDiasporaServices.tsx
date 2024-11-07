@@ -54,8 +54,10 @@ const AfricanDiasporaServices = ({ title, order = 1, children }: Props) => {
   return (
     <section
       className={`${bebas.className} min-h-screen h-auto flex flex-col justify-center `}>
-      <div className={`  relative p-4 md:p-6 space-y-6 `}>
-        <div className=' relative h-auto flex flex-col justify-AfricanDiasporaServices space-y-3 md:px-2 items-AfricanDiasporaServices z-10'>
+
+      <div className={`  relative md:p-6 gap-4 `}>
+        <div className=' relative h-auto flex flex-col justify-center items-center space-y-3 md:px-2 
+         z-10'>
           <h1 className='text-yellow-500 text-[2em] '>
           Africa Diaspora 126+: Reconnecting the Diaspora to the Motherland
           </h1>
@@ -69,20 +71,23 @@ const AfricanDiasporaServices = ({ title, order = 1, children }: Props) => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          <ServiceIntroComponent
+          <ServiceIntroComponent 
+            color='yellow'
             title='Right to Return Advocacy'
             description='We actively advocate for policies that acknowledge the right of African descendants to return
                     and reside in Africa. Our team works with policymakers, local organizations, and
                     international partners to create pathways for citizenship and cultural integration.'
           />
-          <ServiceIntroComponent
+          <ServiceIntroComponent 
+            color='yellow'
             title='Community & Partnerships'
             url='/services'
             description={`Through partnerships with local stakeholders, we establish networks that provide returning
               descendants with the support they need—whether it’s legal guidance, housing resources, or
               community building. Each connection strengthens the foundation for a successful transition.`}
           />
-          <ServiceIntroComponent
+          <ServiceIntroComponent 
+            color='yellow'
             title='Cultural Reconnection Programs'
             url='/services'
             description={`We organize events, workshops, and traditional ceremonies that bring African heritage to life.
