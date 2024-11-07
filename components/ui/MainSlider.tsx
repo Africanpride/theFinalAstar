@@ -8,7 +8,7 @@ type Props = {};
 
 const MainSlider = (props: Props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true },[Autoplay({
-    delay: 15000
+    delay: 9000
   })]);
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -22,21 +22,21 @@ const MainSlider = (props: Props) => {
     <div className='embla' ref={emblaRef}>
       <div className='embla__container relative'>
         <div className='embla__slide'>
-          <Slider
-            image='airport2.jpg'
-            link='/aaha'
-            heading='Unlock Opportunities Abroad'
-            description='Helping individuals pursue opportunities abroad, whether for 
-            work, education, or specialized training.'
-          />
-        </div>
-        <div className='embla__slide'>
           <Slider image='farming.jpg' />
         </div>
         <div className='embla__slide'>
           <Slider
             description='Lobbying for policies that recognize and facilitate the return of diasporas to their ancestral homes.'
             link='/african-diaspora-126-plus'
+          />
+        </div>
+        <div className='embla__slide'>
+          <Slider
+            image='airport2.jpg'
+            link='/aaha'
+            heading='Unlock Opportunities Abroad'
+            description='Helping individuals pursue opportunities abroad, whether for 
+            work, education, or specialized training.'
           />
         </div>
       </div>
