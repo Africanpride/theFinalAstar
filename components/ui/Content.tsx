@@ -1,9 +1,7 @@
 "use client"
 import Link from 'next/link'
-import React, { useCallback, useLayoutEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { siteConfig } from '../../config/site';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
 import Marquee from './marquee';
 import { bebas } from '@/config/fonts';
 
@@ -74,9 +72,9 @@ const Nav = () => {
             </div>
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-2xl text-white'>Partners</h3>
-                <Link href={'/privacy'}>Real Estate</Link>
-                <Link href={'/cookies'}>Africa Diaspora 126+</Link>
-                <Link href={'/terms'}>Access Africa Home & Abroad (AAHA)</Link>
+                <Link href={'/real-estate'}>Real Estate</Link>
+                <Link href={'/african-diaspora-126-plus'}>Africa Diaspora 126+</Link>
+                <Link href={'/aaha'}>Access Africa Home & Abroad (AAHA)</Link>
             </div>
         </div>
     )

@@ -1,6 +1,4 @@
 import AAHAJumbotron from '@/components/ui/AAHAJumbotron'
-import PartnerJumbotron from '@/components/ui/PartnerJumbotron'
-import ServiceJumbotron from '@/components/ui/ServiceJumbotron'
 import React from 'react'
 
 type Props = {}

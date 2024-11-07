@@ -1,7 +1,6 @@
-import { LucideBuilding, LucideDam, LucideFactory, LucideTheater } from 'lucide-react';
+import { LucideBuilding, LucideTheater } from 'lucide-react';
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import { Button } from '@nextui-org/button';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
 import { bebas } from '@/config/fonts';
 

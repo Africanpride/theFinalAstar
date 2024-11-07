@@ -1,26 +1,14 @@
 'use client';
 import {
   bebas,
-  inter,
-  montserrat,
-  playfair_display,
   poppins,
 } from '@/config/fonts';
 import {
-  LucideMoveDown,
-  LucideMove3d,
   LucideArrowUpRight,
-  LucideGlobe,
-  LucidePhoneIncoming,
-  LucideVoicemail,
 } from 'lucide-react';
-import Image from 'next/image';
 import React from 'react';
-import BackgroundImageWrapper from '../BackgroundImageWrapper';
-import Link from 'next/link';
 import ServiceIntroComponent from './ServiceIntroComponent';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
-// Removed imports for MainMenu and BackgroundImageWrapper due to errors
 
 type Props = {
   title?: string;
@@ -62,9 +50,9 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
   }, []);
   return (
     <div className='pb-4'>
-      <section className='min-h-screen h-auto grid   p-5 gap-4'>
+      <section className='min-h-screen h-auto grid   p-4 gap-4'>
         <div
-          className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+          className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
           <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
             <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
               <h1 className='text-lime-600 capitalize text-3xl md:text-3xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
@@ -96,7 +84,7 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
           <ServiceCardWithBackgroundImage backgroundImage='real-estate-goal.jpg' />
         </div>
         <div
-          className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+          className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
           <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
             <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
               <h1 className='text-lime-600 capitalize text-3xl md:text-3xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>

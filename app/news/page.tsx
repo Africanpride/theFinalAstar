@@ -1,7 +1,5 @@
-import { title } from '@/components/primitives';
 import BlogCard from '@/components/ui/BlogCard';
 import { bebas } from '@/config/fonts';
-import { Link } from 'lucide-react';
 // Removed the import of BlogCard due to the error
 
 export default function NewsPage() {

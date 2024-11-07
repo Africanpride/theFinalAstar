@@ -1,8 +1,7 @@
 import { bebas, playfair_display } from "@/config/fonts";
-import { LucideMoveDown, LucideMove3d } from "lucide-react";
+import { LucideMoveDown } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import MainMenu from "./ui/Menu";
 import BackgroundImageWrapper from "./BackgroundImageWrapper";
 
 type Props = {

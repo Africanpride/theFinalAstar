@@ -1,24 +1,13 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@nextui-org/button';
 import {
-  ArrowUpRight,
-  Link,
-  LucideAArrowUp,
   LucideArrowUpRight,
   LucideGlobe,
-  LucideMove3d,
-  LucideMoveDown,
   LucidePhoneIncoming,
   LucideVoicemail,
-  Minus,
-  Plus,
 } from 'lucide-react';
-import { bebas, montserrat, playfair_display, poppins } from '@/config/fonts';
-import { title } from 'process';
-import BackgroundImageWrapper from '../BackgroundImageWrapper';
-import MainMenu from './Menu';
+import { bebas, poppins } from '@/config/fonts';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
 import AfricanDiasporaServices from './AfricanDiasporaServices';
 

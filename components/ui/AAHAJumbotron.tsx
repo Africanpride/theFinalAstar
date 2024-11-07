@@ -1,21 +1,10 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@nextui-org/button';
 import {
-  ArrowUpRight,
-  Link,
-  LucideAArrowUp,
   LucideArrowUpRight,
-  LucideMove3d,
-  LucideMoveDown,
-  Minus,
-  Plus,
 } from 'lucide-react';
-import { bebas, montserrat, playfair_display, poppins } from '@/config/fonts';
-import { title } from 'process';
-import BackgroundImageWrapper from '../BackgroundImageWrapper';
-import MainMenu from './Menu';
+import { bebas, poppins } from '@/config/fonts';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
 
 type Props = {};
@@ -53,7 +42,7 @@ const AAHAJumbotron = (props: Props) => {
     })();
   }, []);
   return (
-    <section className='min-h-screen h-auto grid   p-5 gap-4'>
+    <section className='min-h-screen h-auto grid   p-4 gap-4'>
       <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
@@ -82,7 +71,7 @@ const AAHAJumbotron = (props: Props) => {
       </div>
 
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-2`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
             <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>

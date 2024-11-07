@@ -1,5 +1,4 @@
 import PartnerJumbotron from '@/components/ui/PartnerJumbotron'
-import ServiceJumbotron from '@/components/ui/ServiceJumbotron'
 import React from 'react'
 
 type Props = {}

@@ -1,7 +1,5 @@
 import {
-  ArrowRight,
   LucideArrowUpRight,
-  LucideSquareArrowRight,
 } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@nextui-org/button';

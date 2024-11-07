@@ -1,4 +1,4 @@
-import { lato, poppins, sourceCodePro700 } from "@/config/fonts";
+import { lato } from "@/config/fonts";
 
 export default function AboutLayout({
   children,

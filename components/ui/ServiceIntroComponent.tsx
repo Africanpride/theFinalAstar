@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { LucideArrowUpRight } from 'lucide-react';
-import { lato, montserrat, poppins } from '@/config/fonts';
+import { poppins } from '@/config/fonts';
 
 type ServiceIntroComponentProps = {
   title: string;

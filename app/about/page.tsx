@@ -1,4 +1,3 @@
-import { title } from '@/components/primitives';
 import JumbotronAbout from '@/components/ui/JumbotronAbout';
 
 export default function AboutPage() {

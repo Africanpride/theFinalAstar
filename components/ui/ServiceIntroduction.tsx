@@ -1,11 +1,6 @@
-import { bebas, inter, montserrat, playfair_display, poppins } from '@/config/fonts';
-import { LucideMoveDown, LucideMove3d, LucideArrowUpRight } from 'lucide-react';
-import Image from 'next/image';
+import { bebas, poppins } from '@/config/fonts';
 import React from 'react';
-import BackgroundImageWrapper from '../BackgroundImageWrapper';
-import Link from 'next/link';
 import ServiceIntroComponent from './ServiceIntroComponent';
-// Removed imports for MainMenu and BackgroundImageWrapper due to errors
 
 type Props = {
   title?: string;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { TextGenerateEffect } from './TextGenerateEffect';
 import Image from 'next/image';
 import { bebas } from '@/config/fonts';
 

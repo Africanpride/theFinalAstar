@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
-import { bebas, inter } from "@/config/fonts";
+import { bebas } from "@/config/fonts";
 
 export const TextGenerateEffect = ({
   words,
