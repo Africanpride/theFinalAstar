@@ -49,6 +49,7 @@ const poppins = Poppins({
   style: ['normal'],
   display: 'swap',
   adjustFontFallback: false,
+  variable: '--font-sans', // Define the CSS variable here
 });
 
 const sourceCodePro700 = Source_Sans_3({ subsets: ['latin'], weight: '700' });
