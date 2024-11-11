@@ -6,20 +6,20 @@ export default function NewsPage() {
   return (
     <>
       {/* Card Blog */}
-      <div className='max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
+      <div className='mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14'>
         {/* Title */}
-        <div className='max-w-7xl mx-auto text-left mb-10 lg:mb-14'>
+        <div className='mx-auto mb-10 max-w-7xl text-left lg:mb-14'>
           <h2
-            className={`${bebas.className} text-2xl font-bold md:text-4xl md:leading-tight dark:text-white`}>
+            className={`${bebas.className} text-2xl font-bold dark:text-white md:text-4xl md:leading-tight`}>
             News & Articles
           </h2>
-          <p className='max-w-4xl mt-1 text-gray-600 dark:text-neutral-400'>
+          <p className='mt-1 max-w-4xl text-gray-600 dark:text-neutral-400'>
             Welcome to our News and Articles section, where we dive into
             Africa's evolving markets, exploring the power of trade, technology,
             and sustainability.
           </p>
           <br />
-          <p className='max-w-4xl mt-1 text-gray-600 dark:text-neutral-400'>
+          <p className='mt-1 max-w-4xl text-gray-600 dark:text-neutral-400'>
             {' '}
             From the game-changing African Continental Free Trade Area (AfCFTA) to the
             leading commodities of 2024, discover fresh insights that drive
@@ -30,7 +30,7 @@ export default function NewsPage() {
         {/* End Title */}
 
         {/* Grid */}
-        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-3'>
+        <div className='grid gap-3 sm:grid-cols-2 lg:grid-cols-4'>
           {/* Card */}
           <BlogCard
             imageSrc='/images/farming.jpg'

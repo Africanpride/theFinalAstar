@@ -1,13 +1,13 @@
 
 export default function ContactPage() {
   return (
-    <div className='container mx-auto space-y-2 w-full p-4 md:p-16 bg-gray-200 rounded-2xl my-8'>
-      <h1 className='text-xl md:text-3xl font-bold mb-4'>
+    <div className='container mx-auto my-8 w-full space-y-2 rounded-2xl bg-gray-200 p-4 md:p-16'>
+      <h1 className='mb-4 text-xl font-bold md:text-3xl'>
         Terms of Service for Astar Trading & Agro Processing Company Limited
       </h1>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>Introduction</h2>
+        <h2 className='mb-2 text-2xl font-semibold'>Introduction</h2>
         <p>
           Welcome to the Astar Trading & Agro Processing Company Limited
           website. By accessing or using our website and services, you agree to
@@ -17,7 +17,7 @@ export default function ContactPage() {
         </p>
       </section>
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>Introduction</h2>
+        <h2 className='mb-2 text-2xl font-semibold'>Introduction</h2>
         <p>
           We are Astar Trade & Agro Processing Company Limited (‘Company‘, ‘we‘,
           ‘us‘, or ‘our‘), a company registered in Ghana at H/No.178/14 Otsew
@@ -34,8 +34,8 @@ export default function ContactPage() {
       </section>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>Use of the Website</h2>
-        <ul className='list-disc list-inside space-y-3 indent-[2%]'>
+        <h2 className='mb-2 text-2xl font-semibold'>Use of the Website</h2>
+        <ul className='list-inside list-disc space-y-3 indent-[2%]'>
           <li>
             <strong>Eligibility</strong>: You must be at least 18 years old to
             use our website and services.
@@ -59,7 +59,7 @@ export default function ContactPage() {
       </section>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>Intellectual Property</h2>
+        <h2 className='mb-2 text-2xl font-semibold'>Intellectual Property</h2>
         <p>
           All content on the Astar Trade website, including text, graphics,
           logos, and images, is the property of Astar Trade or its content
@@ -70,7 +70,7 @@ export default function ContactPage() {
       </section>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>User Contributions</h2>
+        <h2 className='mb-2 text-2xl font-semibold'>User Contributions</h2>
         <p>
           Astar Trade may allow users to submit content, such as comments and
           posts. By submitting content, you grant Astar Trade a non-exclusive,
@@ -81,10 +81,10 @@ export default function ContactPage() {
       </section>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>
+        <h2 className='mb-2 text-2xl font-semibold'>
           Disclaimers and Limitation of Liability
         </h2>
-        <ul className='list-disc list-inside space-y-3 indent-[2%]'>
+        <ul className='list-inside list-disc space-y-3 indent-[2%]'>
           <li>
             <strong>Disclaimer of Warranties</strong>: Astar Trade provides the
             website and services "as is" without any warranties, express or
@@ -101,7 +101,7 @@ export default function ContactPage() {
       </section>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>Governing Law</h2>
+        <h2 className='mb-2 text-2xl font-semibold'>Governing Law</h2>
         <p>
           These Terms of Service are governed by and construed in accordance
           with the laws of Ghana. Any disputes arising from or related to these
@@ -111,7 +111,7 @@ export default function ContactPage() {
       </section>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>
+        <h2 className='mb-2 text-2xl font-semibold'>
           Changes to Terms of Service
         </h2>
         <p>
@@ -123,7 +123,7 @@ export default function ContactPage() {
       </section>
 
       <section className=''>
-        <h2 className='text-2xl font-semibold mb-2'>Contact Us</h2>
+        <h2 className='mb-2 text-2xl font-semibold'>Contact Us</h2>
         <p>
           If you have any questions or concerns about these Terms of Service,
           please contact us at:

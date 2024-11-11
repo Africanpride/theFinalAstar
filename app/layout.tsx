@@ -1,17 +1,15 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-import { poppins } from "@/config/fonts";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-
-
-import { Providers } from "./providers";
-
+import { poppins } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import Footer from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
+
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +39,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen  antialiased bg-gray-100 overflow-x-hidden text-[16px] ",
+          "min-h-screen  overflow-x-hidden bg-gray-100 text-[16px] antialiased ",
           poppins.className
         )}
         

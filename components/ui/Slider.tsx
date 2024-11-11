@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { bebas } from '@/config/fonts';
 import { Button } from '@nextui-org/button';
 import { LucideArrowRight } from 'lucide-react';
 import { Link } from '@nextui-org/link';
+
+import { bebas } from '@/config/fonts';
 
 type Props = {
   image?: string;
@@ -21,7 +22,7 @@ const Slider = ({
   link = `/about`,
 }: Props) => {
   return (
-    <div className='relative flex flex-col justify-center items-center  md:min-h-[350px] md:h-[80dvh] h-dvh '>
+    <div className='relative flex h-dvh flex-col items-center  justify-center md:h-[80dvh] md:min-h-[350px] '>
       <Image
         src={`/images/${image}`}
         alt='Vision Background'
@@ -31,19 +32,19 @@ const Slider = ({
         quality={100}
       />
       <div className='absolute inset-0 z-10 bg-black/45' ></div>
-      <div className='space-y-3 md:space-y-4 px-2 z-30'>
+      <div className='z-30 space-y-3 px-2 md:space-y-4'>
         <h1
-          className={`${bebas.className} text-lime-500 text-4xl max-w-2xl hidden`}>
+          className={`${bebas.className} hidden max-w-2xl text-4xl text-lime-500`}>
           {heading}
         </h1>
-        <p className='max-w-6xl text-2xl md:text-4xl text-neutral-100 uppercase  font-bold md:px-2  line-clamp-4'>
+        <p className='line-clamp-4 max-w-6xl text-2xl font-bold uppercase  text-neutral-100 md:px-2  md:text-4xl'>
           {description}
         </p>
         <Button
           as={Link}
           href={link}
           endContent={<LucideArrowRight className='text-white' />}
-          className='rounded-full md:w-2/12 bg-lime-700  text-white '
+          className='rounded-full bg-lime-700 text-white  md:w-2/12 '
           variant='solid'
         >
           Read More

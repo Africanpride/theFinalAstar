@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+
 import { bebas } from '@/config/fonts';
 
 interface Props {
@@ -15,18 +16,18 @@ const Quote: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className='bg-neutral-200 mb-8 relative  '
+      className='relative mb-8 bg-neutral-200  '
       data-scroll
       data-scroll-speed={0.1}>
       <Image
         src='/images/homepage.png'
         alt='Laboratory professional at work'
         layout='fill'
-        className='absolute inset-0 w-full h-full object-cover'
+        className='absolute inset-0 size-full object-cover'
       />
-      <div className='max-w-7xl px-4 lg:px-8 py-16 lg:py-32 mx-auto relative '>
-        <blockquote className='max-w-5xl mx-auto  h-auto flex flex-col justify-center items-start'>
-          <p className='mb-6 md:text-lg  font-bold'>
+      <div className='relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-32 '>
+        <blockquote className='mx-auto flex  h-auto max-w-5xl flex-col items-start justify-center'>
+          <p className='mb-6 font-bold  md:text-lg'>
             <span className=' text-lime-600'>{name},</span>{' '}
             <span className='text-neutral-500'>{title}</span>
           </p>

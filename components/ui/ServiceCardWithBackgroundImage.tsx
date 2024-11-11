@@ -7,7 +7,7 @@ type BackgroundImageProps = {
 
 const ServiceCardWithBackgroundImage: React.FC<BackgroundImageProps> = ({ backgroundImage = "farmer4.jpg" }) => {
     return (
-       <div className='relative rounded-3xl aspect-square'>
+       <div className='relative aspect-square rounded-3xl'>
          <div className="absolute inset-0 z-0 rounded-3xl"
             style={{
                 backgroundImage: `url("/images/${backgroundImage}")`,

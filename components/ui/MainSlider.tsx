@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import Slider from '@/components/ui/Slider';
 import { LucideArrowLeft, LucideArrowRight } from 'lucide-react';
+
+import Slider from '@/components/ui/Slider';
 
 type Props = {};
 
@@ -48,14 +49,14 @@ const MainSlider = (props: Props) => {
           />
         </div>
       </div>
-      <div className='absolute bottom-4 md:bottom-12 right-5 md:right-16 flex items-center gap-x-4 z-10 '>
+      <div className='absolute bottom-4 right-5 z-10 flex items-center gap-x-4 md:bottom-12 md:right-16 '>
         <button
-          className='embla__prev h-auto p-2 aspect-square bg-lime-600 hover:bg-lime-500 rounded-full '
+          className='embla__prev aspect-square h-auto rounded-full bg-lime-600 p-2 hover:bg-lime-500 '
           onClick={scrollPrev}>
           <LucideArrowLeft className='text-white' />
         </button>
         <button
-          className='embla__next  h-auto p-2 aspect-square bg-lime-600 hover:bg-lime-500 rounded-full '
+          className='embla__next  aspect-square h-auto rounded-full bg-lime-600 p-2 hover:bg-lime-500 '
           onClick={scrollNext}>
           <LucideArrowRight className='text-white' />
         </button>

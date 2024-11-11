@@ -1,5 +1,7 @@
-import { bebas, poppins } from '@/config/fonts';
 import React from 'react';
+
+import { bebas, poppins } from '@/config/fonts';
+
 import ServiceIntroComponent from './ServiceIntroComponent';
 
 type Props = {
@@ -42,14 +44,14 @@ const Start = ({ title, order = 1, children }: Props) => {
   }, []);
   return (
     <section
-      className={`${bebas.className} h-auto grid grid-cols-1 `}>
-      <div className={`  relative p-4 md:p-6 space-y-6 `}>
-        <div className=' relative h-auto flex flex-col justify-start space-y-3 md:px-2 items-start z-10'>
-          <h1 className='text-lime-500 text-[3em] leading-[0.9em] '>
+      className={`${bebas.className} grid h-auto grid-cols-1 `}>
+      <div className={`  relative space-y-6 p-4 md:p-6 `}>
+        <div className=' relative z-10 flex h-auto flex-col items-start justify-start space-y-3 md:px-2'>
+          <h1 className='text-[3em] leading-[0.9em] text-lime-500 '>
             Our Services &#x2014;
           </h1>
 
-          <p className={`${poppins.className} text-lg  max-w-4xl `}>
+          <p className={`${poppins.className} max-w-4xl  text-lg `}>
             ASTAR LLC connects buyers, sellers, and investors across Africa in
             agriculture, minerals, and energy. We simplify trade, foster
             sustainable growth, and offer end-to-end support for reliable,
@@ -58,7 +60,7 @@ const Start = ({ title, order = 1, children }: Props) => {
 
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
         <ServiceIntroComponent
           title='Agriculture'
           description='We trade high-quality agricultural products, fostering sustainable farming practices and supporting local economies. Products such as Soya Beans, Shea Butter, Cashew, Palm Oil, Maize, Rice etc'

@@ -1,28 +1,30 @@
 import { LucideBuilding, LucideTheater } from 'lucide-react';
 import React from 'react';
+
+import { bebas } from '@/config/fonts';
+
 import ServiceCard from './ServiceCard';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
-import { bebas } from '@/config/fonts';
 
 type Props = {};
 
 const Jumbotron = (props: Props) => {
   return (
-    <section className={`${bebas.className} container mx-auto  h-auto py-8  rounded-2xl `}>
-      <div className='flex flex-col justify-between h-auto '>
+    <section className={`${bebas.className} container mx-auto  h-auto rounded-2xl  py-8 `}>
+      <div className='flex h-auto flex-col justify-between '>
         <div>
           <>
             {/* Hero */}
-            <div className="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
-              <div className='max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10'>
+            <div className="relative overflow-hidden before:absolute before:start-1/2 before:top-0 before:-z-[1] before:size-full before:-translate-x-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] before:bg-cover before:bg-top before:bg-no-repeat dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')]">
+              <div className='mx-auto max-w-[85rem] px-4 pb-10 pt-8 sm:px-6 lg:px-8'>
                 {/* Announcement Banner */}
                 <div className='flex justify-center'></div>
                 {/* End Announcement Banner */}
 
                 {/* Title */}
-                <div className='mt-5 max-w-5xl text-center mx-auto'>
+                <div className='mx-auto mt-5 max-w-5xl text-center'>
                   <h1
-                    className={`${bebas.className} block  text-gray-800 text-3xl md:text-5xl lg:text-5xl dark:text-neutral-100`}
+                    className={`${bebas.className} block  text-3xl text-gray-800 dark:text-neutral-100 md:text-5xl lg:text-5xl`}
                     data-scroll
                     data-scroll-speed={0.0}>
                     At ASTAR LLC, we believe in Africa’s vast potential and are
@@ -40,7 +42,7 @@ const Jumbotron = (props: Props) => {
         </div>
 
         <div
-          className='grid grid-cols-1 md:grid-cols-6 align-baseline gap-4 p-4 h-auto py-12'>
+          className='grid h-auto grid-cols-1 gap-4 p-4 py-12 align-baseline md:grid-cols-6'>
           <ServiceCard text='Intra-African Trade Facilitation' />
           <ServiceCardWithBackgroundImage backgroundImage='farmer.jpg' />
           <ServiceCard text='Investment Opportunities' icon={<LucideTheater />} />

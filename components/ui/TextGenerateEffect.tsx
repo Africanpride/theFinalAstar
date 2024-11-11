@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
+
 import { bebas } from "@/config/fonts";
 
 export const TextGenerateEffect = ({
@@ -11,7 +12,7 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
   useEffect(() => {
     animate(
       "span",
@@ -32,7 +33,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className={`${bebas.className} font-extrabold text-xl md:text-3xl md:leading-tight text-base-content opacity-0`}
+              className={`${bebas.className} text-base-content text-xl font-extrabold opacity-0 md:text-3xl md:leading-tight`}
             >
               {word}{" "}
             </motion.span>

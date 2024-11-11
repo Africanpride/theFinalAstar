@@ -20,7 +20,7 @@ const OpenStreetMap: React.FC = () => {
                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(mapRef.current);
             // Target's GPS coordinates.
-            var target = L.latLng(5.556906, -0.172245);
+            const target = L.latLng(5.556906, -0.172245);
             // Set map's center to target with zoom 14.
             mapRef.current.setView(target, 14);
             // Place a marker on the same location.

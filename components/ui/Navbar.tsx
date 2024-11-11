@@ -14,12 +14,8 @@ import { Input } from '@nextui-org/input';
 import { link as linkStyles } from '@nextui-org/theme';
 import NextLink from 'next/link';
 import clsx from 'clsx';
-
-import { siteConfig } from '@/config/site';
 import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
-
 import { motion } from 'framer-motion';
-import { bebas } from '@/config/fonts';
 import {
   LucideActivity,
   LucideArrowUpRight,
@@ -30,13 +26,17 @@ import {
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
-import MainLogo from '../MainLogo';
 import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
 } from '@nextui-org/react';
+
+import { bebas } from '@/config/fonts';
+import { siteConfig } from '@/config/site';
+
+import MainLogo from '../MainLogo';
 
 export const Navbar = () => {
   // media query for mobile etc
@@ -66,7 +66,7 @@ export const Navbar = () => {
       labelPlacement='outside'
       placeholder='Search...'
       startContent={
-        <SearchIcon className='text-base text-default-400 pointer-events-none flex-shrink-0' />
+        <SearchIcon className='pointer-events-none shrink-0 text-base text-default-400' />
       }
       type='search'
     />
@@ -87,11 +87,11 @@ export const Navbar = () => {
         <NavbarBrand>
           <Link
             href={'/'}
-            className='flex justify-between items-center gap-x-2'>
+            className='flex items-center justify-between gap-x-2'>
             <NavbarItem className='flex items-center'>
               <MainLogo />
               <span
-                className={`hidden md:block md:text-md text-sm md:leading-4 px-2 border-s`}>
+                className={`md:text-md hidden border-s px-2 text-sm md:block md:leading-4`}>
                 Astar Trading & Agro
                 <br />
                 Processing Company Limited
@@ -102,7 +102,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className={`${bebas.className} hidden sm:flex gap-x-4 text-3xl  px-16 rounded-full`}
+        className={`${bebas.className} hidden gap-x-4 rounded-full px-16  text-3xl sm:flex`}
         justify='center'>
         {siteConfig.navItems.map((item) => (
           <NavbarItem key={item.href}>
@@ -120,7 +120,7 @@ export const Navbar = () => {
         ))}
 
         <NavbarItem>
-          <div className='border-s  px-5 hidden md:flex items-center gap-x-4 '>
+          <div className='hidden  items-center gap-x-4 border-s px-5 md:flex '>
             {/* <div className="pt-1">
         					<ThemeSwitch />
 						</div> */}
@@ -141,15 +141,15 @@ export const Navbar = () => {
       <NavbarContent justify='end'>
         <NavbarItem>
           <div
-            className={`${bebas.className} flex items-center gap-x-2 font-medium text-gray-500 hover:text-lime-500 py-2 md:py-0 md:my-6 md:ps-6`}>
+            className={`${bebas.className} flex items-center gap-x-2 py-2 font-medium text-gray-500 hover:text-lime-500 md:my-6 md:py-0 md:ps-6`}>
             <Link href={'/contact'}>
               <Button
-                className='uppercase bg-lime-500 text-white rounded-full pl-5 pr-1'
+                className='rounded-full bg-lime-500 pl-5 pr-1 uppercase text-white'
                 size={'sm'}
                 // color={'success'}
                 variant='solid'
                 endContent={
-                  <LucideArrowUpRight className='bg-white  text-black rounded-full' />
+                  <LucideArrowUpRight className='rounded-full  bg-white text-black' />
                 }>
                 <span className=' text-[0.9rem] '>Get In Touch</span>
               </Button>
@@ -163,7 +163,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu className='bg-white'>
-        <div className='flex flex-col items-start justify-center h-auto pt-[20%]'>
+        <div className='flex h-auto flex-col items-start justify-center pt-[20%]'>
           <motion.ul
             initial='hidden'
             animate='visible'
@@ -178,14 +178,14 @@ export const Navbar = () => {
                 },
               },
             }}
-            className='space-y-2 font-poppins font-extrabold uppercase  italic'>
+            className='font-poppins space-y-2 font-extrabold uppercase  italic'>
             {siteConfig.navItems.map((item, index) =>
               item.label === 'Partners' ? (
                 <Dropdown key={`${item}-${index}`}>
                   <DropdownTrigger>
                     <Button
                       disableRipple
-                      className='p-0 bg-transparent data-[hover=true]:bg-transparent'
+                      className='bg-transparent p-0 data-[hover=true]:bg-transparent'
                       radius='none'
                       variant='light'>
                       <Link
@@ -197,7 +197,7 @@ export const Navbar = () => {
                         })}
                         color='foreground'
                         href={item.href}>
-                        <span className='space-y-2 font-poppins font-extrabold uppercase italic'>
+                        <span className='font-poppins space-y-2 font-extrabold uppercase italic'>
                           {item.label}
                         </span>
                       </Link>

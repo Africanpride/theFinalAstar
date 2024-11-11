@@ -1,5 +1,6 @@
-import ServiceJumbotron from '@/components/ui/ServiceJumbotron'
 import React from 'react'
+
+import ServiceJumbotron from '@/components/ui/ServiceJumbotron'
 
 type Props = {}
 

@@ -29,7 +29,7 @@ const MainLogo = (props: Props) => {
           height: 'auto',
           mixBlendMode: 'color-burn'
         }}
-        className='pr-2 rounded-full'
+        className='rounded-full pr-2'
       />
     </div>
   );

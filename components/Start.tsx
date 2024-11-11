@@ -1,7 +1,9 @@
-import { bebas, playfair_display } from '@/config/fonts';
 import { LucideMoveDown } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+
+import { bebas, playfair_display } from '@/config/fonts';
+
 import BackgroundImageWrapper from './BackgroundImageWrapper';
 
 type Props = {
@@ -44,12 +46,12 @@ const Start = ({ title, order = 1, children }: Props) => {
   }, []);
   return (
     <section
-      className={`${bebas.className} min-h-screen h-dvh grid grid-cols-1 md:grid-cols-3`}>
-      <div className={` min-h-dvh relative p-4 md:p-6 order-${order}`}>
+      className={`${bebas.className} grid h-dvh min-h-screen grid-cols-1 md:grid-cols-3`}>
+      <div className={` order- relative min-h-dvh p-4 md:p-6${order}`}>
         <BackgroundImageWrapper backgroundImage='/images/farmer3.jpg' />
 
-        <div className=' relative h-full flex flex-col justify-between items-start z-10'>
-          <p className='text-xl text-lime-900 pt-2 leading-[1.25rem]'>
+        <div className=' relative z-10 flex h-full flex-col items-start justify-between'>
+          <p className='pt-2 text-xl leading-5 text-lime-900'>
             Our vast network, market expertise, and commitment to reliable
             supply make us a trusted partner in commodity trading
           </p>
@@ -65,26 +67,26 @@ const Start = ({ title, order = 1, children }: Props) => {
         </div>
       </div>
       <div
-        className={`bg-white col-span-1 md:col-span-2 min-h-dvh h-full hidden md:flex flex-col justify-between items-start p-4 md:p-6 relative order-${3 - order}`}>
+        className={`order- relative col-span-1 hidden h-full min-h-dvh flex-col items-start justify-between bg-white p-4 md:col-span-2 md:flex md:p-6${3 - order}`}>
         <div
-          className={`${bebas.className} flex items-center justify-between w-full font-bebas`}>
+          className={`${bebas.className} flex w-full items-center justify-between font-bebas`}>
           <div
             className={`text-[1.7em] text-white ${playfair_display.className}`}>
             {title}
           </div>
         </div>
 
-        <div className='flex items-center justify-center max-w-4xl container relative'>
+        <div className='container relative flex max-w-4xl items-center justify-center'>
           <Image
             src={'/images/world.png'}
             alt='alt'
             width={400}
             height={400}
-            className='animation-duration-100 animate-pulse absolute'
+            className='animation-duration-100 absolute animate-pulse'
             style={{ width: 'auto', height: 'auto' }}
           />
           <div
-            className='text-[3vw] leading-[0.9em] text-lime-600 text-center'
+            className='text-center text-[3vw] leading-[0.9em] text-lime-600'
             data-scroll
             data-scroll-speed={0.3}>
             {children}
@@ -92,7 +94,7 @@ const Start = ({ title, order = 1, children }: Props) => {
         </div>
 
         <div className='hidden md:block'>
-          <LucideMoveDown className='animate-bounce w-6 h-6 text-white' />
+          <LucideMoveDown className='size-6 animate-bounce text-white' />
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
-import { bebas } from '@/config/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { bebas } from '@/config/fonts';
 
 interface BlogCardProps {
   imageSrc: string;
@@ -14,11 +15,11 @@ interface BlogCardProps {
 const BlogCard: React.FC<BlogCardProps> = ({ imageSrc, imageAlt, title, description, avatarSrc = '/images/logo.png', author = 'By Astar Team' }) => {
   return (
     <Link
-      className=' bg-white group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-3 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40 dark:focus:border-transparent dark:focus:shadow-black/40'
+      className=' group flex h-full flex-col rounded-xl border border-gray-200 bg-white p-3 transition duration-300 hover:border-transparent hover:shadow-lg focus:border-transparent focus:shadow-lg focus:outline-none dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40 dark:focus:border-transparent dark:focus:shadow-black/40'
       href='#'>
       <div className='aspect-w-16 aspect-h-11'>
         <Image
-          className='w-full object-cover rounded-xl'
+          className='w-full rounded-xl object-cover'
           src={imageSrc}
           alt={imageAlt}
           width={560}

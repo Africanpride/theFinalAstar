@@ -1,8 +1,8 @@
 
 export default function ContactPage() {
   return (
-    <div className='space-y-2 w-full p-4 md:p-16 bg-gray-200 rounded-2xl my-8 text-md'>
-      <h1 className='text-3xl mb-2 text-blue-700 pb-4'>Privacy Policy</h1>
+    <div className='text-md my-8 w-full space-y-2 rounded-2xl bg-gray-200 p-4 md:p-16'>
+      <h1 className='mb-2 pb-4 text-3xl text-blue-700'>Privacy Policy</h1>
       <p className='whitespace-normal break-words'>
         Last updated: October 29, 2024
       </p>
@@ -19,12 +19,12 @@ export default function ContactPage() {
         created with the help of the
         <a
           href='https://www.termsfeed.com/privacy-policy-generator/'
-          target='_blank'>
+          target='_blank' rel="noreferrer">
           Privacy Policy Generator
         </a>
         .
       </p>
-      <h2 className='text-3xl mb-2 text-blue-700 pb-2'>
+      <h2 className='mb-2 pb-2 text-3xl text-blue-700'>
         Interpretation and Definitions
       </h2>
       <h3>Interpretation</h3>
@@ -122,7 +122,7 @@ export default function ContactPage() {
             Co. Ltd, accessible from
             <a
               href='https://www.astar-trade.com'
-              rel='external nofollow noopener'
+              rel="external nofollow noopener noreferrer"
               target='_blank'>
               https://www.astar-trade.com
             </a>
@@ -136,7 +136,7 @@ export default function ContactPage() {
           </p>
         </li>
       </ul>
-      <h2 className='text-3xl mb-2 text-blue-700 pb-2'>
+      <h2 className='mb-2 pb-2 text-3xl text-blue-700'>
         Collecting and Using Your Personal Data
       </h2>
       <h3>Types of Data Collected</h3>
@@ -246,7 +246,7 @@ export default function ContactPage() {
         You can learn more about cookies on
         <a
           href='https://www.termsfeed.com/blog/cookies/#What_Are_Cookies'
-          target='_blank'>
+          target='_blank' rel="noreferrer">
           TermsFeed website
         </a>
         article.
@@ -517,7 +517,7 @@ export default function ContactPage() {
         means to protect Your Personal Data, We cannot guarantee its absolute
         security.
       </p>
-      <h2 className='text-3xl mb-2 text-blue-700 pb-2'>Children's Privacy</h2>
+      <h2 className='mb-2 pb-2 text-3xl text-blue-700'>Children's Privacy</h2>
       <p className='whitespace-normal break-words'>
         Our Service does not address anyone under the age of 13. We do not
         knowingly collect personally identifiable information from anyone under
@@ -533,7 +533,7 @@ export default function ContactPage() {
         require Your parent's consent before We collect and use that
         information.
       </p>
-      <h2 className='text-3xl mb-2 text-blue-700 pb-2'>
+      <h2 className='mb-2 pb-2 text-3xl text-blue-700'>
         Links to Other Websites
       </h2>
       <p className='whitespace-normal break-words'>
@@ -546,7 +546,7 @@ export default function ContactPage() {
         We have no control over and assume no responsibility for the content,
         privacy policies or practices of any third party sites or services.
       </p>
-      <h2 className='text-3xl mb-2 text-blue-700 pb-2'>
+      <h2 className='mb-2 pb-2 text-3xl text-blue-700'>
         Changes to this Privacy Policy
       </h2>
       <p className='whitespace-normal break-words'>
@@ -563,7 +563,7 @@ export default function ContactPage() {
         changes. Changes to this Privacy Policy are effective when they are
         posted on this page.
       </p>
-      <h2 className='text-3xl mb-2 text-blue-700 pb-2'>Contact Us</h2>
+      <h2 className='mb-2 pb-2 text-3xl text-blue-700'>Contact Us</h2>
       <p className='whitespace-normal break-words'>
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
@@ -578,7 +578,7 @@ export default function ContactPage() {
             By visiting this page on our website:
             <a
               href='https://www.astar-trade.com'
-              rel='external nofollow noopener'
+              rel="external nofollow noopener noreferrer"
               target='_blank'>
               https://www.astar-trade.com
             </a>

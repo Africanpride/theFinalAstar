@@ -4,6 +4,7 @@ import Image from 'next/image';
 import {
   LucideArrowUpRight,
 } from 'lucide-react';
+
 import { bebas, poppins } from '@/config/fonts';
 
 type Props = {};
@@ -41,18 +42,18 @@ const ServiceJumbotron = (props: Props) => {
     })();
   }, []);
   return (
-    <section className='min-h-screen h-auto grid p-4 gap-4'>
+    <section className='grid h-auto min-h-screen gap-4 p-4'>
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
           
-        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+        <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
+          <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
+            <h1 className='max-w-xl text-4xl capitalize leading-10 md:text-5xl  md:leading-[3rem] '>
               Commodity Trading
             </h1>
 
             <p
-              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+              className={`${poppins.className} text-left  text-base capitalize text-gray-500`}>
               ASTAR LLC specializes in the trade of essential commodities within
               Africa’s booming markets. From agriculture to minerals, we connect
               sellers and buyers, ensuring smooth transactions and reliable
@@ -61,9 +62,9 @@ const ServiceJumbotron = (props: Props) => {
           </div>
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end text-white p-4 space-y-2'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+        rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
+          <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
           <h1 className='text-lime-500'>Sectors of Operation</h1>
           <p className={`${poppins.className} text-sm`}>
             We focus on high-growth sectors, including energy, agriculture,
@@ -72,9 +73,9 @@ const ServiceJumbotron = (props: Props) => {
           </p>
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end text-black p-4 space-y-2'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+        rounded-2xl bg-lime-600 p-4 text-base leading-[1.12rem] text-black'>
+          <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
           <h1>Our Approach</h1>
           <p className={`${poppins.className} text-sm text-white`}>
             We combine data-driven insights with on-the-ground knowledge to help
@@ -84,8 +85,8 @@ const ServiceJumbotron = (props: Props) => {
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
-        <div className=' rounded-3xl flex flex-col justify-center relative'>
+      <div className='container mx-auto grid aspect-square  grid-cols-1 rounded-2xl md:aspect-video   '>
+        <div className=' relative flex flex-col justify-center rounded-3xl'>
           <Image
             src='/images/services4.jpg'
             alt='Vision Background'
@@ -94,7 +95,7 @@ const ServiceJumbotron = (props: Props) => {
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
           />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
+          <div className=' container z-20 mx-auto flex flex-col items-center justify-center space-y-3 '>
             <div>
               {/* <div
                 className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
@@ -112,12 +113,12 @@ const ServiceJumbotron = (props: Props) => {
       </div>
 
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
         <div
-          className='col-span-2   aspect-auto relative bg-black rounded-2xl text-xl leading-tight
-        flex flex-col justify-end text-white p-4 md:p-8 space-y-2'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1 className='text-lime-600 text-5xl leadig-[2.9rem] '>
+          className='relative   col-span-2 flex aspect-auto flex-col justify-end space-y-2
+        rounded-2xl bg-black p-4 text-xl leading-tight text-white md:p-8'>
+          <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
+          <h1 className='leadig-[2.9rem] text-5xl text-lime-600 '>
             End-To-End Facilitation
           </h1>
           <p className={`${poppins.className} text-base  `}>
@@ -131,14 +132,14 @@ const ServiceJumbotron = (props: Props) => {
           </p>
         </div>
 
-        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-            <div className=' text-left capitalize text-3xl md:text-4xl leading-[1.8rem] max-w-md  md:leading-[2rem] '>
+        <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
+          <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
+            <div className=' max-w-md text-left text-3xl capitalize leading-[1.8rem] md:text-4xl  md:leading-8 '>
               Intra-African Trade <br /> Facilitation
             </div>
 
             <p
-              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+              className={`${poppins.className} text-left  text-base capitalize text-gray-500`}>
               African markets are full of untapped potential, but navigating
               regional trade regulations, logistics, and supply chains can be
               complex. ASTAR LLC simplifies this process, helping businesses and
@@ -148,8 +149,8 @@ const ServiceJumbotron = (props: Props) => {
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
-        <div className=' rounded-3xl flex flex-col justify-center relative'>
+      <div className='container mx-auto grid aspect-square  grid-cols-1 rounded-2xl md:aspect-video   '>
+        <div className=' relative flex flex-col justify-center rounded-3xl'>
           <Image
             src='/images/services3.jpg'
             alt='Vision Background'
@@ -158,7 +159,7 @@ const ServiceJumbotron = (props: Props) => {
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
           />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
+          <div className=' container z-20 mx-auto flex flex-col items-center justify-center space-y-3 '>
             <div>
               {/* <div
                 className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'

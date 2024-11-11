@@ -1,12 +1,14 @@
 'use client';
 import {
-  bebas,
-  poppins,
-} from '@/config/fonts';
-import {
   LucideArrowUpRight,
 } from 'lucide-react';
 import React from 'react';
+
+import {
+  bebas,
+  poppins,
+} from '@/config/fonts';
+
 import ServiceIntroComponent from './ServiceIntroComponent';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
 
@@ -50,17 +52,17 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
   }, []);
   return (
     <div className='pb-4'>
-      <section className='min-h-screen h-auto grid   p-4 gap-4'>
+      <section className='grid h-auto min-h-screen   gap-4 p-4'>
         <div
-          className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
-          <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-            <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-              <h1 className='text-lime-600 capitalize text-3xl md:text-3xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+          className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
+          <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
+            <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
+              <h1 className='max-w-xl text-3xl capitalize leading-10 text-lime-600 md:text-3xl  md:leading-[3rem] '>
               Empower, Invest and Belong
               </h1>
 
               <p
-                className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+                className={`${poppins.className} text-left  text-base capitalize text-gray-500`}>
                 We are committed to creating lasting opportunities for
                 individuals and families, particularly within the diaspora to
                 invest in real estate and establish roots in their home country.
@@ -71,9 +73,9 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
             </div>
           </div>
           <div
-            className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end text-white p-4 space-y-2'>
-            <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+            className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+        rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
+            <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
             <h1 className='text-lime-500'>Our Goal</h1>
             <p className={`${poppins.className} text-sm`}>
               Our goal is to make real estate investment easy and accessible for
@@ -84,15 +86,15 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
           <ServiceCardWithBackgroundImage backgroundImage='real-estate-goal.jpg' />
         </div>
         <div
-          className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
-          <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-            <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-              <h1 className='text-lime-600 capitalize text-3xl md:text-3xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+          className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
+          <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
+            <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
+              <h1 className='max-w-xl text-3xl capitalize leading-10 text-lime-600 md:text-3xl  md:leading-[3rem] '>
                 Comprehensive Service
               </h1>
 
               <p
-                className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+                className={`${poppins.className} text-left  text-base capitalize text-gray-500`}>
                 From land search to handing over the keys to your property, we
                 take care of every detail so you can focus on the bigger
                 picture.
@@ -101,9 +103,9 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
           </div>
           <ServiceCardWithBackgroundImage backgroundImage='trust.jpg' />
           <div
-            className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end text-white p-4 space-y-2'>
-            <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+            className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+        rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
+            <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
             <h1 className='text-lime-500'>Trust and Professionalism</h1>
             <p className={`${poppins.className} text-sm`}>
               We are dedicated to delivering high-quality, trustworthy service.
@@ -115,22 +117,22 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
       </section>
 
       <section
-        className={`${bebas.className} min-h-screen h-auto flex flex-col justify-center `}>
-        <div className={`  relative p-4 md:p-6 space-y-6 `}>
-          <div className=' relative h-auto flex flex-col justify-RealEstateServices space-y-3 md:px-2 items-RealEstateServices z-10'>
-            <h1 className='text-lime-500 text-[2em] '>
+        className={`${bebas.className} flex h-auto min-h-screen flex-col justify-center `}>
+        <div className={`  relative space-y-6 p-4 md:p-6 `}>
+          <div className=' justify-RealEstateServices items-RealEstateServices relative z-10 flex h-auto flex-col space-y-3 md:px-2'>
+            <h1 className='text-[2em] text-lime-500 '>
               Diaspora Focused Solutions
 
             </h1>
 
-            <p className={`${poppins.className} text-lg  max-w-4xl `}>
+            <p className={`${poppins.className} max-w-4xl  text-lg `}>
               We specialize in helping members of the diaspora reconnect with
               their roots by facilitating land acquisition, construction, and
               home buying with ease and transparency.
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
             <ServiceIntroComponent
               title='Land Search and Acquisition'
               description='For those in the diaspora eager to reconnect with their
@@ -183,7 +185,7 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
       </section>
 
       <section>
-        <div className='container text-2xl hidden'>
+        <div className='container hidden text-2xl'>
           Whether you are looking to invest in land, build a home, or purchase
           property in your homeland, ASTAR LLC is here to support you through
           the entire process. Together, we can turn your dreams into reality,

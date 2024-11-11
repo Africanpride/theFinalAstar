@@ -7,7 +7,9 @@ import {
   LucidePhoneIncoming,
   LucideVoicemail,
 } from 'lucide-react';
+
 import { bebas, poppins } from '@/config/fonts';
+
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
 import AfricanDiasporaServices from './AfricanDiasporaServices';
 
@@ -46,17 +48,17 @@ const DiasporaJumbotron = (props: Props) => {
     })();
   }, []);
   return (
-    <section className='min-h-screen h-auto grid   p-4 gap-4'>
+    <section className='grid h-auto min-h-screen   gap-4 p-4'>
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
-        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
-            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
+        <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
+          <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
+            <h1 className='max-w-xl text-4xl capitalize leading-10 md:text-5xl  md:leading-[3rem] '>
               Supporting the African diaspora
             </h1>
 
             <p
-              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+              className={`${poppins.className} text-left  text-base capitalize text-gray-500`}>
               African Diaspora 126+ is a non-profit organization working to help
               people of African descent to reconnect with their heritage. We
               advocate for the Right to Return, focusing on policies that
@@ -65,9 +67,9 @@ const DiasporaJumbotron = (props: Props) => {
           </div>
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end text-white p-4 space-y-2'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+        rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
+          <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
           <h1 className='text-yellow-500'>Our Mission</h1>
           <p className={`${poppins.className} text-sm`}>
             To champion the Right to Return by building collaborative networks
@@ -79,17 +81,17 @@ const DiasporaJumbotron = (props: Props) => {
       </div>
 
       <div
-        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
-        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
-          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
+        className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
+        <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
+          <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
             <h1
-              className='capitalize text-3xl md:text-4xl leading-[2.5rem] max-w-xl text-yellow-600 
+              className='max-w-xl text-3xl capitalize leading-10 text-yellow-600 md:text-4xl 
              md:leading-[3rem] '>
               Message to the Diaspora Community
             </h1>
 
             <p
-              className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
+              className={`${poppins.className} text-left  text-base capitalize text-gray-500`}>
               Congratulations to all African Diaspora Descendants (HUG) who have
               successfully embraced their heritage through the citizenship
               process. Each journey home is a milestone, not just for the
@@ -101,9 +103,9 @@ const DiasporaJumbotron = (props: Props) => {
         </div>
         <ServiceCardWithBackgroundImage backgroundImage='vision4.jpg' />
         <div
-          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
-        flex flex-col justify-end text-white p-4 space-y-2'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+        rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
+          <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
           <h1 className='text-yellow-500'>Our Vision</h1>
           <p className={`${poppins.className} text-sm`}>
             We envision a vibrant Africa enriched by the presence, talents, and
@@ -113,8 +115,8 @@ const DiasporaJumbotron = (props: Props) => {
           </p>
         </div>
       </div>
-      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
-        <div className=' rounded-3xl flex flex-col justify-center relative'>
+      <div className='container mx-auto grid aspect-square  grid-cols-1 rounded-2xl md:aspect-video   '>
+        <div className=' relative flex flex-col justify-center rounded-3xl'>
           <Image
             src='/images/aaha.jpg'
             alt='Vision Background'
@@ -123,7 +125,7 @@ const DiasporaJumbotron = (props: Props) => {
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
           />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
+          <div className=' container z-20 mx-auto flex flex-col items-center justify-center space-y-3 '>
             <div>
               {/* <div
                 className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
@@ -140,37 +142,37 @@ const DiasporaJumbotron = (props: Props) => {
         </div>
       </div>
       <AfricanDiasporaServices />
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 space-y-2 '>
+      <div className='container mx-auto grid grid-cols-1 gap-4 space-y-2 md:grid-cols-3 '>
         <ServiceCardWithBackgroundImage backgroundImage='contactus.jpg' />
 
         <div
-          className='col-span-2   md:aspect-auto relative bg-black rounded-2xl leading-[1.12rem]
-        flex flex-col justify-center text-white p-4 md:p-8 space-y-3'>
-          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
-          <h1 className={`${bebas.className} text-yellow-500 uppercase `}>
+          className='relative   col-span-2 flex flex-col justify-center space-y-3
+        rounded-2xl bg-black p-4 leading-[1.12rem] text-white md:aspect-auto md:p-8'>
+          <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
+          <h1 className={`${bebas.className} uppercase text-yellow-500 `}>
             Contact us
           </h1>
-          <p className={`${poppins.className} text-sm md:text-lg md:w-3/4`}>
+          <p className={`${poppins.className} text-sm md:w-3/4 md:text-lg`}>
             Ready to learn more or start your journey home? Reach out to us and
             let us build a future of connection, community, and cultural pride.
           </p>
-          <div className='border-0 border-t border-solid border-yellow-500 h-[2px] w-[120px] ' />{' '}
+          <div className='h-[2px] w-[120px] border-0 border-t border-solid border-yellow-500 ' />{' '}
           <div className='space-y-3'>
-            <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '>
+            <div className='flex flex-col gap-x-4  text-yellow-500 md:flex-row md:items-center '>
               <span className='hidden md:inline-block'>
                 {' '}
                 <LucideVoicemail />{' '}
               </span>{' '}
               Email: info@africadiaspora126+.com
             </div>
-            <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '>
+            <div className='flex flex-col gap-x-4  text-yellow-500 md:flex-row md:items-center '>
               <span className='hidden md:inline-block'>
                 {' '}
                 <LucidePhoneIncoming />{' '}
               </span>
               Phone: +233 269 173 378{' '}
             </div>
-            <div className='flex flex-col md:flex-row  md:items-center gap-x-4 text-yellow-500 '>
+            <div className='flex flex-col gap-x-4  text-yellow-500 md:flex-row md:items-center '>
               <span className='hidden md:inline-block'>
                 {' '}
                 <LucideGlobe />{' '}

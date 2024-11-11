@@ -1,19 +1,18 @@
 'use client';
-import { bebas, poppins } from '@/config/fonts';
 import React, { useCallback, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Input } from '@nextui-org/input';
 import { Button } from '@nextui-org/button';
-import { GoogleMap } from './GoogleMap';
 import axios from 'axios';
-import toast, { Toaster } from 'react-hot-toast';
-
+import toast from 'react-hot-toast';
 import {
-  GoogleReCaptchaProvider,
-  GoogleReCaptcha,
   useGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
 import { LucideBadgeCheck } from 'lucide-react';
+
+import { bebas } from '@/config/fonts';
+
+import { GoogleMap } from './GoogleMap';
 
 interface InputsData {
   name: string;
@@ -185,12 +184,12 @@ const ContactStart = () => {
   };
 
   return (
-    <section className='min-h-dvh h-auto z-20 pb-5 text-xl'>
-      <div className='grid grid-cols-1 md:grid-cols-3 p-4'>
+    <section className='z-20 h-auto min-h-dvh pb-5 text-xl'>
+      <div className='grid grid-cols-1 p-4 md:grid-cols-3'>
         <div
-          className='md:rounded-2xl  bg-neutral-200 col-span-1 h-auto  p-4
-        flex flex-col justify-start md:justify-center items-center py-8 md:p-6'>
-          <div className={`${bebas.className} text-3xl p5-5 m-5 `}>
+          className='col-span-1  flex h-auto flex-col  items-center
+        justify-start bg-neutral-200 p-4 py-8 md:justify-center md:rounded-2xl md:p-6'>
+          <div className={`${bebas.className} p5-5 m-5 text-3xl `}>
             Let us Connect and Build Africa’s Future Together.
           </div>
 
@@ -206,22 +205,22 @@ const ContactStart = () => {
             <textarea
               {...register('message')}
               placeholder='Send us a Message'
-              className='border p-2 w-full rounded-xl min-h-16'
+              className='min-h-16 w-full rounded-xl border p-2'
             />
             <Button
               color='success'
               radius='full'
               type='submit'
-              className='w-full mt-4  text-white p-2'>
+              className='mt-4 w-full  p-2 text-white'>
               Submit
             </Button>
           </form>
         </div>
 
-        <div className='md:col-span-2 h-auto min-h-full p-4 md:p-16 text-base '>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4'>
+        <div className='h-auto min-h-full p-4 text-base md:col-span-2 md:p-16 '>
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-4'>
             <div>
-              <div className={`${bebas.className} text-3xl block`}>
+              <div className={`${bebas.className} block text-3xl`}>
                 Our Office Location
               </div>
               <p className=' block'>
@@ -230,7 +229,7 @@ const ContactStart = () => {
             </div>
 
             <div>
-              <div className={`${bebas.className} text-3xl block`}>
+              <div className={`${bebas.className} block text-3xl`}>
                 Contact Details
               </div>
               <p className=' block'>

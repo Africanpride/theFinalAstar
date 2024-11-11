@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { LucideArrowUpRight } from 'lucide-react';
+
 import { poppins } from '@/config/fonts';
 
 type ServiceIntroComponentProps = {
@@ -18,19 +19,19 @@ const ServiceIntroComponent: React.FC<ServiceIntroComponentProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-3xl bg-neutral-100 hover:bg-${color}-300/30 p-4 md:p-8 aspect-square md:aspect-video flex flex-col justify-center items-start border border-neutral-300 space-y-2 relative`}
+      className={`hover:bg- rounded-3xl bg-neutral-100${color}-300/30 relative flex aspect-square flex-col items-start justify-center space-y-2 border border-neutral-300 p-4 md:aspect-video md:p-8`}
       data-scroll
       data-scroll-speed={0.1}
     >
-      <div className="w-full text-lg flex justify-between items-center">
+      <div className="flex w-full items-center justify-between text-lg">
         <div className="text-3xl">{title}</div>
-        <div className={`bg-${color}-600 rounded-full w-8 aspect-square flex justify-center items-center absolute top-2 right-2`}>
+        <div className={`bg-${color}-600 absolute right-2 top-2 flex aspect-square w-8 items-center justify-center rounded-full`}>
           <Link href={url}>
             <LucideArrowUpRight className="text-white" />
           </Link>
         </div>
       </div>
-      <div className={`${poppins.className} font-light line-clamp-3`}>
+      <div className={`${poppins.className} line-clamp-3 font-light`}>
         {description}
       </div>
       <div>

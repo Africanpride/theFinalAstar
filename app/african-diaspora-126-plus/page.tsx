@@ -1,5 +1,6 @@
-import DiasporaJumbotron from '@/components/ui/DiasporaJumbotron';
 import React from 'react';
+
+import DiasporaJumbotron from '@/components/ui/DiasporaJumbotron';
 
 type Props = {};
 

@@ -6,7 +6,7 @@ type Props = {};
 
 const SocialMediaNavIcons = (props: Props) => {
   return (
-    <div className='hidden md:flex items-center gap-x-4'>
+    <div className='hidden items-center gap-x-4 md:flex'>
       <Link href='/'>
         <FaLinkedinIn className='text-2xl' />
       </Link>

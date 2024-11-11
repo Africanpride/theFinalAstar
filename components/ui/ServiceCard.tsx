@@ -7,8 +7,8 @@ type Props = {
 }
 
 const ServiceCard = ({ text = "Mining Services", icon = <LucideFactory name="mining" /> }) => (
-    <div className='flex flex-col justify-between bg-lime-100 text-lime-700 text-xl leading-[0.9em] rounded-3xl aspect-square p-4 md:p-8'>
-      <div>{icon ?? <LucideFactory className='h-8 w-8' />}</div>
+    <div className='flex aspect-square flex-col justify-between rounded-3xl bg-lime-100 p-4 text-xl leading-[0.9em] text-lime-700 md:p-8'>
+      <div>{icon ?? <LucideFactory className='size-8' />}</div>
       <div>{text}</div>
     </div>
   );
