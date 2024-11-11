@@ -50,8 +50,8 @@ const AAHAJumbotron = (props: Props) => {
           <Image
             src='/images/airport2.jpg'
             alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
+            fill={true}
+             style={{objectFit: "cover"}} 
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
           />

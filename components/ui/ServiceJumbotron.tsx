@@ -90,8 +90,8 @@ const ServiceJumbotron = (props: Props) => {
           <Image
             src='/images/services4.jpg'
             alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
+            fill={true}
+             style={{objectFit: "cover"}} 
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
           />
@@ -154,8 +154,8 @@ const ServiceJumbotron = (props: Props) => {
           <Image
             src='/images/services3.jpg'
             alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
+            fill={true}
+             style={{objectFit: "cover"}} 
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
           />

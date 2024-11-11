@@ -16,7 +16,7 @@ export default function CallToAction() {
           <Image
             src='/images/calltoaction2.jpg'
             alt='Laboratory professional at work'
-            layout='fill'
+            fill={true}
             className='absolute inset-0 size-full object-cover'
           />
         </div>

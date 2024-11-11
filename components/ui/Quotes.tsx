@@ -22,7 +22,7 @@ const Quote: React.FC<Props> = ({
       <Image
         src='/images/homepage.png'
         alt='Laboratory professional at work'
-        layout='fill'
+        fill={true}
         className='absolute inset-0 size-full object-cover'
       />
       <div className='relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-32 '>
