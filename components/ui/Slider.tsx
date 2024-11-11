@@ -30,7 +30,7 @@ const Slider = ({
         className='absolute inset-0 z-10 '
         quality={100}
       />
-      <div className='absolute inset-0 z-10 bg-black/35' ></div>
+      <div className='absolute inset-0 z-10 bg-black/45' ></div>
       <div className='space-y-3 md:space-y-4 px-2 z-30'>
         <h1
           className={`${bebas.className} text-lime-500 text-4xl max-w-2xl hidden`}>
