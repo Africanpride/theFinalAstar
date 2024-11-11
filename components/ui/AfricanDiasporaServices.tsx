@@ -51,14 +51,14 @@ const AfricanDiasporaServices = ({ title, order = 1, children }: Props) => {
         <div className=' relative h-auto flex flex-col justify-center items-start space-y-3 pb-7 md:px-2 
          z-10'>
           <h1 className='text-yellow-500 text-[2em] '>
-          Africa Diaspora 126+: Reconnecting the Diaspora to the Motherland
+          African Diaspora 126+: Reconnecting the Diaspora to the Motherland
           </h1>
 
           <p className={`${poppins.className} text-lg  max-w-4xl `}>
             Join us as we work to make Africa an inclusive, welcoming space for
             all who seek to reconnect with their roots. Whether you are looking
             to volunteer, contribute to our mission, or participate in cultural
-            exchanges, there’s a place for you at Africa Diaspora 126+.
+            exchanges, there’s a place for you at African Diaspora 126+.
           </p>
         </div>
 

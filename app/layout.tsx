@@ -41,7 +41,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen  antialiased  bg-neutral-200/65",
+          "min-h-screen  antialiased bg-gray-100  font-sans overflow-x-hidden text-[16px] ",
           poppins.className
         )}
         

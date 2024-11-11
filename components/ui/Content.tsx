@@ -72,7 +72,7 @@ const Nav = () => {
             <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-2xl text-white'>Partners</h3>
                 <Link href={'/real-estate'}>Real Estate</Link>
-                <Link href={'/african-diaspora-126-plus'}>Africa Diaspora 126+</Link>
+                <Link href={'/african-diaspora-126-plus'}>African Diaspora 126+</Link>
                 <Link href={'/aaha'}>Access Africa Home & Abroad (AAHA)</Link>
             </div>
         </div>

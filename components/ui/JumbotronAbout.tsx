@@ -1,3 +1,4 @@
+
 'use client';
 import React from 'react';
 import Image from 'next/image';
@@ -44,6 +45,71 @@ const JumbotronAbout = (props: Props) => {
     <section className='min-h-screen h-auto grid   p-4 gap-4'>
       <div
         className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
+
+        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
+          <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
+            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+              About Astar LLC
+            </h1>
+
+            <p
+              className={`${poppins.className} capitalize  text-gray-500 text-left text-lg`}>
+              ASTAR LLC was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. Our team brings
+              decades of experience in commodities trading and investment
+              management, with a special focus on the African continent.
+            </p>
+          </div>
+        </div>
+        <div
+          className='col-span-1   aspect-square relative bg-black rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-end text-white p-4 space-y-2'>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          <h1 className='text-lime-500'>Our Vision</h1>
+          <p className={`${poppins.className} text-sm`}>
+            Our Vision is a united Africa where regional trade flows seamlessly, fostering mutual growth and long-term prosperity.
+          </p>
+        </div>
+        <div
+          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-base leading-[1.12rem]
+        flex flex-col justify-end text-black p-4 space-y-2'>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          <h1>Our Mission</h1>
+          <p className={`${poppins.className} text-sm text-white`}>
+            To drive Africa’s economic growth by enabling seamless commodity
+            trading and fostering impactful investment opportunities across
+            regional markets
+          </p>
+        </div>
+      </div>
+      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-auto md:aspect-video   '>
+        <div className=' rounded-3xl flex flex-col justify-center relative'>
+          {/* <div className='absolute inset-0 z-20 bg-black/35 rounded-2xl' ></div> */}
+          <Image
+            src='/images/mission.jpg'
+            alt='Vision Background'
+            layout='fill'
+            objectFit='cover'
+            className='absolute inset-0 z-10 rounded-2xl'
+            quality={100}
+          />
+          <div className=' z-30 container  mx-auto flex flex-col justify-center items-center space-y-3 '>
+
+            {/* <div>
+              <div
+                className='max-w-6xl text-xl md:text-4xl text-neutral-100 md:uppercase leading-[1.5rem]  md:font-bold md:px-2 p-5 md:p-8'
+                data-scroll
+                data-scroll-speed={0.1}>
+                ASTAR LLC was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. Our team brings
+                decades of experience in commodities trading and investment
+                management, with a special focus on the African continent.
+              </div>
+            </div> */}
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col justify-center h-full space-y-2 '>
             <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
@@ -72,33 +138,35 @@ const JumbotronAbout = (props: Props) => {
         </div>
       </div>
 
-      <div className='container mx-auto grid grid-cols-1  rounded-2xl aspect-square md:aspect-video   '>
-        <div className=' rounded-3xl flex flex-col justify-center relative'>
-          <Image
-            src='/images/mission.jpg'
-            alt='Vision Background'
-            layout='fill'
-            objectFit='cover'
-            className='absolute inset-0 z-10 rounded-2xl'
-            quality={100}
-          />
-          <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
-            <div>
-              <div
-                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
-                data-scroll
-                data-scroll-speed={0.1}>
-                Founded on the belief that Africa’s future lies in its ability
-                to collaborate, trade, and invest within itself, ASTAR LLC was
-                created to promote sustainable regional growth. Our team brings
-                decades of experience in commodities trading and investment
-                management, with a special focus on the African continent.
-              </div>
-            </div>
+
+      {/* <div
+        className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
+        <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl  flex flex-col justify-center'>
+          <div className='space-y-2 '>
+            <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
+              Our Vision
+            </h1>
+
+            <p className={`${poppins.className} capitalize  text-gray-500 text-left text-lg`}>
+              Our Vision is a united Africa where regional trade flows seamlessly, fostering mutual growth and long-term prosperity.
+            </p>
           </div>
         </div>
-      </div>
-      <div
+        <div
+          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
+        flex flex-col justify-end text-white p-4'>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3' />
+          Empowering regional <br /> markets
+        </div>
+        <div
+          className='col-span-1   aspect-square relative bg-black rounded-2xl text-xl leading-[1.3rem]
+        flex flex-col justify-end text-white p-4'>
+          <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
+          African trade <br /> expertise
+        </div>
+      </div> */}
+
+      {/* <div
         className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div
           className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
@@ -125,8 +193,10 @@ const JumbotronAbout = (props: Props) => {
             </p>
           </div>
         </div>
-      </div>
-      <div className='container mx-auto grid grid-cols-1 bg-white rounded-2xl aspect-square md:aspect-video   '>
+      </div> */}
+
+
+      {/* <div className='container mx-auto grid grid-cols-1 bg-white rounded-2xl aspect-square md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/vision.jpg'
@@ -138,22 +208,22 @@ const JumbotronAbout = (props: Props) => {
           />
           <div className=' z-20 container mx-auto flex flex-col justify-center items-center space-y-3 '>
             <div
-                className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
-                data-scroll
-                data-scroll-speed={0.1}>
-                Our Vision is a united Africa where regional trade flows
-                seamlessly, fostering mutual growth and long-term prosperity
-              </div>
+              className='max-w-5xl md:text-3xl text-white  p-4 md:p-8'
+              data-scroll
+              data-scroll-speed={0.1}>
+              Our Vision is a united Africa where regional trade flows
+              seamlessly, fostering mutual growth and long-term prosperity
+            </div>
 
           </div>
         </div>
-      </div>
+      </div> */}
 
       <>
         {/* Approach */}
-        <div className=''>
+        <div className='bg-white pt-5'>
           {/* Approach */}
-          <div className='max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto'>
+          <div className='max-w-5xl rounded-3xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto'>
             {/* Title */}
             <div className='max-w-3xl mb-10 lg:mb-14'>
               <h2

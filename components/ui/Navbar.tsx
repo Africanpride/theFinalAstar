@@ -76,11 +76,12 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
+      isBlurred={false}
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth='full'
-      className={`navbar ${isMenuOpen ? 'menu-open' : ''} md:py-2`}
+      className={`navbar bg-white ${isMenuOpen ? 'menu-open' : ''} md:py-2`}
       style={{ maxWidth: 'full' }}>
       <NavbarContent justify='start' className='md:!px-0'>
         <NavbarBrand>
@@ -101,15 +102,15 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className={`${bebas.className} hidden sm:flex gap-x-4 text-2xl  px-16 rounded-full`}
+        className={`${bebas.className} hidden sm:flex gap-x-4 text-3xl  px-16 rounded-full`}
         justify='center'>
         {siteConfig.navItems.map((item) => (
           <NavbarItem key={item.href}>
             <NextLink
               className={clsx(linkStyles({ color: 'foreground' }), {
-                'data-[active=true]:text-primary data-[active=true]:font-medium hover:text-lime-600':
+                'data-[active=true]:text-primary data-[active=true]:font-medium hover:text-lime-500':
                   true,
-                'text-lime-600': pathname === item.href, // Highlight active link
+                'text-lime-500': pathname === item.href, // Highlight active link
               })}
               color='foreground'
               href={item.href}>
@@ -140,10 +141,10 @@ export const Navbar = () => {
       <NavbarContent justify='end'>
         <NavbarItem>
           <div
-            className={`${bebas.className} flex items-center gap-x-2 font-medium text-gray-500 hover:text-lime-600 py-2 md:py-0 md:my-6 md:ps-6`}>
+            className={`${bebas.className} flex items-center gap-x-2 font-medium text-gray-500 hover:text-lime-500 py-2 md:py-0 md:my-6 md:ps-6`}>
             <Link href={'/contact'}>
               <Button
-                className='uppercase bg-lime-600 text-white rounded-full pl-5 pr-1'
+                className='uppercase bg-lime-500 text-white rounded-full pl-5 pr-1'
                 size={'sm'}
                 // color={'success'}
                 variant='solid'
@@ -161,7 +162,7 @@ export const Navbar = () => {
         />
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className='bg-white'>
         <div className='flex flex-col items-start justify-center h-auto pt-[20%]'>
           <motion.ul
             initial='hidden'
@@ -177,7 +178,7 @@ export const Navbar = () => {
                 },
               },
             }}
-            className='space-y-2 font-poppins font-extrabold uppercase italic'>
+            className='space-y-2 font-poppins font-extrabold uppercase  italic'>
             {siteConfig.navItems.map((item, index) =>
               item.label === 'Partners' ? (
                 <Dropdown key={`${item}-${index}`}>
@@ -190,9 +191,9 @@ export const Navbar = () => {
                       <Link
                         onClick={() => handleMenuItemClick()}
                         className={clsx(linkStyles({ color: 'foreground' }), {
-                          'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-600 text-lg':
+                          'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-500 text-2xl ':
                             true,
-                          'text-lime-600': pathname === item.href,
+                          'text-lime-500': pathname === item.href,
                         })}
                         color='foreground'
                         href={item.href}>
@@ -220,11 +221,11 @@ export const Navbar = () => {
                     </DropdownItem>
                     <DropdownItem
                       key='african_diaspora_126+'
-                      description='This is a non-profit organization focused on supporting the African diaspora. '
+                      description='This is a non-profit organization focused on supporting the African diaspora '
                       startContent={<LucideGlobe />}>
                       <a href='/african-diaspora-126-plus'>
                         <span className={`${bebas.className} text-lg`}>
-                          Africa Diaspora 126+
+                          African Diaspora 126+
                         </span>
                       </a>
                     </DropdownItem>
@@ -249,9 +250,9 @@ export const Navbar = () => {
                   <Link
                     onClick={() => setIsMenuOpen(false)}
                     className={clsx(linkStyles({ color: 'foreground' }), {
-                      'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-600 text-lg':
+                      'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-500 text-2xl':
                         true,
-                      'text-lime-600': pathname === item.href,
+                      'text-lime-500': pathname === item.href,
                     })}
                     color='foreground'
                     href={item.href}>

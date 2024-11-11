@@ -52,12 +52,12 @@ const DiasporaJumbotron = (props: Props) => {
         <div className='col-span-1 md:col-span-3 bg-white p-4 md:p-8 rounded-2xl'>
           <div className='md:flex flex-col items-start justify-end h-full space-y-3 '>
             <h1 className='capitalize text-4xl md:text-5xl leading-[2.5rem] max-w-xl  md:leading-[3rem] '>
-              Supporting the African diaspora.
+              Supporting the African diaspora
             </h1>
 
             <p
               className={`${poppins.className} capitalize  text-gray-500 text-left text-base`}>
-              Africa Diaspora 126+ is a non-profit organization working to help
+              African Diaspora 126+ is a non-profit organization working to help
               people of African descent to reconnect with their heritage. We
               advocate for the Right to Return, focusing on policies that
               facilitate the African Diaspora integration to the Motherland.

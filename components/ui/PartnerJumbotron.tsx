@@ -48,7 +48,7 @@ const PartnerJumbotron = (props: Props) => {
         flex flex-col justify-end  p-4 md:p-8 space-y-3`}>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           <h1 className='text-lime-300 text-5xl leadig-[2.9rem] '>
-            Africa Diaspora 126+
+            African Diaspora 126+
           </h1>
           <p
             className={`${poppins.className} capitalize  text-white text-left text-base`}>

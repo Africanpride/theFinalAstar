@@ -39,8 +39,16 @@ const MainSlider = (props: Props) => {
             work, education, or specialized training.'
           />
         </div>
+        <div className='embla__slide'>
+          <Slider
+            image='real-estate2.jpg'
+            link='/real-estate'
+            heading='Build Your Dream Home'
+            description='Whether you are searching for a land, building a property, or purchasing a home, our comprehensive services are designed to support you every step of the way.'
+          />
+        </div>
       </div>
-      <div className='absolute bottom-4 right-5 md:right-16 flex items-center gap-x-4 z-10 '>
+      <div className='absolute bottom-4 md:bottom-12 right-5 md:right-16 flex items-center gap-x-4 z-10 '>
         <button
           className='embla__prev h-auto p-2 aspect-square bg-lime-600 hover:bg-lime-500 rounded-full '
           onClick={scrollPrev}>
