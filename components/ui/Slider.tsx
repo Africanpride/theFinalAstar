@@ -30,6 +30,7 @@ const Slider = ({
          style={{objectFit: "cover"}} 
         className='absolute inset-0 z-10 '
         quality={100}
+        priority
       />
       <div className='absolute inset-0 z-10 bg-black/45' ></div>
       <div className='z-30 space-y-3 px-2 md:space-y-4'>

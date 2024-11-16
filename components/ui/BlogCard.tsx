@@ -24,6 +24,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ imageSrc, imageAlt, title, descript
           alt={imageAlt}
           width={560}
           height={320}
+          priority
         />
       </div>
       <div className='my-6'>

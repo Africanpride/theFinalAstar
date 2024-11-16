@@ -15,7 +15,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 
 interface NewsletterForm {
-  name: string;
+  firstname: string;
+  lastname: string;
   email: string;
 }
 
@@ -78,7 +79,7 @@ export default function CallToAction() {
     reset,
     formState: { errors },
   } = useForm<NewsletterForm>({
-    defaultValues: { name: '', email: '' },
+    defaultValues: { firstname: '', lastname: '', email: '' },
   });
 
   const onSubmit: SubmitHandler<NewsletterForm> = async (data) => {
@@ -144,15 +145,32 @@ export default function CallToAction() {
               id='newsletter'
               onSubmit={handleSubmit(onSubmit)}
               className='space-y-4'>
-              <Input
-                {...register('name', { required: 'Name is required' })}
-                placeholder='Your Name'
-                className='w-full rounded-none border-0 focus:ring-2 focus:ring-white'
-                aria-label='Name'
-              />
-              {errors.name && (
-                <p className='text-red-500'>{errors.name.message}</p>
-              )}
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div>
+                  {' '}
+                  <Input
+                    {...register('firstname', { required: 'First Name is required' })}
+                    placeholder='Your Name'
+                    className='w-full rounded-none border-0 focus:ring-2 focus:ring-white'
+                    aria-label='firstname'
+                  />
+                  {errors.firstname && (
+                    <p className='text-red-500'>{errors.firstname.message}</p>
+                  )}
+                </div>
+                <div>
+                  {' '}
+                  <Input
+                    {...register('lastname', { required: 'Last Name is required' })}
+                    placeholder='Your Name'
+                    className='w-full rounded-none border-0 focus:ring-2 focus:ring-white'
+                    aria-label='lastname'
+                  />
+                  {errors.lastname && (
+                    <p className='text-red-500'>{errors.lastname.message}</p>
+                  )}
+                </div>
+              </div>
 
               <Input
                 {...register('email', {

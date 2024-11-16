@@ -163,7 +163,7 @@ const DiasporaJumbotron = (props: Props) => {
                 {' '}
                 <LucideVoicemail />{' '}
               </span>{' '}
-              Email: info@africadiaspora126+.com
+              Email: info@africadiaspora126.com
             </div>
             <div className='flex flex-col gap-x-4  text-yellow-500 md:flex-row md:items-center '>
               <span className='hidden md:inline-block'>

@@ -166,6 +166,7 @@ const PartnerJumbotron = (props: Props) => {
              style={{objectFit: "cover"}} 
             className='absolute inset-0 z-10 rounded-2xl'
             quality={100}
+            priority
           />
         </div>
 
