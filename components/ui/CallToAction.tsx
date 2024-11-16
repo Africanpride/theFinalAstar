@@ -1,13 +1,121 @@
-import {
-  LucideArrowUpRight,
-} from 'lucide-react';
+'use client';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { LucideArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@nextui-org/button';
 import { Input } from '@nextui-org/input';
-
 import { bebas } from '@/config/fonts';
+import toast, { Toaster } from 'react-hot-toast';
+// import GoogleCaptchaWrapper from '../GoogleCaptchaWrapper';
+// import {
+//   GoogleReCaptchaContext,
+//   useGoogleReCaptcha,
+// } from 'react-google-recaptcha-v3';
+import axios from 'axios';
+
+interface NewsletterForm {
+  name: string;
+  email: string;
+}
 
 export default function CallToAction() {
+  const [isVerified, setIsVerified] = useState<boolean>(false);
+  const [token, setToken] = useState<string>('');
+  // const { executeRecaptcha } = useGoogleReCaptcha();
+
+  // useEffect(() => {
+  //   let timeoutId: NodeJS.Timeout;
+
+  //   const loadToken = async () => {
+  //     if (!executeRecaptcha) {
+  //       console.error('reCAPTCHA not initialized');
+  //       return;
+  //     }
+
+  //     try {
+  //       const token = await executeRecaptcha('inquirySubmit');
+  //       if (token) {
+  //         setToken(token);
+  //         handleCaptchaSubmission(token);
+  //       }
+  //     } catch (error) {
+  //       console.error('Error executing reCAPTCHA:', error);
+  //     }
+  //   };
+
+  //   if (executeRecaptcha) {
+  //     loadToken();
+  //     // Refresh token every 2 minutes
+  //     timeoutId = setInterval(loadToken, 120000);
+  //   }
+
+  //   return () => {
+  //     if (timeoutId) clearInterval(timeoutId);
+  //   };
+  // }, [executeRecaptcha]);
+
+  // check the recaptcher response
+  async function handleCaptchaSubmission(token: string | null) {
+    try {
+      const response = await axios.post('/api/recaptchaVerification/', {
+        token,
+      });
+      if (response.status !== 200) {
+        toast.error('Verification failed ...');
+        return;
+      }
+      setIsVerified(true);
+    } catch (error) {
+      setIsVerified(false);
+      console.error('Verification failed:', error);
+    }
+  }
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<NewsletterForm>({
+    defaultValues: { name: '', email: '' },
+  });
+
+  const onSubmit: SubmitHandler<NewsletterForm> = async (data) => {
+    // if (!isVerified) {
+    //   toast.error('Please wait for verification...', {
+    //     duration: 4000,
+    //     position: 'top-center',
+    //   });
+    //   return;
+    // }
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...data, token }),
+      });
+
+      if (response.ok) {
+        toast.success('Subscription successful!', {
+          duration: 4000,
+          position: 'top-center',
+        });
+        reset();
+      } else {
+        toast.error('Failed to create subscription.', {
+          duration: 4000,
+          position: 'top-center',
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('An error occurred while submitting the form.');
+    }
+  };
   return (
     <section className='w-full'>
       <div className='grid grid-cols-1 md:grid-cols-2'>
@@ -15,49 +123,71 @@ export default function CallToAction() {
         <div className='relative h-[400px] md:h-full'>
           <Image
             src='/images/calltoaction2.jpg'
-            alt='Laboratory professional at work'
+            alt='Astar trading professionals at work'
             fill={true}
-            className='absolute inset-0 size-full object-cover'
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+            style={{ objectFit: 'cover' }}
+            className='absolute inset-0 z-10'
+            quality={100}
           />
         </div>
-
         {/* Content Column */}
-        <div className='flex flex-col justify-center bg-blue-950 p-8 md:p-12 lg:p-16'>
-          <div className='max-w-md'>
-            <h2 className={`mb-8 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl ${bebas.className}`}>
+        <div className='flex flex-col justify-center items-center bg-blue-950 p-4 md:p-8 lg:p-12'>
+          <div className='py-8'>
+            <h2
+              className={`mb-8 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl ${bebas.className}`}>
               Join a thriving network.
               <br />
-              Stay connected to Growth and Oppportunity.
+              Stay connected to Growth and Opportunity.
             </h2>
+            <form
+              id='newsletter'
+              onSubmit={handleSubmit(onSubmit)}
+              className='space-y-4'>
+              <Input
+                {...register('name', { required: 'Name is required' })}
+                placeholder='Your Name'
+                className='w-full rounded-none border-0 focus:ring-2 focus:ring-white'
+                aria-label='Name'
+              />
+              {errors.name && (
+                <p className='text-red-500'>{errors.name.message}</p>
+              )}
 
-            <form className='space-y-8'>
-              <div className='relative'>
-                <Input
-                  type='email'
-                  placeholder='Your Email Address'
-                  className='w-full  border-0 py-8 text-lg focus:ring-2 focus:ring-white'
-                  required
-                  aria-label='Email Address'
-                />
-                <Button
-                  className='w-full rounded-full bg-lime-600 pl-5 pr-1 uppercase text-white'
-                  size={'lg'}
-                  // color={'success'}
-                  variant='solid'
-                  endContent={
-                    <LucideArrowUpRight className='rounded-full  bg-white text-black' />
-                  }>
-                  <span className=' text-[1.2rem] '>Subscribe</span>
-                </Button>
-              </div>
+              <Input
+                {...register('email', {
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: 'Invalid email address',
+                  },
+                })}
+                placeholder='Your Email Address'
+                type='email'
+                className='w-full rounded-none border-0 focus:ring-2 focus:ring-white'
+                aria-label='Email Address'
+              />
+              {errors.email && (
+                <p className='text-red-500'>{errors.email.message}</p>
+              )}
 
-              <p className='text-lg text-white/90'>
-                Subscribe for updates, news, events, and community resources.
-              </p>
+              <Button
+                type='submit'
+                className='w-full rounded-full mt-5 bg-lime-600 uppercase text-white'
+                size='lg'
+                variant='solid'
+                // isDisabled={!isVerified}
+                endContent={
+                  <LucideArrowUpRight className='rounded-full bg-white text-black' />
+                }>
+                Subscribe
+              </Button>
             </form>
           </div>
         </div>
       </div>
+      {/* Toaster */}
+      <Toaster position='bottom-center' reverseOrder={false} />
     </section>
   );
 }

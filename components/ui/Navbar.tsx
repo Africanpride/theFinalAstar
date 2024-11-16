@@ -179,88 +179,25 @@ export const Navbar = () => {
               },
             }}
             className='font-poppins space-y-2 font-extrabold uppercase  italic'>
-            {siteConfig.navItems.map((item, index) =>
-              item.label === 'Partners' ? (
-                <Dropdown key={`${item}-${index}`}>
-                  <DropdownTrigger>
-                    <Button
-                      disableRipple
-                      className='bg-transparent p-0 data-[hover=true]:bg-transparent'
-                      radius='none'
-                      variant='light'>
-                      <Link
-                        onClick={() => handleMenuItemClick()}
-                        className={clsx(linkStyles({ color: 'foreground' }), {
-                          'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-500 text-2xl ':
-                            true,
-                          'text-lime-500': pathname === item.href,
-                        })}
-                        color='foreground'
-                        href={item.href}>
-                        <span className='font-poppins space-y-2 font-extrabold uppercase italic'>
-                          {item.label}
-                        </span>
-                      </Link>
-                    </Button>
-                  </DropdownTrigger>
-                  <DropdownMenu
-                    aria-label='ACME features'
-                    className='w-[340px]'
-                    itemClasses={{
-                      base: 'gap-4',
-                    }}>
-                    <DropdownItem
-                      // key='real_estate_services'
-                      description='We specialize in real estate services that cater to diasporas looking to invest in their homeland'
-                      startContent={<LucideHousePlus />}>
-                      <a href='/real-estate'>
-                        <span className={`${bebas.className} text-lg`}>
-                          Real Estate Services
-                        </span>
-                      </a>
-                    </DropdownItem>
-                    <DropdownItem
-                      key='african_diaspora_126+'
-                      description='This is a non-profit organization focused on supporting the African diaspora '
-                      startContent={<LucideGlobe />}>
-                      <a href='/african-diaspora-126-plus'>
-                        <span className={`${bebas.className} text-lg`}>
-                          African Diaspora 126+
-                        </span>
-                      </a>
-                    </DropdownItem>
-                    <DropdownItem
-                      key='access_africa_home&abroad_(AAHA)'
-                      description='Helping individuals pursue opportunities abroad, whether for work, education, or specialized training.'
-                      startContent={<LucideActivity />}>
-                      <a href='/aaha'>
-                        <span className={`${bebas.className} text-lg`}>
-                          Access Africa Home & Abroad (AAHA)
-                        </span>
-                      </a>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
-              ) : (
-                <motion.li
-                  key={`${item}-${index}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}>
-                  <Link
-                    onClick={() => setIsMenuOpen(false)}
-                    className={clsx(linkStyles({ color: 'foreground' }), {
-                      'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-500 text-2xl':
-                        true,
-                      'text-lime-500': pathname === item.href,
-                    })}
-                    color='foreground'
-                    href={item.href}>
-                    {item.label}
-                  </Link>
-                </motion.li>
-              )
-            )}
+            {siteConfig.navItems.map((item, index) => (
+              <motion.li
+                key={`${item}-${index}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}>
+                <Link
+                  onClick={() => setIsMenuOpen(false)}
+                  className={clsx(linkStyles({ color: 'foreground' }), {
+                    'data-[active=true]:text-primary data-[active=true]:font-bold hover:text-lime-500 text-2xl':
+                      true,
+                    'text-lime-500': pathname === item.href,
+                  })}
+                  color='foreground'
+                  href={item.href}>
+                  {item.label}
+                </Link>
+              </motion.li>
+            ))}
           </motion.ul>
         </div>
       </NavbarMenu>

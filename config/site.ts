@@ -3,6 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Astar Trading & Agro Processing Co. Ltd.",
   description: "ASTAR LLC, AStar Trading, AStar limited,AStar Trading & Agro Processing Co. Ltd,AStar Trading & Agro Processing Company, AStar Trading & Agro Processing Company Limited,  Africa commodity trading, agriculture trade Africa, mineral trade Africa, energy trade Africa, sustainable farming, soya beans Africa, shea butter Africa, cashew trade, palm oil trade, maize Africa, rice Africa, gold trade Africa, diamond trade Africa, tanzanite Africa, crude oil Africa, green energy Africa, solar energy Africa, wind energy Africa, hydro power Africa, investment Africa, high-growth sectors Africa, sustainable investment, trade facilitation Africa, intra-African trade, market access Africa, logistics Africa, regional trade Africa, regulatory guidance Africa, emerging markets Africa",
+  telephone: "026 917 3378",
   author: {
     name:'Pius Opoku-Fofie',
     url: 'https://x.com/africanpride'
