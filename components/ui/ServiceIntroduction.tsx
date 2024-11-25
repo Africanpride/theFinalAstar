@@ -60,7 +60,7 @@ const Start = ({ title, order = 1, children }: Props) => {
 
         </div>
 
-        <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
         <ServiceIntroComponent
           title='Agriculture'
           description='We trade high-quality agricultural products, fostering sustainable farming practices and supporting local economies. Products such as Soya Beans, Shea Butter, Cashew, Palm Oil, Maize, Rice etc'
@@ -69,11 +69,14 @@ const Start = ({ title, order = 1, children }: Props) => {
           title='Minerals & Natural Resources'
           url='/services'
           description={`Facilitating the trade of Africa's abundant natural resources and minerals such as, Mining (Gold, Diamond, Tanzanite) Crude Oil etc`}
-        />
+          image='/images/mining.svg'
+          
+          />
         <ServiceIntroComponent
           title='Energy'
           url='/services'
           description={`Involved in the regional trade of key energy products, contributing to Africa's energy security. Green Energy or Solar Wind, Hydro Power etc.`}
+          image='/images/energy.svg'
         />
         </div>
       </div>

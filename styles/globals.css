@@ -26,3 +26,14 @@ body {
     text-wrap: balance;
   }
 }
+
+p {
+  transform: translateY(20px); /* Start from below */
+  transform: translateY(0); /* Move to original position */
+}
+
+p.visible {
+  opacity: 1; /* Fully visible */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade-in */
+}
+

@@ -63,7 +63,7 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
                 individuals and families, particularly within the diaspora to
                 invest in real estate and establish roots in their home country.
                 Whether you are searching for a land, building a property, or
-                purchasing a home, our comprehensive services are designed to
+                purchasing a home, our comprehensive# are designed to
                 support you every step of the way.
               </p>
             </div>
@@ -137,45 +137,51 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
               searching for suitable plots to coordinating with reputable surveyors, we ensure due
               diligence is upheld, providing you with authentic and verified land that aligns with your
               vision.'
-            />
+              image='/images/land.svg'
+              />
             <ServiceIntroComponent
               title='Surveying and Land Purchase'
-              url='/services'
+              url='#'
               description={`Once we identify the perfect parcel of land, our
                         experienced team collaborates with professional surveyors to validate and secure your
                         investment, giving you peace of mind as you move forward.`}
-            />
+              image='/images/wallet.svg'
+              />
             <ServiceIntroComponent
               title='Construction Services'
-              url='/services'
+              url='#'
               description={`Whether you aspire to build a cozy family home or a thriving
                 commercial space, we work with a network of trusted contractors and skilled architects.
                 Together, we bring your vision to life, ensuring that your property is crafted to your
                 exact specifications and desires.`}
-            />
+              image='/images/worker.svg'
+              />
             <ServiceIntroComponent
               title='Architectural and Contracting Support'
-              url='/services'
+              url='#'
               description={`Whether you aspire to build a cozy family home or a thriving
                 commercial space, we work with a network of trusted contractors and skilled architects.
                 Together, we bring your vision to life, ensuring that your property is crafted to your
                 exact specifications and desires.`}
-            />
+              image='/images/worker2.svg'
+              />
             <ServiceIntroComponent
               title='Construction Services'
-              url='/services'
+              url='#'
               description={`Whether you aspire to build a cozy family home or a thriving
                 commercial space, we work with a network of trusted contractors and skilled architects.
                 Together, we bring your vision to life, ensuring that your property is crafted to your
                 exact specifications and desires.`}
-            />
+                image='/images/building.svg'
+                />
             <ServiceIntroComponent
               title='Home Buying Assistance'
-              url='/services'
+              url='#'
               description={`If you prefer to purchase a home rather than build, we are
                 here to guide you through the local market with confidence. We offer a curated selection
                 of homes tailored to your preferences, lifestyle, and budget, making the home-buying
                 process smooth and enjoyable.`}
+                image='/images/home.svg'
             />
           </div>
         </div>

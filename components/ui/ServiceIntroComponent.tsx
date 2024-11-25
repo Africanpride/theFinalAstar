@@ -3,23 +3,26 @@ import Link from 'next/link';
 import { LucideArrowUpRight } from 'lucide-react';
 
 import { poppins } from '@/config/fonts';
+import Image from 'next/image';
 
 type ServiceIntroComponentProps = {
   title: string;
   description: React.ReactNode;
   url?: string;
   color?: string;
+  image?: string;
 };
 
 const ServiceIntroComponent: React.FC<ServiceIntroComponentProps> = ({
   title,
   description,
   url = '/services',
-  color = 'lime'
+  color = 'lime',
+  image = '/images/farm.svg'
 }) => {
   return (
     <div
-      className={`hover:bg- rounded-3xl bg-white  relative flex h-auto min-h-full  flex-col items-start justify-start space-y-2 border border-neutral-300 p-4 md:aspect-video md:p-8`}
+      className={` overflow-hidden hover:bg rounded-3xl bg-white  relative flex h-auto min-h-full  flex-col items-start justify-start space-y-2  border-neutral-300 p-4 md:aspect-video md:p-8`}
       data-scroll
       data-scroll-speed={0.1}
     >
@@ -39,6 +42,10 @@ const ServiceIntroComponent: React.FC<ServiceIntroComponentProps> = ({
           Read More ...
         </Link>
       </div> */}
+
+      <Image src={image} width={100} height={100} alt='Worker' className='opacity-5 absolute ' style={{
+        bottom: '-15px', right: '-5px'
+      }} />
     </div>
   );
 };

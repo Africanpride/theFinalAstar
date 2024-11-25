@@ -48,6 +48,21 @@ export function Providers({ children, themeProps }: ProvidersProps) {
         window.scrollTo(0, 0);
       }, 2000);
     })();
+
+    const paragraphs = document.querySelectorAll('p');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once it has faded in
+        }
+      });
+    });
+
+    paragraphs.forEach(p => {
+      observer.observe(p); // Observe each paragraph
+    });
   }, []);
 
   return (

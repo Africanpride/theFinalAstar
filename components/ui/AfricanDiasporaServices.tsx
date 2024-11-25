@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  bebas,
-  poppins,
-} from '@/config/fonts';
+import { bebas, poppins } from '@/config/fonts';
 
 import ServiceIntroComponent from './ServiceIntroComponent';
 
@@ -48,12 +45,12 @@ const AfricanDiasporaServices = ({ title, order = 1, children }: Props) => {
   return (
     <section
       className={`${bebas.className} flex h-auto min-h-screen flex-col justify-center `}>
-
       <div className={`  relative gap-4 md:p-6 `}>
-        <div className=' relative z-10 flex h-auto flex-col items-start justify-center space-y-3 pb-7 
+        <div
+          className=' relative z-10 flex h-auto flex-col items-start justify-center space-y-3 pb-7 
          md:px-2'>
           <h1 className='text-[2em] text-yellow-500 '>
-          African Diaspora 126+: Reconnecting the Diaspora to the Motherland
+            African Diaspora 126+: Reconnecting the Diaspora to the Motherland
           </h1>
 
           <p className={`${poppins.className} max-w-4xl  text-lg `}>
@@ -65,28 +62,31 @@ const AfricanDiasporaServices = ({ title, order = 1, children }: Props) => {
         </div>
 
         <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
-          <ServiceIntroComponent 
+          <ServiceIntroComponent
             color='yellow'
             title='Right to Return Advocacy'
             description='We actively advocate for policies that acknowledge the right of African descendants to return
                     and reside in Africa. Our team works with policymakers, local organizations, and
                     international partners to create pathways for citizenship and cultural integration.'
+            image='/images/people.svg'
           />
-          <ServiceIntroComponent 
+          <ServiceIntroComponent
             color='yellow'
             title='Community & Partnerships'
             url='/services'
             description={`Through partnerships with local stakeholders, we establish networks that provide returning
               descendants with the support they need—whether it’s legal guidance, housing resources, or
               community building. Each connection strengthens the foundation for a successful transition.`}
+            image='/images/community.svg'
           />
-          <ServiceIntroComponent 
+          <ServiceIntroComponent
             color='yellow'
             title='Cultural Reconnection Programs'
             url='/services'
             description={`We organize events, workshops, and traditional ceremonies that bring African heritage to life.
                   From language classes to cultural immersion activities, our programs allow you to experience
                   Africa as both a visitor and a long-lost family member returning home.`}
+            image='/images/culture.svg'
           />
         </div>
       </div>
