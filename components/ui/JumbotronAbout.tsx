@@ -50,12 +50,12 @@ const JumbotronAbout = (props: Props) => {
         <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
           <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
             <h1 className='max-w-xl text-4xl capitalize leading-10 md:text-5xl  md:leading-[3rem] '>
-              About Astar LLC
+              About Astar
             </h1>
 
             <p
               className={`${poppins.className} text-left  text-lg capitalize text-gray-500`}>
-              ASTAR LLC was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. Our team brings
+              ASTAR was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. Our team brings
               decades of experience in commodities trading and investment
               management, with a special focus on the African continent.
             </p>
@@ -100,7 +100,7 @@ const JumbotronAbout = (props: Props) => {
                 className='max-w-6xl text-xl md:text-4xl text-neutral-100 md:uppercase leading-[1.5rem]  md:font-bold md:px-2 p-5 md:p-8'
                 data-scroll
                 data-scroll-speed={0.1}>
-                ASTAR LLC was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. Our team brings
+                ASTAR was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. Our team brings
                 decades of experience in commodities trading and investment
                 management, with a special focus on the African continent.
               </div>
@@ -232,7 +232,7 @@ const JumbotronAbout = (props: Props) => {
                 Partnerships
               </h2>
               <p className='mt-1 text-neutral-600'>
-                ASTAR LLC works closely with businesses, governments, and
+                ASTAR works closely with businesses, governments, and
                 private investors to create mutually beneficial partnerships
                 that foster regional trade and growth. If you’re interested in
                 working together, learn more about how we can collaborate

@@ -52,7 +52,7 @@ const Start = ({ title, order = 1, children }: Props) => {
           </h1>
 
           <p className={`${poppins.className} max-w-4xl  text-lg `}>
-            ASTAR LLC connects buyers, sellers, and investors across Africa in
+            ASTAR connects buyers, sellers, and investors across Africa in
             agriculture, minerals, and energy. We simplify trade, foster
             sustainable growth, and offer end-to-end support for reliable,
             impactful partnerships in emerging markets.

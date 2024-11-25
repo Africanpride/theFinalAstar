@@ -27,7 +27,7 @@ const Jumbotron = (props: Props) => {
                     className={`${bebas.className} block  text-3xl text-gray-800 dark:text-neutral-100 md:text-5xl lg:text-5xl`}
                     data-scroll
                     data-scroll-speed={0.0}>
-                    At ASTAR LLC, we believe in Africa’s vast potential and are
+                    At ASTAR, we believe in Africa’s vast potential and are
                     committed to unlocking opportunities through strategic
                     commodity trading and investment.
                   </h1>

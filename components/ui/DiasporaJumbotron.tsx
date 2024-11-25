@@ -132,7 +132,7 @@ const DiasporaJumbotron = (props: Props) => {
                 data-scroll
                 data-scroll-speed={0.1}>
                 Founded on the belief that Africa’s future lies in its ability
-                to collaborate, trade, and invest within itself, ASTAR LLC was
+                to collaborate, trade, and invest within itself, ASTAR was
                 created to promote sustainable regional growth. Our team brings
                 decades of experience in commodities trading and investment
                 management, with a special focus on the African continent.

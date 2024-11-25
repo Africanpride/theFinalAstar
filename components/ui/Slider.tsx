@@ -13,7 +13,7 @@ type Props = {
   link?: string;
 };
 
-const descriptionTemplate = `ASTAR LLC was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. `;
+const descriptionTemplate = `ASTAR was founded on the belief that Africa's future lies in its ability to collaborate, trade, and invest within the continent, promoting sustainable regional growth. `;
 
 const Slider = ({
   image = 'aaha.jpg',
