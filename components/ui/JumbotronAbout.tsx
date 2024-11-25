@@ -62,7 +62,7 @@ const JumbotronAbout = (props: Props) => {
           </div>
         </div>
         <div
-          className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+          className='relative   col-span-1 flex  flex-col justify-end space-y-2
         rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
           <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
           <h1 className='text-lime-500'>Our Vision</h1>
@@ -71,7 +71,7 @@ const JumbotronAbout = (props: Props) => {
           </p>
         </div>
         <div
-          className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+          className='relative   col-span-1 flex  flex-col justify-end space-y-2
         rounded-2xl bg-lime-600 p-4 text-base leading-[1.12rem] text-black'>
           <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
           <h1>Our Mission</h1>
@@ -125,13 +125,13 @@ const JumbotronAbout = (props: Props) => {
           </div>
         </div>
         <div
-          className='relative   col-span-1 flex aspect-square flex-col justify-end rounded-2xl
+          className='relative   col-span-1 flex  flex-col justify-end rounded-2xl
         bg-black p-4 text-xl leading-[1.3rem] text-white'>
           <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
           African trade <br /> expertise
         </div>
         <div
-          className='relative   col-span-1 flex aspect-square flex-col justify-end rounded-2xl
+          className='relative   col-span-1 flex  flex-col justify-end rounded-2xl
         bg-lime-600 p-4 text-xl leading-[1.3rem] text-white'>
           <LucideArrowUpRight className='absolute right-3 top-3 text-white' />
           Fostering collaborative <br />
@@ -154,13 +154,13 @@ const JumbotronAbout = (props: Props) => {
           </div>
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
+          className='col-span-1    relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
         flex flex-col justify-end text-white p-4'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3' />
           Empowering regional <br /> markets
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-black rounded-2xl text-xl leading-[1.3rem]
+          className='col-span-1    relative bg-black rounded-2xl text-xl leading-[1.3rem]
         flex flex-col justify-end text-white p-4'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           African trade <br /> expertise
@@ -170,13 +170,13 @@ const JumbotronAbout = (props: Props) => {
       {/* <div
         className={`${bebas.className} container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4`}>
         <div
-          className='col-span-1   aspect-square relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
+          className='col-span-1    relative bg-lime-600 rounded-2xl text-xl leading-[1.3rem]
         flex flex-col justify-end text-white p-4'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3' />
           Empowering regional <br /> markets
         </div>
         <div
-          className='col-span-1   aspect-square relative bg-black rounded-2xl text-xl leading-[1.3rem]
+          className='col-span-1    relative bg-black rounded-2xl text-xl leading-[1.3rem]
         flex flex-col justify-end text-white p-4'>
           <LucideArrowUpRight className='text-white absolute right-3 top-3 ' />
           African trade <br /> expertise
@@ -197,7 +197,7 @@ const JumbotronAbout = (props: Props) => {
       </div> */}
 
 
-      {/* <div className='container mx-auto grid grid-cols-1 bg-white rounded-2xl aspect-square md:aspect-video   '>
+      {/* <div className='container mx-auto grid grid-cols-1 bg-white rounded-2xl  md:aspect-video   '>
         <div className=' rounded-3xl flex flex-col justify-center relative'>
           <Image
             src='/images/vision.jpg'

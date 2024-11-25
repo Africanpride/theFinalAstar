@@ -6,7 +6,7 @@ type Props = {}
 
 const ServicePage = (props: Props) => {
   return (
-    <div>
+    <div className='pb-4'>
         <ServiceJumbotron />
     </div>
   )

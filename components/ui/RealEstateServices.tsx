@@ -1,13 +1,8 @@
 'use client';
-import {
-  LucideArrowUpRight,
-} from 'lucide-react';
+import { LucideArrowUpRight } from 'lucide-react';
 import React from 'react';
 
-import {
-  bebas,
-  poppins,
-} from '@/config/fonts';
+import { bebas, poppins } from '@/config/fonts';
 
 import ServiceIntroComponent from './ServiceIntroComponent';
 import ServiceCardWithBackgroundImage from './ServiceCardWithBackgroundImage';
@@ -53,12 +48,13 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
   return (
     <div className='pb-4'>
       <section className='grid h-auto min-h-screen   gap-4 p-4'>
-        <div
-          className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
-          <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
-            <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
+      <div
+        className={`${bebas.className} container mx-auto grid grid-cols-1 gap-4 md:grid-cols-5`}>
+          
+        <div className='col-span-1 rounded-2xl bg-white p-4 md:col-span-3 md:p-8'>
+          <div className='h-full flex-col items-start justify-end space-y-3 md:flex '>
               <h1 className='max-w-xl text-3xl capitalize leading-10 text-lime-600 md:text-3xl  md:leading-[3rem] '>
-              Empower, Invest and Belong
+                Empower, Invest and Belong
               </h1>
 
               <p
@@ -73,7 +69,7 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
             </div>
           </div>
           <div
-            className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+            className='relative   col-span-1 flex flex-col justify-end space-y-2
         rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
             <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
             <h1 className='text-lime-500'>Our Goal</h1>
@@ -94,16 +90,18 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
               </h1>
 
               <p
-                className={`${poppins.className} text-left  text-base capitalize text-gray-500`}>
-                From land search to handing over the keys to your property, we
-                take care of every detail so you can focus on the bigger
-                picture.
+                className={`${poppins.className}  text-left  text-base capitalize text-gray-500`}>
+                From identifying the ideal land to handing you the keys to your
+                completed property, we manage every aspect of the process with
+                care and precision. Our goal is to provide a hassle-free
+                experience, ensuring every detail is handled so you can focus on
+                your vision and the bigger picture.
               </p>
             </div>
           </div>
           <ServiceCardWithBackgroundImage backgroundImage='trust.jpg' />
           <div
-            className='relative   col-span-1 flex aspect-square flex-col justify-end space-y-2
+            className='relative   col-span-1 flex  flex-col justify-end space-y-2
         rounded-2xl bg-black p-4 text-base leading-[1.12rem] text-white'>
             <LucideArrowUpRight className='absolute right-3 top-3 text-white ' />
             <h1 className='text-lime-500'>Trust and Professionalism</h1>
@@ -122,7 +120,6 @@ const RealEstateServices = ({ title, order = 1, children }: Props) => {
           <div className=' justify-RealEstateServices items-RealEstateServices relative z-10 flex h-auto flex-col space-y-3 md:px-2'>
             <h1 className='text-[2em] text-lime-500 '>
               Diaspora Focused Solutions
-
             </h1>
 
             <p className={`${poppins.className} max-w-4xl  text-lg `}>
