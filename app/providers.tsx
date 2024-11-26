@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { NextUIProvider } from "@nextui-org/system";
-import { useRouter } from "next/navigation";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { ThemeProviderProps } from "next-themes/dist/types";
+import * as React from 'react';
+import { NextUIProvider } from '@nextui-org/system';
+import { useRouter } from 'next/navigation';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ThemeProviderProps } from 'next-themes/dist/types';
+import { ClerkProvider } from '@clerk/nextjs';
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
       // console.log(scroll, limit, velocity, direction, progress);
     }
     (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
 
       // Check if the window width is greater than 768 pixels
       if (window.innerWidth > 768) {
@@ -32,8 +33,8 @@ export function Providers({ children, themeProps }: ProvidersProps) {
             // content: document.querySelector('#scroll-content') as HTMLElement,
             lerp: 0.1,
             duration: 1.2,
-            orientation: "vertical",
-            gestureOrientation: "vertical",
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
             smoothWheel: true,
             wheelMultiplier: 1,
             touchMultiplier: 2,
@@ -44,7 +45,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
       setTimeout(() => {
         setIsLoading(false);
-        document.body.style.cursor = "default";
+        document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
       }, 2000);
     })();
@@ -52,7 +53,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
     const paragraphs = document.querySelectorAll('p');
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target); // Stop observing once it has faded in
@@ -60,16 +61,23 @@ export function Providers({ children, themeProps }: ProvidersProps) {
       });
     });
 
-    paragraphs.forEach(p => {
+    paragraphs.forEach((p) => {
       observer.observe(p); // Observe each paragraph
     });
   }, []);
 
   return (
-    <NextUIProvider navigate={router.push}>
-      <NextThemesProvider {...{ ...themeProps, defaultTheme: 'light', disableTransitionOnChange: true }}>
-        {children}
-      </NextThemesProvider>
-    </NextUIProvider>
+    <ClerkProvider>
+      <NextUIProvider navigate={router.push}>
+        <NextThemesProvider
+          {...{
+            ...themeProps,
+            defaultTheme: 'light',
+            disableTransitionOnChange: true,
+          }}>
+          {children}
+        </NextThemesProvider>
+      </NextUIProvider>
+    </ClerkProvider>
   );
 }

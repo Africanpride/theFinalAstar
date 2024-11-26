@@ -17,9 +17,12 @@ import clsx from 'clsx';
 import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import {
+  BookMarked,
   LucideActivity,
   LucideArrowUpRight,
+  LucideBook,
   LucideGlobe,
+  LucideGlobeLock,
   LucideHousePlus,
   SearchIcon,
 } from 'lucide-react';
@@ -37,6 +40,8 @@ import { bebas } from '@/config/fonts';
 import { siteConfig } from '@/config/site';
 
 import MainLogo from '../MainLogo';
+import { UserButton } from '@clerk/nextjs';
+import BlogCard from './BlogCard';
 
 export const Navbar = () => {
   // media query for mobile etc
@@ -49,6 +54,17 @@ export const Navbar = () => {
 
   const handleMenuItemClick = () => {
     setIsMenuOpen(false);
+  };
+
+  const BookMarked = () => {
+    return (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 512 512'
+        fill='currentColor'>
+        <path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z' />
+      </svg>
+    );
   };
 
   const searchInput = (
@@ -154,8 +170,29 @@ export const Navbar = () => {
                 <span className=' text-[0.9rem] '>Get In Touch</span>
               </Button>
             </Link>
+            <UserButton>
+              {/* You can pass the content as a component */}
+              <UserButton.UserProfilePage
+                label='Custom Page'
+                url='custom'
+                labelIcon={<LucideBook className='w-4 h-5' />}>
+                <BlogCard imageSrc={'/images/aaha.jpg '} imageAlt={''} title={'Some Activity'} description={'Very cool '} />
+              </UserButton.UserProfilePage>
+
+              {/* You can also pass the content as direct children */}
+              <UserButton.UserProfilePage
+                label='Terms'
+                labelIcon={<LucideGlobeLock className='w-4 h-5' />}
+                url='terms'>
+                <div>
+                  <h1>Custom Terms Page</h1>
+                  <p>This is the custom terms page</p>
+                </div>
+              </UserButton.UserProfilePage>
+            </UserButton>
           </div>
         </NavbarItem>
+
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className='sm:hidden'

@@ -1,11 +1,21 @@
-import React from 'react'
+import {
+  GoogleOneTap,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from '@clerk/nextjs';
+import { Link } from 'lucide-react';
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div>Admin page</div>
-  )
-}
+    <div className='h-screen'>
+      <UserButton />
+    </div>
+  );
+};
 
-export default page
+export default page;
