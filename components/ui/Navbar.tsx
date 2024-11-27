@@ -44,13 +44,7 @@ import { bebas } from '@/config/fonts';
 import { siteConfig } from '@/config/site';
 
 import MainLogo from '../MainLogo';
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-  UserProfile,
-} from '@clerk/nextjs';
+
 import BlogCard from './BlogCard';
 
 export const Navbar = () => {
@@ -180,18 +174,7 @@ export const Navbar = () => {
                 <span className=' text-[0.9rem] '>Get In Touch</span>
               </Button>
             </Link>
-            <UserButton>
-              <UserButton.UserProfileLink
-                label='Manage News'
-                url='/admin'
-                labelIcon={<LucideBookCheck className='w-4 h-4' />}
-              />
-              <UserButton.UserProfileLink
-                label='Add News Article'
-                url='/article'
-                labelIcon={<LucidePlusSquare className='w-4 h-4' />}
-              />
-            </UserButton>
+          
           </div>
         </NavbarItem>
 
