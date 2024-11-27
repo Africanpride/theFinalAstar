@@ -19,11 +19,15 @@ import { motion } from 'framer-motion';
 import {
   BookMarked,
   LucideActivity,
+  LucideArrowDownToDot,
   LucideArrowUpRight,
   LucideBook,
+  LucideBookCheck,
   LucideGlobe,
   LucideGlobeLock,
   LucideHousePlus,
+  LucidePlusSquare,
+  LucideUser,
   SearchIcon,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
@@ -40,7 +44,13 @@ import { bebas } from '@/config/fonts';
 import { siteConfig } from '@/config/site';
 
 import MainLogo from '../MainLogo';
-import { UserButton } from '@clerk/nextjs';
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+  UserProfile,
+} from '@clerk/nextjs';
 import BlogCard from './BlogCard';
 
 export const Navbar = () => {
@@ -171,24 +181,16 @@ export const Navbar = () => {
               </Button>
             </Link>
             <UserButton>
-              {/* You can pass the content as a component */}
-              <UserButton.UserProfilePage
-                label='Custom Page'
-                url='custom'
-                labelIcon={<LucideBook className='w-4 h-5' />}>
-                <BlogCard imageSrc={'/images/aaha.jpg '} imageAlt={''} title={'Some Activity'} description={'Very cool '} />
-              </UserButton.UserProfilePage>
-
-              {/* You can also pass the content as direct children */}
-              <UserButton.UserProfilePage
-                label='Terms'
-                labelIcon={<LucideGlobeLock className='w-4 h-5' />}
-                url='terms'>
-                <div>
-                  <h1>Custom Terms Page</h1>
-                  <p>This is the custom terms page</p>
-                </div>
-              </UserButton.UserProfilePage>
+              <UserButton.UserProfileLink
+                label='Manage News'
+                url='/admin'
+                labelIcon={<LucideBookCheck className='w-4 h-4' />}
+              />
+              <UserButton.UserProfileLink
+                label='Add News Article'
+                url='/article'
+                labelIcon={<LucidePlusSquare className='w-4 h-4' />}
+              />
             </UserButton>
           </div>
         </NavbarItem>
