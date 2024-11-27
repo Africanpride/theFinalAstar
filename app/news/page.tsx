@@ -12,7 +12,7 @@ export default function NewsPage() {
         {/* Title */}
         <div className='mx-auto mb-10 max-w-7xl text-left lg:mb-14'>
           <h2
-            className={`${bebas.className} text-2xl font-bold dark:text-white md:text-4xl md:leading-tight`}>
+            className={`${bebas.className} text-2xl dark:text-white md:text-4xl md:leading-tight`}>
             News & Articles
           </h2>
           <p className='mt-1 max-w-4xl text-gray-600 dark:text-neutral-400'>

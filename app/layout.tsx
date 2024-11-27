@@ -1,15 +1,16 @@
-import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-import clsx from "clsx";
+import '@/styles/globals.css';
+import { Metadata, Viewport } from 'next';
+import clsx from 'clsx';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import { poppins } from "@/config/fonts";
-import { siteConfig } from "@/config/site";
-import Footer from "@/components/ui/Footer";
-import { Navbar } from "@/components/ui/Navbar";
+import { poppins } from '@/config/fonts';
+import { siteConfig } from '@/config/site';
+import Footer from '@/components/ui/Footer';
+import { Navbar } from '@/components/ui/Navbar';
 
-import { Providers } from "./providers";
+import { Providers } from './providers';
+import { ClerkProvider } from '@clerk/nextjs';
 
 export const metadata: Metadata = {
   title: {
@@ -18,14 +19,14 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/images/logo.png",
+    icon: '/images/logo.png',
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 };
 
@@ -35,26 +36,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <head />
-      <body
-        className={clsx(
-          "min-h-screen  overflow-x-hidden bg-gray-100 text-[16px] antialiased ",
-          poppins.className
-        )}
-        
-      >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <main>
-            <Navbar />
-            {children}
-            <Footer />
-            <Analytics />
-            <SpeedInsights />
-
-          </main>
-        </Providers>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html suppressHydrationWarning lang='en'>
+        <head />
+        <body
+          className={clsx(
+            'min-h-screen  overflow-x-hidden bg-gray-100 text-[16px] antialiased ',
+            poppins.className
+          )}>
+          <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
+            <main>
+              <Navbar />
+              {children}
+              <Footer />
+              <Analytics />
+              <SpeedInsights />
+            </main>
+          </Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

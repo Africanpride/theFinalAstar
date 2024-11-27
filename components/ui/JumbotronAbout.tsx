@@ -269,7 +269,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pb-8 pt-0.5 sm:pb-12'>
                     <p className='text-sm text-neutral-600 lg:text-base'>
-                      <span className={`${bebas.className} pr-3 text-xl font-bold text-black`}>Integrity:</span> <br />
+                      <span className={`${bebas.className} pr-3 text-xl text-black`}>Integrity:</span> <br />
                       We believe in transparency and ethical practices in every
                       transaction.
                     </p>
@@ -286,7 +286,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pb-8 pt-0.5 sm:pb-12'>
                     <p className='text-sm text-neutral-600 lg:text-base'>
-                      <span className={`${bebas.className} pr-3 text-xl font-bold text-black`}>Sustainability:</span> <br />
+                      <span className={`${bebas.className} pr-3 text-xl text-black`}>Sustainability:</span> <br />
                       We prioritize sustainable investments that benefit
                       communities and the environment.
                     </p>
@@ -303,7 +303,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pb-8 pt-0.5 sm:pb-12'>
                     <p className='text-sm text-neutral-600 md:text-base'>
-                      <span className={`${bebas.className} pr-3 text-xl font-bold text-black`}>Collaboration:</span> <br />
+                      <span className={`${bebas.className} pr-3 text-xl text-black`}>Collaboration:</span> <br />
                       We are stronger together and believe in the power of
                       partnerships to drive progress.
                     </p>
@@ -320,7 +320,7 @@ const JumbotronAbout = (props: Props) => {
                   </div>
                   <div className='grow pb-8 pt-0.5 sm:pb-12'>
                     <p className='text-sm text-neutral-600 md:text-base'>
-                      <span className={`${bebas.className} pr-3 text-xl font-bold text-black`}>Innovation</span> <br />
+                      <span className={`${bebas.className} pr-3 text-xl text-black`}>Innovation</span> <br />
                       We embrace forward-thinking solutions to stay ahead in the
                       ever-evolving market.
                     </p>

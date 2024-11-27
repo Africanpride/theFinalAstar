@@ -38,7 +38,7 @@ const Slider = ({
           className={`${bebas.className} hidden max-w-2xl text-4xl text-lime-500`}>
           {heading}
         </h1>
-        <p className='line-clamp-4 max-w-6xl text-2xl font-bold uppercase  text-neutral-100 md:px-2  md:text-4xl'>
+        <p className='line-clamp-4 max-w-6xl text-2xl uppercase  text-neutral-100 md:px-2  md:text-4xl'>
           {description}
         </p>
         <Button

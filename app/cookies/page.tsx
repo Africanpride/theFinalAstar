@@ -2,7 +2,7 @@
 export default function ContactPage() {
   return (
     <div className='container mx-auto my-8 w-full space-y-2 rounded-2xl bg-gray-200 p-4 md:p-16'>
-      <h1 className='mb-4 text-xl font-bold md:text-3xl'>
+      <h1 className='mb-4 text-xl md:text-3xl'>
         Cookie Policy for Astar Trading & Agro Processing Company Limited
       </h1>
 

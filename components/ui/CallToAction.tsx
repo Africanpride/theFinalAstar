@@ -136,7 +136,7 @@ export default function CallToAction() {
         <div className='flex flex-col justify-center items-center bg-blue-950 p-4 md:p-8 lg:p-12'>
           <div className='py-8'>
             <h2
-              className={`mb-8 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl ${bebas.className}`}>
+              className={`mb-8 text-3xl leading-tight text-white md:text-4xl lg:text-5xl ${bebas.className}`}>
               Join a thriving network.
               <br />
               Stay connected to Growth and Opportunity.

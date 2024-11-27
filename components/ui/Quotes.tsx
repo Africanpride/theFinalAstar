@@ -27,7 +27,7 @@ const Quote: React.FC<Props> = ({
       />
       <div className='relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-32 '>
         <blockquote className='mx-auto flex  h-auto max-w-5xl flex-col items-start justify-center'>
-          <p className='mb-6 font-bold  md:text-lg'>
+          <p className='mb-6  md:text-lg'>
             <span className=' text-lime-600'>{name},</span>{' '}
             <span className='text-neutral-500'>{title}</span>
           </p>
