@@ -75,7 +75,7 @@ export default function App() {
     }
 
     return filteredArticles;
-  }, [articles, filterValue, statusFilter]);
+  }, [filterValue, hasSearchFilter, statusFilter]);
 
   const items = React.useMemo(() => {
     const start = (page - 1) * rowsPerPage;
@@ -264,15 +264,7 @@ export default function App() {
         </div>
       </div>
     );
-  }, [
-    filterValue,
-    statusFilter,
-    visibleColumns,
-    onSearchChange,
-    onRowsPerPageChange,
-    articles.length,
-    hasSearchFilter,
-  ]);
+  }, [filterValue, onSearchChange, statusFilter, visibleColumns, onRowsPerPageChange, router]);
 
   const bottomContent = React.useMemo(() => {
     return (

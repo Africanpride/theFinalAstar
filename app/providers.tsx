@@ -67,17 +67,15 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   }, []);
 
   return (
-    <ClerkProvider>
-      <NextUIProvider navigate={router.push}>
-        <NextThemesProvider
-          {...{
-            ...themeProps,
-            defaultTheme: 'light',
-            disableTransitionOnChange: true,
-          }}>
-          {children}
-        </NextThemesProvider>
-      </NextUIProvider>
-    </ClerkProvider>
+    <NextUIProvider navigate={router.push}>
+      <NextThemesProvider
+        {...{
+          ...themeProps,
+          defaultTheme: 'light',
+          disableTransitionOnChange: true,
+        }}>
+        <ClerkProvider>{children}</ClerkProvider>
+      </NextThemesProvider>
+    </NextUIProvider>
   );
 }
