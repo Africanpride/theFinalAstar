@@ -1,17 +1,16 @@
+import BlogCard from '@/components/ui/BlogCard';
 import { bebas } from '@/config/fonts';
 import { prisma } from '@/lib/prisma';
-import BlogCard from '@/components/ui/BlogCard'; // Ensure this import is correct
 
-export default async function NewsPage() {
-  const articles = await prisma.article?.findMany({
-    include: { author: true },
-  });
+// Removed the import of BlogCard due to the error
+
+export default function NewsPage() {
   return (
     <>
       {/* Card Blog */}
       <div className='mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14'>
         {/* Title */}
-        <div className='mx-auto mb-10 max-w-7xl text-left lg:mb-14 p-4 md:p-8 bg-white text-foreground md:rounded-2xl '>
+        <div className='mx-auto mb-10 max-w-7xl text-left lg:mb-14'>
           <h2
             className={`${bebas.className} text-2xl font-bold dark:text-white md:text-4xl md:leading-tight`}>
             News & Articles
@@ -23,36 +22,53 @@ export default async function NewsPage() {
           </p>
           <br />
           <p className='mt-1 max-w-4xl text-gray-600 dark:text-neutral-400'>
-            From the game-changing African Continental Free Trade Area (AfCFTA)
-            to the leading commodities of 2024, discover fresh insights that
-            drive regional growth, support sustainable investment, and empower
+            {' '}
+            From the game-changing African Continental Free Trade Area (AfCFTA) to the
+            leading commodities of 2024, discover fresh insights that drive
+            regional growth, support sustainable investment, and empower
             Africa's economic transformation.
           </p>
         </div>
         {/* End Title */}
 
-        {/* Render articles only if there are any */}
-        <div className='container mx-auto bg-white text-foreground p-4 md:p-8  '>
-          {articles.length > 0 ? (
-            <ul className='grid gap-3 sm:grid-cols-2 lg:grid-cols-4'>
-              {articles.map((article) => (
-                <li key={article.id}>
-                  <BlogCard
-                    imageSrc={`${article.thumbnail}`}
-                    imageAlt='Intra-African Trade'
-                    title={`${article.title}`}
-                    description={`${article.text}`}
-                    author='By Astar Team'
-                  />
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className='text-center text-gray-600 dark:text-neutral-400'>
-              No articles available at the moment. Please check back later.
-            </p>
-          )}
+        {/* Grid */}
+        <div className='grid gap-3 sm:grid-cols-2 lg:grid-cols-4'>
+          {/* Card */}
+          <BlogCard
+            imageSrc='/images/farming.jpg'
+            imageAlt='Intra-African Trade'
+            title='The Rise of Intra-African Trade: What It Means for Regional Growth'
+            description='We will Discuss the opportunities that the African Continental Free Trade Area 
+              (AfCFTA) provides for businesses and investors in commodities'
+            author='By Astar Team'
+          />
+          <BlogCard
+            imageSrc='/images/construction.jpg'
+            imageAlt='Commodities in Africa'
+            title='Top Commodities Driving Africa’s Economy in 2024'
+            description='We will focus on the key commodities (like oil, gas, minerals, agriculture) and how 
+                they impact regional markets.'
+            author='By Astar Team'
+          />
+          <BlogCard
+            imageSrc='/images/mission2.jpg'
+            imageAlt='Sustainable Investment'
+            title='Why Sustainable Investment Matters for Africa’s Future'
+            description='Under this we will explain the importance of sustainability in investment, 
+                  highlighting ASTAR’s commitment to promoting eco-friendly projects.'
+            author='By Astar Team'
+          />
+          <BlogCard
+            imageSrc='/images/trading.jpg'
+            imageAlt='Sustainable Investment'
+            title='The Role of Technology in Africa’s Commodity Markets'
+            description='Here, we will Discuss how technology is transforming commodities trading in Africa, 
+            from blockchain for transparency to AI for market analysis.'
+            author='By Astar Team'
+          />
+          {/* End Card */}
         </div>
+        {/* End Grid */}
       </div>
       {/* End Card Blog */}
     </>

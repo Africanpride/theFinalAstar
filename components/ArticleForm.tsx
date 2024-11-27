@@ -10,6 +10,7 @@ import { ArrowRight } from 'lucide-react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import { useUser } from '@clerk/nextjs';
+import { Avatar } from '@nextui-org/react';
 
 interface ArticleFormData {
   title: string;
@@ -48,7 +49,7 @@ export default function ArticleForm() {
     defaultValues: {
       publishedDate: new Date().toISOString().split('T')[0],
       status: 'published',
-      category: 'business-finance'
+      category: 'business-finance',
     },
   });
 
@@ -100,10 +101,9 @@ export default function ArticleForm() {
             />
             <Select
               {...register('category', { required: true })}
-              label="Category"
-              placeholder="Select a category"
-              isInvalid={errors.category ? true : false}
-            >
+              label='Category'
+              placeholder='Select a category'
+              isInvalid={errors.category ? true : false}>
               {newsCategories.map((category) => (
                 <SelectItem key={category.value} value={category.value}>
                   {category.label}
@@ -157,13 +157,26 @@ export default function ArticleForm() {
           <div className='space-y-4'>
             <h3 className='text-lg font-semibold'>Author Details</h3>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <Input
-                {...register('authorName', { required: true })}
-                label='Author Name'
-                placeholder="Enter author's name"
-                isReadOnly
-                isInvalid={errors.authorName ? true : false}
-              />
+              <div className='flex items-center gap-4'>
+                <span>
+                  {' '}
+                  <Avatar
+                    src={
+                      user
+                        ? user.imageUrl
+                        : 'https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycE00aUVDeFVWazYyN2xJeDVPQW0wbG5RbVQifQ'
+                    }
+                    size='md'
+                  />
+                </span>{' '}
+                <Input
+                  {...register('authorName', { required: true })}
+                  label='Author Name'
+                  placeholder="Enter author's name"
+                  isReadOnly
+                  isInvalid={errors.authorName ? true : false}
+                />
+              </div>
               <Input
                 {...register('authorEmail', {
                   required: true,
@@ -179,13 +192,13 @@ export default function ArticleForm() {
                 isInvalid={errors.authorEmail ? true : false}
               />
             </div>
-            <Input
+            {/* <Input
               {...register('authorAvatar', { required: true })}
               label='Author Avatar URL'
               placeholder="Enter author's avatar URL"
               isReadOnly
               isInvalid={errors.authorAvatar ? true : false}
-            />
+            /> */}
           </div>
 
           <div>
@@ -204,4 +217,3 @@ export default function ArticleForm() {
     </Card>
   );
 }
-
